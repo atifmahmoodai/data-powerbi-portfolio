@@ -26,7 +26,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Service'"
+                  "Value": "'Status'"
                 }
               }
             },
@@ -126,11 +126,11 @@
                       "Entity": "Jobs"
                     }
                   },
-                  "Property": "Service"
+                  "Property": "Status"
                 }
               },
-              "queryRef": "Jobs.Service",
-              "nativeQueryRef": "Service"
+              "queryRef": "Jobs.Status",
+              "nativeQueryRef": "Status"
             }
           ]
         }

@@ -18,6 +18,12 @@ Track current backlog, on-time completion, service cycle time, rework and delive
 - **Backlog and service:** Open Jobs, Overdue Open Jobs, Average Cycle Days, Completion Rate
 - **Quality and cost:** Rework Jobs, Rework Rate, Recorded Cost, Cost per Completed Job
 
+### Page guidance
+
+- **Management scorecard:** Monthly results group jobs by creation date and show current status; they are not completion-date throughput.
+- **Backlog and service:** Filter Status to Open. Overdue means the due date was before 30 Sep 2026; this is a calendar-date SLA.
+- **Quality and cost:** Recorded cost includes open and completed jobs. Cost per completed job includes completed work only.
+
 ## Business scope
 
 Creation-date cohorts and current job status at 30 Sep 2026.

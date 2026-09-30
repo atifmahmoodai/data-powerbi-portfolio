@@ -136,6 +136,15 @@ class BusinessRules(unittest.TestCase):
         self.assertIn('vs budget',delivery['charts'][0][0].lower())
         self.assertIn('invoices and collections',billing['charts'][1][0].lower())
 
+    def test_operations_backlog_detail_can_filter_open_jobs(self):
+        page=self.specs[9]['pages'][1]
+        self.assertIn('Jobs.Status',page['slicers'])
+        self.assertTrue({'Jobs.Status','Jobs.CreatedDate','Jobs.DueDate'}.issubset(page['table']))
+
+    def test_operations_chart_labels_completed_and_open_series(self):
+        page=self.specs[9]['pages'][0]
+        self.assertIn('completed and open',page['charts'][0][0].lower())
+
     def test_stock_ageing_detail_supports_actionable_stock_filtering(self):
         page=self.specs[0]['pages'][1]
         self.assertIn('Vehicles.Status',page['slicers'])

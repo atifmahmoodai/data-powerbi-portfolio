@@ -122,7 +122,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "SYNTHETIC DEMO  |  PKR  |  Creation-date cohorts and current job status at 30 Sep 2026.",
+                    "value": "SYNTHETIC DEMO  |  PKR  |  Filter Status to Open. Overdue means the due date was before 30 Sep 2026; this is a calendar-date SLA.",
                     "textStyle": {
                       "fontSize": "10pt",
                       "color": "#526674"

@@ -26,7 +26,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Management detail'"
+                  "Value": "'Job backlog detail · created and due dates'"
                 }
               }
             },
@@ -154,11 +154,53 @@
                       "Entity": "Jobs"
                     }
                   },
+                  "Property": "Service"
+                }
+              },
+              "queryRef": "Jobs.Service",
+              "nativeQueryRef": "Service"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs"
+                    }
+                  },
                   "Property": "Priority"
                 }
               },
               "queryRef": "Jobs.Priority",
               "nativeQueryRef": "Priority"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs"
+                    }
+                  },
+                  "Property": "Status"
+                }
+              },
+              "queryRef": "Jobs.Status",
+              "nativeQueryRef": "Status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs"
+                    }
+                  },
+                  "Property": "CreatedDate"
+                }
+              },
+              "queryRef": "Jobs.CreatedDate",
+              "nativeQueryRef": "CreatedDate"
             },
             {
               "field": {

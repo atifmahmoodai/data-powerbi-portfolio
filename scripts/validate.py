@@ -146,9 +146,13 @@ def business_checks(slug,data):
     else:
         for r in data['Jobs']:
             complete=r['Status']=='Completed'
+            require(r['Status'] in ['Open','Completed'] and r['Priority'] in ['Standard','High','Urgent'],'Invalid job status or priority')
+            require(r['Cost']>=0 and r['CreatedDate']<=ASOF.isoformat() and r['CreatedDate']<=r['DueDate'],'Invalid job cost or due date')
             require(bool(r['CompletedDate'])==complete,'Job completion/status mismatch')
             if complete:
+                require(r['CreatedDate']<=r['CompletedDate']<=ASOF.isoformat(),'Invalid completion date')
                 require(r['CycleDays']==(dt.date.fromisoformat(r['CompletedDate'])-dt.date.fromisoformat(r['CreatedDate'])).days,'Cycle time mismatch')
+                require(r['OnTime'] in [0,1] and r['Rework'] in [0,1],'Job KPI flags must be binary')
                 require(r['OnTime']==int(r['CompletedDate']<=r['DueDate']),'On-time flag mismatch')
             else: require(r['OnTime']==r['Rework']==0,'Open job marked completed KPI')
 

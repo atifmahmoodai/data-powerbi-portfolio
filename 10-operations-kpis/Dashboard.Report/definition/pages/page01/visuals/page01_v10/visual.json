@@ -26,7 +26,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Completed Jobs by Team'"
+                  "Value": "'Completed and open jobs by team'"
                 }
               }
             },

@@ -26,7 +26,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Overdue Open Jobs by Team'"
+                  "Value": "'Overdue open jobs by team'"
                 }
               }
             },
