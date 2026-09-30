@@ -49,6 +49,8 @@ def business_checks(slug,data):
             require((dt.date.fromisoformat(end)-dt.date.fromisoformat(r['PurchaseDate'])).days==r['DaysHeld'],'Vehicle days held mismatch')
             require((r['Status']=='Sold')==bool(r['SaleDate']),'Vehicle sale/status mismatch')
             require((r['SalePrice']>0)==(r['Status']=='Sold'),'Sale amount/status mismatch')
+            expected_band='0–30' if r['DaysHeld']<=30 else '31–60' if r['DaysHeld']<=60 else '61–90' if r['DaysHeld']<=90 else '91+'
+            require(r['AgeBand']==expected_band,'Age-band label/boundary mismatch')
     elif n==2:
         unique(data['Targets'],['AccountID','Date'])
         require(all(r['Units']>0 and r['Revenue']>=0 and r['Cost']>=0 for r in data['Sales']),'Invalid sale')

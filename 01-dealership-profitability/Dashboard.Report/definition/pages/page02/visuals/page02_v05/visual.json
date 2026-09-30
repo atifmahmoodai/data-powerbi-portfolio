@@ -26,7 +26,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Salesperson'"
+                  "Value": "'Status'"
                 }
               }
             },
@@ -126,11 +126,11 @@
                       "Entity": "Vehicles"
                     }
                   },
-                  "Property": "Salesperson"
+                  "Property": "Status"
                 }
               },
-              "queryRef": "Vehicles.Salesperson",
-              "nativeQueryRef": "Salesperson"
+              "queryRef": "Vehicles.Status",
+              "nativeQueryRef": "Status"
             }
           ]
         }

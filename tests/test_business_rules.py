@@ -49,6 +49,17 @@ class BusinessRules(unittest.TestCase):
         self.assertEqual(before['Gross Profit'],after['Gross Profit'])
         self.assertEqual(after['Stock Value']-before['Stock Value'],100000)
 
+    def test_dealership_age_bands_match_the_90_day_cutoff(self):
+        rows=self.data(1)['Vehicles']
+        for row in rows:
+            expected='0–30' if row['DaysHeld']<=30 else '31–60' if row['DaysHeld']<=60 else '61–90' if row['DaysHeld']<=90 else '91+'
+            self.assertEqual(row['AgeBand'],expected)
+
+    def test_stock_ageing_detail_supports_actionable_stock_filtering(self):
+        page=self.specs[0]['pages'][1]
+        self.assertIn('Vehicles.Status',page['slicers'])
+        self.assertTrue({'Vehicles.Status','Vehicles.PurchaseDate','Vehicles.DaysHeld'}.issubset(page['table']))
+
     def test_invalid_source_rows_are_rejected(self):
         cases=[(1,'Vehicles','DaysHeld',-1),(2,'Sales','Units',-1),(3,'Stock','Reserved',999999),(4,'PnL','Category','Unknown'),(5,'Trading','Transactions',999999),(6,'Orders','Refund',99999999),(7,'Opportunities','Probability',1.2),(8,'Workforce','ClosingHeadcount',-1),(9,'Performance','ActualHours',-1),(10,'Jobs','CompletedDate','2099-01-01')]
         for n,t,col,value in cases:

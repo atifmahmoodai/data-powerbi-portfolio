@@ -18,8 +18,8 @@ def table(rows,key,grain,dates=(),decimals=()):
     return dict(rows=rows,key=key,grain=grain,columns=cols)
 def measure(name,dax,desc,fmt='#,0'): return dict(name=name,dax=dax,description=desc,format=fmt)
 def summ(name,t,c,desc=None,fmt=MONEY): return measure(name,f'SUM({t}[{c}])',desc or f'Sum of {c} at the recorded grain.',fmt)
-def page(title,slicers,cards,cat,vals,cat2,vals2,detail,note=None,kind2='clusteredBarChart'):
-    p=dict(title=title,slicers=slicers,cards=cards,charts=[(vals[0]+' by '+cat.split('.')[-1],'clusteredBarChart',cat,vals),(vals2[0]+' by '+cat2.split('.')[-1],kind2,cat2,vals2)],table=detail)
+def page(title,slicers,cards,cat,vals,cat2,vals2,detail,note=None,kind2='clusteredBarChart',tableTitle='Management detail'):
+    p=dict(title=title,slicers=slicers,cards=cards,charts=[(vals[0]+' by '+cat.split('.')[-1],'clusteredBarChart',cat,vals),(vals2[0]+' by '+cat2.split('.')[-1],kind2,cat2,vals2)],table=detail,tableTitle=tableTitle)
     if note: p['note']=note
     return p
 def base(slug,title,short,purpose,scope,rules,tables,rels,measures,pages,expected):
@@ -36,7 +36,7 @@ def dealership():
         days=rng.randint(3,350); sold=i%4!=0; held=rng.randint(1,days) if sold else days
         cost=rng.randrange(18,85)*100000; recon=rng.randrange(2,30)*10000
         revenue=cost+recon+rng.randrange(-5,20)*50000 if sold else 0
-        rows.append(dict(VehicleID=f'V{i+1:04d}',Make=['Toyota','Honda','Suzuki','Kia','Hyundai'][i%5],Model=['Sedan','Hatchback','SUV'][i%3],Branch=['Karachi','Lahore','Islamabad'][i%3],Salesperson=f'Advisor {i%7+1}',Status='Sold' if sold else 'In Stock',PurchaseDate=date(days),SaleDate=date(days-held) if sold else '',PurchaseCost=cost,Reconditioning=recon,SalePrice=revenue,DaysHeld=held,AgeBand='0–30' if held<=30 else '31–60' if held<=60 else '61–90' if held<=90 else '90+'))
+        rows.append(dict(VehicleID=f'V{i+1:04d}',Make=['Toyota','Honda','Suzuki','Kia','Hyundai'][i%5],Model=['Sedan','Hatchback','SUV'][i%3],Branch=['Karachi','Lahore','Islamabad'][i%3],Salesperson=f'Advisor {i%7+1}',Status='Sold' if sold else 'In Stock',PurchaseDate=date(days),SaleDate=date(days-held) if sold else '',PurchaseCost=cost,Reconditioning=recon,SalePrice=revenue,DaysHeld=held,AgeBand='0–30' if held<=30 else '31–60' if held<=60 else '61–90' if held<=90 else '91+'))
     sold=[r for r in rows if r['Status']=='Sold']; stock=[r for r in rows if r['Status']=='In Stock']
     rev=total(sold,'SalePrice'); cost=sum(r['PurchaseCost']+r['Reconditioning'] for r in sold)
     measures=[measure('Units Sold','CALCULATE(COUNTROWS(Vehicles), KEEPFILTERS(Vehicles[Status] = "Sold"))','Count of vehicles with completed sales.'),
@@ -53,7 +53,7 @@ def dealership():
         measure('Profit per Vehicle','DIVIDE([Gross Profit], [Units Sold])','Mean gross profit per sold vehicle.',MONEY)]
     slicers=['Vehicles.Branch','Vehicles.Make','Vehicles.Salesperson']
     pages=[page('Executive overview',slicers,['Sales Revenue','Gross Profit','Stock Value','Aged Stock Units'],'Vehicles.Branch',['Gross Profit'],'Vehicles.Make',['Stock Value'],['Vehicles.Branch','Units Sold','Gross Margin','Stock Units','Average Stock Age']),
-        page('Stock ageing',slicers,['Stock Units','Stock Value','Average Stock Age','Aged Stock Value'],'Vehicles.AgeBand',['Stock Value'],'Vehicles.Make',['Aged Stock Units'],['Vehicles.VehicleID','Vehicles.Make','Vehicles.Branch','Vehicles.AgeBand','Stock Units','Stock Value']),
+        page('Stock ageing',['Vehicles.Branch','Vehicles.Make','Vehicles.Status'],['Stock Units','Stock Value','Average Stock Age','Aged Stock Value'],'Vehicles.AgeBand',['Stock Value'],'Vehicles.Make',['Aged Stock Units'],['Vehicles.VehicleID','Vehicles.Status','Vehicles.Make','Vehicles.Branch','Vehicles.PurchaseDate','Vehicles.DaysHeld','Vehicles.AgeBand','Stock Units','Stock Value'],note='Select In Stock in the Status filter to focus on current vehicles. Age band 91+ means more than 90 days.',tableTitle='Vehicle stock detail · filter Status to In Stock'),
         page('Sales performance',['Calendar.Month','Vehicles.Branch','Vehicles.Salesperson'],['Units Sold','Sales Revenue','Gross Margin','Average Days to Sell'],'Vehicles.Salesperson',['Gross Profit'],'Calendar.Month',['Sales Revenue','Gross Profit'],['Vehicles.Make','Units Sold','Sales Revenue','Sold Vehicle Cost','Profit per Vehicle'],note='Date filters apply to sale date. Stock is shown only on the other pages.',kind2='lineChart')]
     return base('01-dealership-profitability','Car Dealership Profitability & Inventory','Dealership intelligence','Identify profitable vehicles, compare branches and review capital trapped in ageing stock.','Current stock at 30 Sep 2026; completed sales by sale date.','One row per vehicle lifecycle. Sold vehicles require SaleDate >= PurchaseDate and nonzero SalePrice; unsold vehicles have blank SaleDate and zero SalePrice. Stock is a current snapshot, not historical inventory. No leads or conversion rate are inferred.',{'Vehicles':table(rows,'VehicleID','one vehicle lifecycle',dates=['PurchaseDate','SaleDate'],decimals=['PurchaseCost','Reconditioning','SalePrice'])},[('Vehicles','SaleDate','Calendar','Date')],measures,pages,{'Units Sold':len(sold),'Sales Revenue':rev,'Gross Profit':rev-cost,'Gross Margin':ratio(rev-cost,rev),'Stock Units':len(stock),'Stock Value':sum(r['PurchaseCost']+r['Reconditioning'] for r in stock),'Aged Stock Units':sum(r['DaysHeld']>90 for r in stock)})
 

@@ -26,7 +26,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Management detail'"
+                  "Value": "'Vehicle stock detail · filter Status to In Stock'"
                 }
               }
             },
@@ -140,6 +140,20 @@
                       "Entity": "Vehicles"
                     }
                   },
+                  "Property": "Status"
+                }
+              },
+              "queryRef": "Vehicles.Status",
+              "nativeQueryRef": "Status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Vehicles"
+                    }
+                  },
                   "Property": "Make"
                 }
               },
@@ -159,6 +173,34 @@
               },
               "queryRef": "Vehicles.Branch",
               "nativeQueryRef": "Branch"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Vehicles"
+                    }
+                  },
+                  "Property": "PurchaseDate"
+                }
+              },
+              "queryRef": "Vehicles.PurchaseDate",
+              "nativeQueryRef": "PurchaseDate"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Vehicles"
+                    }
+                  },
+                  "Property": "DaysHeld"
+                }
+              },
+              "queryRef": "Vehicles.DaysHeld",
+              "nativeQueryRef": "DaysHeld"
             },
             {
               "field": {

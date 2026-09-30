@@ -126,6 +126,7 @@ def build_report(p,folder):
 
 def build_docs(p,folder):
     links='\n'.join(f'- **{page["title"]}:** '+', '.join(page['cards']) for page in p['pages'])
+    notes='\n'.join(f'- **{page["title"]}:** {page["note"]}' for page in p['pages'] if page.get('note'))
     metrics='\n'.join(f'| {m["name"]} | {m["description"]} |' for m in p['measures'])
     write(folder/'README.md',f'''# {p['title']}
 
@@ -144,6 +145,8 @@ def build_docs(p,folder):
 ## Report pages
 
 {links}
+
+{('### Page guidance\n\n'+notes) if notes else ''}
 
 ## Business scope
 

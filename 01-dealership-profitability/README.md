@@ -18,6 +18,11 @@ Identify profitable vehicles, compare branches and review capital trapped in age
 - **Stock ageing:** Stock Units, Stock Value, Average Stock Age, Aged Stock Value
 - **Sales performance:** Units Sold, Sales Revenue, Gross Margin, Average Days to Sell
 
+### Page guidance
+
+- **Stock ageing:** Select In Stock in the Status filter to focus on current vehicles. Age band 91+ means more than 90 days.
+- **Sales performance:** Date filters apply to sale date. Stock is shown only on the other pages.
+
 ## Business scope
 
 Current stock at 30 Sep 2026; completed sales by sale date.
