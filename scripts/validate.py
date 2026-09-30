@@ -77,6 +77,15 @@ def business_checks(slug,data):
     elif n==5:
         unique(data['Trading'],['StoreID','Date'])
         require(all(0<=r['Transactions']<=r['Visitors'] and 0<=r['Refunds']<=r['GrossSales'] for r in data['Trading']),'Invalid retail conversion/refunds')
+        require(all(r['Target']>=0 and r['Units']>=0 and r['NetCOGS']>=0 for r in data['Trading']),'Invalid retail target, units or net cost')
+        store_ids={r['StoreID'] for r in data['Stores']}
+        trading_dates={r['Date'] for r in data['Trading']}
+        first=dt.date.fromisoformat(min(trading_dates)); last=dt.date.fromisoformat(max(trading_dates))
+        expected_dates={(first+dt.timedelta(days=i)).isoformat() for i in range((last-first).days+1)}
+        require(trading_dates==expected_dates,'Retail trading dates must cover a continuous daily period')
+        expected_pairs={(store_id,date) for store_id in store_ids for date in trading_dates}
+        actual_pairs={(r['StoreID'],r['Date']) for r in data['Trading']}
+        require(actual_pairs==expected_pairs,'Each store must have exactly one record for every trading date')
     elif n==6:
         unique(data['Advertising'],['ChannelID','Date'])
         require(all(0<=r['Refund']<=r['GrossSales']-r['Discount']+.001 for r in data['Orders']),'Refund exceeds discounted value')

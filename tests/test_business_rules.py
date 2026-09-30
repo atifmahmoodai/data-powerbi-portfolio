@@ -80,6 +80,16 @@ class BusinessRules(unittest.TestCase):
         self.assertIn('vs budget',budget['charts'][1][0])
         self.assertIn('inflow vs outflow',cash['charts'][1][0])
 
+    def test_retail_daily_records_cover_every_store(self):
+        d=self.data(5)
+        d['Trading'].pop()
+        with self.assertRaisesRegex(ValueError,'every trading date'):
+            business_checks('05',d)
+
+    def test_retail_conversion_definition_is_visible(self):
+        page=self.specs[4]['pages'][1]
+        self.assertIn('not unique customers',page['note'])
+
     def test_stock_ageing_detail_supports_actionable_stock_filtering(self):
         page=self.specs[0]['pages'][1]
         self.assertIn('Vehicles.Status',page['slicers'])

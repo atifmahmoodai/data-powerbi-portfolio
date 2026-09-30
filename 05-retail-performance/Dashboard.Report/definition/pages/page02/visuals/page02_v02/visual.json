@@ -122,7 +122,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "SYNTHETIC DEMO  |  PKR  |  180 trading days through 30 Sep 2026; one daily record per store.",
+                    "value": "SYNTHETIC DEMO  |  PKR  |  Conversion is purchase transactions divided by counted visits, not unique customers. Average basket is net sales per transaction.",
                     "textStyle": {
                       "fontSize": "10pt",
                       "color": "#526674"

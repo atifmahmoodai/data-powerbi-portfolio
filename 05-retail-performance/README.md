@@ -18,6 +18,11 @@ Compare stores on sales, footfall conversion, basket value, refunds and gross ma
 - **Footfall and baskets:** Visitors, Transactions, Average Basket, Units Sold
 - **Margin and refunds:** Gross Sales, Refunds, Refund Rate, Gross Margin
 
+### Page guidance
+
+- **Footfall and baskets:** Conversion is purchase transactions divided by counted visits, not unique customers. Average basket is net sales per transaction.
+- **Margin and refunds:** Net cost of sales already reflects the cost restored for returned inventory.
+
 ## Business scope
 
 180 trading days through 30 Sep 2026; one daily record per store.
