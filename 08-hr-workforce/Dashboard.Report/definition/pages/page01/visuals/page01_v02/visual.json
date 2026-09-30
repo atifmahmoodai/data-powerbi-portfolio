@@ -122,7 +122,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "SYNTHETIC DEMO  |  PKR  |  Jan–Sep 2026 department/month snapshots; headcount uses latest selected month.",
+                    "value": "SYNTHETIC DEMO  |  PKR  |  Headcount reflects the latest selected monthly snapshot; do not add headcount across months.",
                     "textStyle": {
                       "fontSize": "10pt",
                       "color": "#526674"

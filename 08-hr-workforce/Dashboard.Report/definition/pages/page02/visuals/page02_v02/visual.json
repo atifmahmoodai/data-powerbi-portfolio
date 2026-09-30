@@ -122,7 +122,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "SYNTHETIC DEMO  |  PKR  |  Jan–Sep 2026 department/month snapshots; headcount uses latest selected month.",
+                    "value": "SYNTHETIC DEMO  |  PKR  |  Period attrition is leavers divided by average monthly opening headcount; it is not annualized.",
                     "textStyle": {
                       "fontSize": "10pt",
                       "color": "#526674"

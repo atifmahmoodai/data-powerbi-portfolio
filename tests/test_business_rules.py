@@ -113,6 +113,17 @@ class BusinessRules(unittest.TestCase):
         self.assertIn('won and lost',page['charts'][1][0].lower())
         self.assertIn('creation month',page['charts'][1][0].lower())
 
+    def test_workforce_snapshots_have_full_department_month_coverage(self):
+        d=self.data(8)
+        d['Workforce'].pop()
+        with self.assertRaisesRegex(ValueError,'Inconsistent department periods'):
+            business_checks('08',d)
+
+    def test_workforce_hiring_chart_names_both_series(self):
+        page=self.specs[7]['pages'][1]
+        self.assertIn('hires and leavers',page['charts'][0][0].lower())
+        self.assertIn('hires and leavers',page['charts'][1][0].lower())
+
     def test_stock_ageing_detail_supports_actionable_stock_filtering(self):
         page=self.specs[0]['pages'][1]
         self.assertIn('Vehicles.Status',page['slicers'])

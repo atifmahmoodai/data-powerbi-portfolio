@@ -26,7 +26,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Hires by Department'"
+                  "Value": "'Hires and leavers by department'"
                 }
               }
             },

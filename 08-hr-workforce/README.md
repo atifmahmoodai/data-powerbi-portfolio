@@ -18,6 +18,12 @@ Monitor staffing, period attrition, attendance and payroll without double-counti
 - **Retention and hiring:** Average Opening Headcount, Hires, Net Hiring, Period Attrition
 - **Attendance and cost:** Payroll, Payroll per Employee Month, Absence Rate, Overtime Hours
 
+### Page guidance
+
+- **Workforce overview:** Headcount reflects the latest selected monthly snapshot; do not add headcount across months.
+- **Retention and hiring:** Period attrition is leavers divided by average monthly opening headcount; it is not annualized.
+- **Attendance and cost:** Synthetic department aggregates only. Apply access controls before loading identifiable employee records.
+
 ## Business scope
 
 Jan–Sep 2026 department/month snapshots; headcount uses latest selected month.

@@ -2,6 +2,7 @@
 from __future__ import annotations
 import argparse
 import base64
+import calendar
 import csv
 import datetime as dt
 import hashlib
@@ -113,11 +114,21 @@ def business_checks(slug,data):
         prev={}; coverage={}
         for r in sorted(data['Workforce'],key=lambda x:(x['DepartmentID'],x['Date'])):
             key=r['DepartmentID']; coverage.setdefault(key,set()).add(r['Date'])
+            require(all(r[c]>=0 for c in ['OpeningHeadcount','ClosingHeadcount','Hires','Leavers','ScheduledHours','AbsentHours','OvertimeHours','Payroll']),'Negative workforce metric')
             require(r['ClosingHeadcount']==r['OpeningHeadcount']+r['Hires']-r['Leavers'],'Headcount rollforward failed')
             require(0<=r['AbsentHours']<=r['ScheduledHours'],'Invalid absence hours')
+            snapshot_date=dt.date.fromisoformat(r['Date'])
+            require(snapshot_date.day==calendar.monthrange(snapshot_date.year,snapshot_date.month)[1],'Workforce snapshot date must be month end')
             if key in prev: require(prev[key]==r['OpeningHeadcount'],'Monthly headcount discontinuity')
             prev[key]=r['ClosingHeadcount']
         require(len({tuple(sorted(x)) for x in coverage.values()})==1,'Inconsistent department periods')
+        dates=next(iter(coverage.values()))
+        ordered=sorted(dt.date.fromisoformat(x) for x in dates)
+        expected=[]; year,month=ordered[0].year,ordered[0].month
+        while (year,month)<=(ordered[-1].year,ordered[-1].month):
+            expected.append(dt.date(year,month,calendar.monthrange(year,month)[1]).isoformat())
+            year,month=(year+1,1) if month==12 else (year,month+1)
+        require(dates==set(expected),'Workforce snapshots must cover every month in the period')
     elif n==9:
         unique(data['Performance'],['ProjectID','Date'])
         require(all(r['ActualHours']>=0 and r['CostBudget']>=0 for r in data['Performance']),'Invalid project hours/budget')
