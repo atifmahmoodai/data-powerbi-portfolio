@@ -18,6 +18,12 @@ Explain operating profit, budget variance and the difference between earned reve
 - **Budget performance:** Operating Profit, Budget Profit, Profit Variance, Operating Expense
 - **Cash movements:** Cash Inflow, Cash Outflow, Net Cash Movement, Operating Cash Movement
 
+### Page guidance
+
+- **Profit and loss:** Accrual profit is shown here. Customer receipts and payments are reported separately on the Cash movements page.
+- **Budget performance:** Positive profit variance means actual operating profit is above budget.
+- **Cash movements:** Cash movements only. Opening/closing balances and bank reconciliation are outside this release.
+
 ## Business scope
 
 Jan–Sep 2026 monthly accrual P&L and separate cash records.

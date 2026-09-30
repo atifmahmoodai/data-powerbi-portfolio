@@ -26,7 +26,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Cash Inflow by Month'"
+                  "Value": "'Cash inflow vs outflow by month'"
                 }
               }
             },

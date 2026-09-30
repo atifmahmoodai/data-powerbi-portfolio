@@ -73,6 +73,13 @@ class BusinessRules(unittest.TestCase):
         page=self.specs[2]['pages'][1]
         self.assertIn('Stock.AgeDays',page['table'])
 
+    def test_financial_comparison_charts_name_the_compared_series(self):
+        pnl, budget, cash=self.specs[3]['pages']
+        self.assertIn('Revenue and operating profit',pnl['charts'][1][0])
+        self.assertIn('vs budget',budget['charts'][0][0])
+        self.assertIn('vs budget',budget['charts'][1][0])
+        self.assertIn('inflow vs outflow',cash['charts'][1][0])
+
     def test_stock_ageing_detail_supports_actionable_stock_filtering(self):
         page=self.specs[0]['pages'][1]
         self.assertIn('Vehicles.Status',page['slicers'])
