@@ -54,6 +54,15 @@ def business_checks(slug,data):
     elif n==2:
         unique(data['Targets'],['AccountID','Date'])
         require(all(r['Units']>0 and r['Revenue']>=0 and r['Cost']>=0 for r in data['Sales']),'Invalid sale')
+        require(all(r['TargetRevenue']>=0 for r in data['Targets']),'Negative account target')
+        account_ids={r['AccountID'] for r in data['Accounts']}
+        target_dates={r['Date'] for r in data['Targets']}
+        first=dt.date.fromisoformat(min(target_dates)); last=dt.date.fromisoformat(max(target_dates))
+        expected_dates={(first+dt.timedelta(days=i)).isoformat() for i in range((last-first).days+1)}
+        require(target_dates==expected_dates,'Target dates must cover a continuous daily period')
+        expected_pairs={(account_id,date) for account_id in account_ids for date in target_dates}
+        actual_pairs={(r['AccountID'],r['Date']) for r in data['Targets']}
+        require(actual_pairs==expected_pairs,'Each account must have exactly one target for every target date')
     elif n==3:
         for r in data['Stock']:
             require(0<=r['Reserved']<=r['OnHand'] and r['UnitCost']>=0,'Invalid stock')

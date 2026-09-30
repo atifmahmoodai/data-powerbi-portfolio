@@ -18,6 +18,10 @@ Compare actual sales against targets, understand margins and evaluate customers 
 - **Customers and margins:** Active Customers, Sales Transactions, Average Transaction, Gross Margin
 - **Sales team performance:** Units Sold, Revenue, Gross Profit, Target Attainment
 
+### Page guidance
+
+- **Revenue and targets:** Targets are daily per account. Salesperson filters use current account ownership, not historical assignments.
+
 ## Business scope
 
 01 Oct 2025–30 Sep 2026 transactions; daily account targets.

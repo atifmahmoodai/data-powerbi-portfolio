@@ -55,6 +55,12 @@ class BusinessRules(unittest.TestCase):
             expected='0–30' if row['DaysHeld']<=30 else '31–60' if row['DaysHeld']<=60 else '61–90' if row['DaysHeld']<=90 else '91+'
             self.assertEqual(row['AgeBand'],expected)
 
+    def test_sales_targets_cover_every_account_on_every_target_date(self):
+        d=self.data(2)
+        d['Targets'].pop()
+        with self.assertRaisesRegex(ValueError,'every target date'):
+            business_checks('02',d)
+
     def test_stock_ageing_detail_supports_actionable_stock_filtering(self):
         page=self.specs[0]['pages'][1]
         self.assertIn('Vehicles.Status',page['slicers'])
