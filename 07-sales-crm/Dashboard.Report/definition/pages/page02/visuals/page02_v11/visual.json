@@ -26,7 +26,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Won Deals by Month'"
+                  "Value": "'Won and lost deals by creation month'"
                 }
               }
             },

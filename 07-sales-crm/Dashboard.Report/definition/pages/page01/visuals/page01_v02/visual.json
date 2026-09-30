@@ -122,7 +122,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "SYNTHETIC DEMO  |  PKR  |  Creation-date cohorts; current stage/activity snapshot at 30 Sep 2026.",
+                    "value": "SYNTHETIC DEMO  |  PKR  |  Weighted pipeline applies stage probabilities as a planning heuristic, not a calibrated forecast.",
                     "textStyle": {
                       "fontSize": "10pt",
                       "color": "#526674"

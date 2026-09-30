@@ -18,6 +18,12 @@ Review open pipeline, cohort win rates, deal velocity and stale follow-up opport
 - **Wins and conversion:** Won Deals, Won Value, Win Rate, Average Sales Cycle
 - **Follow-up priorities:** Stale Open Deals, Stale Pipeline, Open Opportunities, Weighted Pipeline
 
+### Page guidance
+
+- **Pipeline overview:** Weighted pipeline applies stage probabilities as a planning heuristic, not a calibrated forecast.
+- **Wins and conversion:** Monthly results use opportunity creation date. Win rate excludes open opportunities.
+- **Follow-up priorities:** Stale means no recorded activity for more than 14 days as of 30 Sep 2026.
+
 ## Business scope
 
 Creation-date cohorts; current stage/activity snapshot at 30 Sep 2026.

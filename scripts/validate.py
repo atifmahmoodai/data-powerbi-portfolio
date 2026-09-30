@@ -100,9 +100,14 @@ def business_checks(slug,data):
         require(actual_pairs==expected_pairs,'Each channel must have one ad-spend record for every advertising date')
     elif n==7:
         for r in data['Opportunities']:
-            require(0<=r['Probability']<=1,'Invalid stage probability')
+            require(0<=r['Probability']<=1 and r['Amount']>=0,'Invalid stage probability or amount')
+            require(r['Stage'] in ['New','Qualified','Proposal','Negotiation','Won','Lost'],'Invalid opportunity stage')
             require(bool(r['ClosedDate'])==(r['Stage'] in ['Won','Lost']),'Opportunity close mismatch')
-            if r['ClosedDate']: require(r['CreatedDate']<=r['ClosedDate']<=ASOF.isoformat(),'Invalid opportunity dates')
+            require(r['CreatedDate']<=r['LastActivityDate']<=ASOF.isoformat(),'Invalid last-activity date')
+            require(bool(r['IsOpen'])==(r['Stage'] not in ['Won','Lost']),'Opportunity open flag/stage mismatch')
+            if r['ClosedDate']:
+                require(r['CreatedDate']<=r['ClosedDate']<=ASOF.isoformat(),'Invalid opportunity dates')
+                require(r['CycleDays']==(dt.date.fromisoformat(r['ClosedDate'])-dt.date.fromisoformat(r['CreatedDate'])).days,'Opportunity cycle-time mismatch')
     elif n==8:
         unique(data['Workforce'],['DepartmentID','Date'])
         prev={}; coverage={}

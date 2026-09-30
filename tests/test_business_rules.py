@@ -102,6 +102,17 @@ class BusinessRules(unittest.TestCase):
         self.assertIn('ad spend and contribution',marketing['charts'][1][0].lower())
         self.assertIn('not attributed ROAS',marketing['note'])
 
+    def test_crm_activity_date_cannot_precede_creation(self):
+        d=self.data(7)
+        d['Opportunities'][0]['LastActivityDate']='2025-01-01'
+        with self.assertRaisesRegex(ValueError,'last-activity date'):
+            business_checks('07',d)
+
+    def test_crm_cohort_chart_labels_wins_and_losses(self):
+        page=self.specs[6]['pages'][1]
+        self.assertIn('won and lost',page['charts'][1][0].lower())
+        self.assertIn('creation month',page['charts'][1][0].lower())
+
     def test_stock_ageing_detail_supports_actionable_stock_filtering(self):
         page=self.specs[0]['pages'][1]
         self.assertIn('Vehicles.Status',page['slicers'])
