@@ -26,7 +26,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Ad Spend by Month'"
+                  "Value": "'Ad spend and contribution after ads by month'"
                 }
               }
             },

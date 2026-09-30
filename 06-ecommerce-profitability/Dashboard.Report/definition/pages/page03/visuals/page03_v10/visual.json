@@ -26,7 +26,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Refunds by Channel'"
+                  "Value": "'Refunds by channel'"
                 }
               }
             },

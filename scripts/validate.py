@@ -88,8 +88,16 @@ def business_checks(slug,data):
         require(actual_pairs==expected_pairs,'Each store must have exactly one record for every trading date')
     elif n==6:
         unique(data['Advertising'],['ChannelID','Date'])
-        require(all(0<=r['Refund']<=r['GrossSales']-r['Discount']+.001 for r in data['Orders']),'Refund exceeds discounted value')
+        require(all(r['GrossSales']>=0 and r['Discount']>=0 and 0<=r['Refund']<=r['GrossSales']-r['Discount']+.001 and r['NetCOGS']>=0 and r['ShippingCost']>=0 and r['PaymentFee']>=0 and r['FulfilmentCost']>=0 for r in data['Orders']),'Invalid order revenue, refund or cost')
         require(all(r['AdSpend']>=0 for r in data['Advertising']),'Negative ad spend')
+        channel_ids={r['ChannelID'] for r in data['Channels']}
+        ad_dates={r['Date'] for r in data['Advertising']}
+        first=dt.date.fromisoformat(min(ad_dates)); last=dt.date.fromisoformat(max(ad_dates))
+        expected_dates={(first+dt.timedelta(days=i)).isoformat() for i in range((last-first).days+1)}
+        require(ad_dates==expected_dates,'Advertising dates must cover a continuous daily period')
+        expected_pairs={(channel_id,date) for channel_id in channel_ids for date in ad_dates}
+        actual_pairs={(r['ChannelID'],r['Date']) for r in data['Advertising']}
+        require(actual_pairs==expected_pairs,'Each channel must have one ad-spend record for every advertising date')
     elif n==7:
         for r in data['Opportunities']:
             require(0<=r['Probability']<=1,'Invalid stage probability')

@@ -18,6 +18,12 @@ Expose channel contribution after discounts, refunds, fulfilment and advertising
 - **Marketing economics:** Ad Spend, Revenue to Ad Spend, Contribution before Ads, Contribution after Ads
 - **Discounts and returns:** Gross Sales, Discounts, Refunds, Refund Rate
 
+### Page guidance
+
+- **Profitability overview:** Net AOV uses all placed cohort orders, including fully refunded orders. Refunds are assigned to the original order date.
+- **Marketing economics:** Revenue to ad spend is blended across paid media; it is not attributed ROAS or proof of advertising lift.
+- **Discounts and returns:** Refunds are attributed to the original order date. Net cost reflects recoverable returned inventory.
+
 ## Business scope
 
 180-day order cohorts through 30 Sep 2026; refunds attributed to original order date.

@@ -26,7 +26,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Contribution after Ads by Channel'"
+                  "Value": "'Contribution after ads by channel'"
                 }
               }
             },

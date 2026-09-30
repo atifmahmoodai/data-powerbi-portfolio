@@ -122,7 +122,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "SYNTHETIC DEMO  |  PKR  |  180-day order cohorts through 30 Sep 2026; refunds attributed to original order date.",
+                    "value": "SYNTHETIC DEMO  |  PKR  |  Net AOV uses all placed cohort orders, including fully refunded orders. Refunds are assigned to the original order date.",
                     "textStyle": {
                       "fontSize": "10pt",
                       "color": "#526674"

@@ -90,6 +90,18 @@ class BusinessRules(unittest.TestCase):
         page=self.specs[4]['pages'][1]
         self.assertIn('not unique customers',page['note'])
 
+    def test_advertising_spend_covers_every_channel_and_date(self):
+        d=self.data(6)
+        d['Advertising'].pop()
+        with self.assertRaisesRegex(ValueError,'every advertising date'):
+            business_checks('06',d)
+
+    def test_ecommerce_comparison_chart_names_both_series(self):
+        overview, marketing, _=self.specs[5]['pages']
+        self.assertIn('net revenue and contribution',overview['charts'][1][0].lower())
+        self.assertIn('ad spend and contribution',marketing['charts'][1][0].lower())
+        self.assertIn('not attributed ROAS',marketing['note'])
+
     def test_stock_ageing_detail_supports_actionable_stock_filtering(self):
         page=self.specs[0]['pages'][1]
         self.assertIn('Vehicles.Status',page['slicers'])
