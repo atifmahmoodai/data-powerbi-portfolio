@@ -124,6 +124,18 @@ class BusinessRules(unittest.TestCase):
         self.assertIn('hires and leavers',page['charts'][0][0].lower())
         self.assertIn('hires and leavers',page['charts'][1][0].lower())
 
+    def test_project_performance_covers_every_project_month(self):
+        d=self.data(9)
+        d['Performance'].pop()
+        with self.assertRaisesRegex(ValueError,'every reporting month'):
+            business_checks('09',d)
+
+    def test_project_comparison_chart_titles_name_both_series(self):
+        profitability, delivery, billing=self.specs[8]['pages']
+        self.assertIn('recognized revenue and delivery cost',profitability['charts'][1][0].lower())
+        self.assertIn('vs budget',delivery['charts'][0][0].lower())
+        self.assertIn('invoices and collections',billing['charts'][1][0].lower())
+
     def test_stock_ageing_detail_supports_actionable_stock_filtering(self):
         page=self.specs[0]['pages'][1]
         self.assertIn('Vehicles.Status',page['slicers'])

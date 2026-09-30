@@ -18,6 +18,12 @@ Find unprofitable engagements, budget overruns and differences between project r
 - **Delivery and budgets:** Delivery Cost, Cost Budget, Hours Variance, Effective Revenue per Hour
 - **Billing and collections:** Invoiced, Collected, Invoice Cash Gap, Recognized Revenue
 
+### Page guidance
+
+- **Portfolio profitability:** Recognized revenue is accrual-based and separate from invoicing and cash collection.
+- **Delivery and budgets:** Cost budget is allocated by month. Positive hours variance means actual hours exceeded plan.
+- **Billing and collections:** Invoice cash gap is a period comparison, not an overdue receivables balance.
+
 ## Business scope
 
 Jan–Sep 2026 monthly project performance.

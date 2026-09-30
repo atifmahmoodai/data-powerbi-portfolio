@@ -26,7 +26,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Delivery Cost by Manager'"
+                  "Value": "'Delivery cost vs budget by manager'"
                 }
               }
             },

@@ -131,7 +131,18 @@ def business_checks(slug,data):
         require(dates==set(expected),'Workforce snapshots must cover every month in the period')
     elif n==9:
         unique(data['Performance'],['ProjectID','Date'])
-        require(all(r['ActualHours']>=0 and r['CostBudget']>=0 for r in data['Performance']),'Invalid project hours/budget')
+        require(all(all(r[c]>=0 for c in ['RecognizedRevenue','LaborCost','SubcontractCost','Expenses','ActualHours','PlannedHours','CostBudget','Invoiced','Collected']) for r in data['Performance']),'Negative project metric')
+        project_ids={r['ProjectID'] for r in data['Projects']}
+        period_dates={r['Date'] for r in data['Performance']}
+        first=dt.date.fromisoformat(min(period_dates)); last=dt.date.fromisoformat(max(period_dates))
+        expected_dates=[]; year,month=first.year,first.month
+        while (year,month)<=(last.year,last.month):
+            expected_dates.append(dt.date(year,month,1).isoformat())
+            year,month=(year+1,1) if month==12 else (year,month+1)
+        require(period_dates==set(expected_dates),'Project reporting periods must cover a continuous month range')
+        expected_pairs={(project_id,date) for project_id in project_ids for date in period_dates}
+        actual_pairs={(r['ProjectID'],r['Date']) for r in data['Performance']}
+        require(actual_pairs==expected_pairs,'Each project must have exactly one record for every reporting month')
     else:
         for r in data['Jobs']:
             complete=r['Status']=='Completed'

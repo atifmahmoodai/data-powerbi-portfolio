@@ -26,7 +26,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Invoiced by Client'"
+                  "Value": "'Invoices and collections by client'"
                 }
               }
             },

@@ -122,7 +122,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "SYNTHETIC DEMO  |  PKR  |  Jan–Sep 2026 monthly project performance.",
+                    "value": "SYNTHETIC DEMO  |  PKR  |  Cost budget is allocated by month. Positive hours variance means actual hours exceeded plan.",
                     "textStyle": {
                       "fontSize": "10pt",
                       "color": "#526674"
