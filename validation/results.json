@@ -1,0 +1,126 @@
+{
+  "status": "PASS",
+  "schemaValidation": true,
+  "schemaRevision": "24ce2795f9fb15655f61185246b6578536ca43f8",
+  "projects": [
+    {
+      "project": "01-dealership-profitability",
+      "pages": 3,
+      "visuals": 36,
+      "measures": 12,
+      "tables": 3,
+      "rows": 911,
+      "schemaFiles": 45,
+      "reconciledMetrics": 7
+    },
+    {
+      "project": "02-executive-sales",
+      "pages": 3,
+      "visuals": 36,
+      "measures": 14,
+      "tables": 5,
+      "rows": 12978,
+      "schemaFiles": 45,
+      "reconciledMetrics": 6
+    },
+    {
+      "project": "03-inventory-stock-ageing",
+      "pages": 3,
+      "visuals": 36,
+      "measures": 12,
+      "tables": 3,
+      "rows": 289,
+      "schemaFiles": 45,
+      "reconciledMetrics": 6
+    },
+    {
+      "project": "04-financial-pnl-cashflow",
+      "pages": 3,
+      "visuals": 36,
+      "measures": 14,
+      "tables": 5,
+      "rows": 950,
+      "schemaFiles": 45,
+      "reconciledMetrics": 6
+    },
+    {
+      "project": "05-retail-performance",
+      "pages": 3,
+      "visuals": 36,
+      "measures": 14,
+      "tables": 4,
+      "rows": 2360,
+      "schemaFiles": 45,
+      "reconciledMetrics": 6
+    },
+    {
+      "project": "06-ecommerce-profitability",
+      "pages": 3,
+      "visuals": 36,
+      "measures": 14,
+      "tables": 5,
+      "rows": 2174,
+      "schemaFiles": 45,
+      "reconciledMetrics": 6
+    },
+    {
+      "project": "07-sales-crm",
+      "pages": 3,
+      "visuals": 36,
+      "measures": 12,
+      "tables": 4,
+      "rows": 1160,
+      "schemaFiles": 45,
+      "reconciledMetrics": 6
+    },
+    {
+      "project": "08-hr-workforce",
+      "pages": 3,
+      "visuals": 36,
+      "measures": 12,
+      "tables": 4,
+      "rows": 781,
+      "schemaFiles": 45,
+      "reconciledMetrics": 6
+    },
+    {
+      "project": "09-project-profitability",
+      "pages": 3,
+      "visuals": 36,
+      "measures": 16,
+      "tables": 4,
+      "rows": 911,
+      "schemaFiles": 45,
+      "reconciledMetrics": 6
+    },
+    {
+      "project": "10-operations-kpis",
+      "pages": 3,
+      "visuals": 36,
+      "measures": 13,
+      "tables": 4,
+      "rows": 1457,
+      "schemaFiles": 45,
+      "reconciledMetrics": 7
+    }
+  ],
+  "checks": [
+    "CSV headers and types",
+    "primary/foreign keys",
+    "business invariants",
+    "embedded demo parity",
+    "fixture hashes",
+    "DAX reference names (not execution)",
+    "visual bindings",
+    "canvas bounds and overlap",
+    "CSV reconciliation totals",
+    "Microsoft PBIP/PBIR/PBISM JSON schemas"
+  ],
+  "notExecuted": [
+    "Power BI Desktop open",
+    "Power Query refresh",
+    "DAX engine evaluation",
+    "Native visual rendering",
+    "Service deployment or refresh"
+  ]
+}

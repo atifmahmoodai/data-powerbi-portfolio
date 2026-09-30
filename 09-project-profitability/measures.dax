@@ -1,0 +1,63 @@
+// Accrual revenue recognized for the reporting period.
+Recognized Revenue =
+SUM(Performance[RecognizedRevenue])
+
+// Sum of LaborCost at the recorded grain.
+Labor Cost =
+SUM(Performance[LaborCost])
+
+// Sum of SubcontractCost at the recorded grain.
+Subcontract Cost =
+SUM(Performance[SubcontractCost])
+
+// Sum of Expenses at the recorded grain.
+Expenses =
+SUM(Performance[Expenses])
+
+// Direct project delivery cost excluding general overhead.
+Delivery Cost =
+[Labor Cost] + [Subcontract Cost] + [Expenses]
+
+// Recognized revenue less direct delivery cost.
+Project Profit =
+[Recognized Revenue] - [Delivery Cost]
+
+// Project profit / recognized revenue.
+Project Margin =
+DIVIDE([Project Profit], [Recognized Revenue])
+
+// Monthly allocated direct delivery budget.
+Cost Budget =
+SUM(Performance[CostBudget])
+
+// Allocated budget less actual cost; positive is under budget.
+Budget Remaining =
+[Cost Budget] - [Delivery Cost]
+
+// Sum of ActualHours at the recorded grain.
+Actual Hours =
+SUM(Performance[ActualHours])
+
+// Sum of PlannedHours at the recorded grain.
+Planned Hours =
+SUM(Performance[PlannedHours])
+
+// Positive means more hours consumed than planned.
+Hours Variance =
+[Actual Hours] - [Planned Hours]
+
+// Recognized revenue per actual delivery hour.
+Effective Revenue per Hour =
+DIVIDE([Recognized Revenue], [Actual Hours])
+
+// Sum of Invoiced at the recorded grain.
+Invoiced =
+SUM(Performance[Invoiced])
+
+// Sum of Collected at the recorded grain.
+Collected =
+SUM(Performance[Collected])
+
+// Selected-period invoices minus collections. Not accounts-receivable balance or overdue debt.
+Invoice Cash Gap =
+[Invoiced] - [Collected]

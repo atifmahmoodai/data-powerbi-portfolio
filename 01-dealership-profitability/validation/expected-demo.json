@@ -1,0 +1,13 @@
+{
+  "method": "Independent Python reference totals; NOT evaluated by the DAX engine",
+  "scope": "All filters cleared; entire supplied period or snapshot",
+  "metrics": {
+    "Units Sold": 135,
+    "Sales Revenue": 719140000,
+    "Gross Profit": 50050000,
+    "Gross Margin": 0.06959701866117864,
+    "Stock Units": 45,
+    "Stock Value": 222900000,
+    "Aged Stock Units": 39
+  }
+}

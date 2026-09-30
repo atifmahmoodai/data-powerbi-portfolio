@@ -1,0 +1,9 @@
+EVALUATE
+ROW(
+    "Net Sales", [Net Sales],
+    "Gross Profit", [Gross Profit],
+    "Visitors", [Visitors],
+    "Transactions", [Transactions],
+    "Store Conversion", [Store Conversion],
+    "Average Basket", [Average Basket]
+)

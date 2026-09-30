@@ -1,0 +1,9 @@
+EVALUATE
+ROW(
+    "Headcount", [Headcount],
+    "Hires", [Hires],
+    "Leavers", [Leavers],
+    "Period Attrition", [Period Attrition],
+    "Absence Rate", [Absence Rate],
+    "Payroll", [Payroll]
+)

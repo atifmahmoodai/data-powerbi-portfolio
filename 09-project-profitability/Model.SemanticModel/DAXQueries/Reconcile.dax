@@ -1,0 +1,9 @@
+EVALUATE
+ROW(
+    "Recognized Revenue", [Recognized Revenue],
+    "Delivery Cost", [Delivery Cost],
+    "Project Profit", [Project Profit],
+    "Project Margin", [Project Margin],
+    "Budget Remaining", [Budget Remaining],
+    "Invoice Cash Gap", [Invoice Cash Gap]
+)

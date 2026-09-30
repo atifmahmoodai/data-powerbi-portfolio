@@ -1,0 +1,55 @@
+// Sum of GrossSales at the recorded grain.
+Gross Sales =
+SUM(Orders[GrossSales])
+
+// Sum of Discount at the recorded grain.
+Discounts =
+SUM(Orders[Discount])
+
+// Sum of Refund at the recorded grain.
+Refunds =
+SUM(Orders[Refund])
+
+// Revenue after discounts and refunds, before tax.
+Net Revenue =
+[Gross Sales] - [Discounts] - [Refunds]
+
+// Cost after recoverable returned goods are restored.
+Net COGS =
+SUM(Orders[NetCOGS])
+
+// Shipping, payment and fulfilment expenses including nonrefundable return costs.
+Variable Costs =
+SUM(Orders[ShippingCost]) + SUM(Orders[PaymentFee]) + SUM(Orders[FulfilmentCost])
+
+// Contribution after order-level costs, before marketing.
+Contribution before Ads =
+[Net Revenue] - [Net COGS] - [Variable Costs]
+
+// Daily channel spend, stored separately to avoid order duplication.
+Ad Spend =
+SUM(Advertising[AdSpend])
+
+// Contribution after paid media; not accounting net profit.
+Contribution after Ads =
+[Contribution before Ads] - [Ad Spend]
+
+// Post-ad contribution / net revenue.
+Contribution Margin =
+DIVIDE([Contribution after Ads], [Net Revenue])
+
+// All placed orders in the supplied cohort, including refunded orders.
+Order Count =
+COUNTROWS(Orders)
+
+// Net revenue / all cohort orders.
+Net AOV =
+DIVIDE([Net Revenue], [Order Count])
+
+// Blended net revenue / all paid media spend; not attributed ROAS.
+Revenue to Ad Spend =
+DIVIDE([Net Revenue], [Ad Spend])
+
+// Refund amount / discounted sales.
+Refund Rate =
+DIVIDE([Refunds], [Gross Sales] - [Discounts])

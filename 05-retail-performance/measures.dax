@@ -1,0 +1,55 @@
+// Sum of GrossSales at the recorded grain.
+Gross Sales =
+SUM(Trading[GrossSales])
+
+// Sum of Refunds at the recorded grain.
+Refunds =
+SUM(Trading[Refunds])
+
+// Gross sales less refund amounts, excluding tax.
+Net Sales =
+[Gross Sales] - [Refunds]
+
+// Cost of sold goods less inventory cost restored by returns.
+Net Cost of Sales =
+SUM(Trading[NetCOGS])
+
+// Net sales less net COGS.
+Gross Profit =
+[Net Sales] - [Net Cost of Sales]
+
+// Gross profit / net sales.
+Gross Margin =
+DIVIDE([Gross Profit], [Net Sales])
+
+// Sum of Visitors at the recorded grain.
+Visitors =
+SUM(Trading[Visitors])
+
+// Sum of Transactions at the recorded grain.
+Transactions =
+SUM(Trading[Transactions])
+
+// Gross units sold; return quantities are not supplied.
+Units Sold =
+SUM(Trading[Units])
+
+// Purchase transactions / counted store visits; not unique customer conversion.
+Store Conversion =
+DIVIDE([Transactions], [Visitors])
+
+// Net sales / purchase transactions.
+Average Basket =
+DIVIDE([Net Sales], [Transactions])
+
+// Daily store net sales target.
+Sales Target =
+SUM(Trading[Target])
+
+// Net sales / target.
+Target Attainment =
+DIVIDE([Net Sales], [Sales Target])
+
+// Refund amount / gross sales.
+Refund Rate =
+DIVIDE([Refunds], [Gross Sales])

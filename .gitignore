@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+**/.pbi/
+*.pbix
+*.pbit
+data/private/
+*.env

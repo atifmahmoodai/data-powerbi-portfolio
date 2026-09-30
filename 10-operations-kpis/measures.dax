@@ -1,0 +1,51 @@
+// Jobs in selected creation-date cohorts.
+Jobs Created =
+COUNTROWS(Jobs)
+
+// Currently completed jobs in selected creation cohorts.
+Completed Jobs =
+CALCULATE(COUNTROWS(Jobs), KEEPFILTERS(Jobs[Status] = "Completed"))
+
+// Current unfinished jobs in selected creation cohorts.
+Open Jobs =
+CALCULATE(COUNTROWS(Jobs), KEEPFILTERS(Jobs[Status] = "Open"))
+
+// Completed jobs / created jobs in cohort; not daily throughput.
+Completion Rate =
+DIVIDE([Completed Jobs], [Jobs Created])
+
+// Completed jobs by due date.
+On Time Jobs =
+SUM(Jobs[OnTime])
+
+// Completed on-time jobs / all completed jobs.
+On Time Rate =
+DIVIDE([On Time Jobs], [Completed Jobs])
+
+// Mean creation-to-completion days for finished work.
+Average Cycle Days =
+CALCULATE(AVERAGE(Jobs[CycleDays]), KEEPFILTERS(Jobs[Status] = "Completed"))
+
+// Open jobs whose due date precedes the demo snapshot date.
+Overdue Open Jobs =
+CALCULATE([Open Jobs], KEEPFILTERS(Jobs[DueDate] < DATE(2026,9,30)))
+
+// Completed jobs flagged for rework.
+Rework Jobs =
+SUM(Jobs[Rework])
+
+// Reworked completed jobs / completed jobs.
+Rework Rate =
+DIVIDE([Rework Jobs], [Completed Jobs])
+
+// Completed without rework / all completed jobs.
+First Pass Yield =
+DIVIDE([Completed Jobs] - [Rework Jobs], [Completed Jobs])
+
+// Recorded cost incurred on all selected jobs; open jobs included.
+Recorded Cost =
+SUM(Jobs[Cost])
+
+// Cost associated with completed jobs / completed count.
+Cost per Completed Job =
+DIVIDE(CALCULATE(SUM(Jobs[Cost]), KEEPFILTERS(Jobs[Status] = "Completed")), [Completed Jobs])

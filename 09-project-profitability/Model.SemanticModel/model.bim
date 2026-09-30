@@ -1,0 +1,443 @@
+{
+  "name": "Model",
+  "compatibilityLevel": 1567,
+  "model": {
+    "culture": "en-US",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Projects",
+        "lineageTag": "ca6746f0-0864-5db0-ab24-bfdbf626945f",
+        "columns": [
+          {
+            "name": "ProjectID",
+            "dataType": "string",
+            "sourceColumn": "ProjectID",
+            "summarizeBy": "none",
+            "lineageTag": "5a58bc4b-790a-5171-9bf7-55f2250a596c",
+            "isHidden": true
+          },
+          {
+            "name": "Project",
+            "dataType": "string",
+            "sourceColumn": "Project",
+            "summarizeBy": "none",
+            "lineageTag": "bbe7d0b6-2a1d-567a-a1b3-4378ea89228e"
+          },
+          {
+            "name": "Client",
+            "dataType": "string",
+            "sourceColumn": "Client",
+            "summarizeBy": "none",
+            "lineageTag": "b371be03-de85-5e4b-a9a7-eaa781462f47"
+          },
+          {
+            "name": "Manager",
+            "dataType": "string",
+            "sourceColumn": "Manager",
+            "summarizeBy": "none",
+            "lineageTag": "35fe2581-dc15-516b-b65b-7770eb7bc7ac"
+          },
+          {
+            "name": "Service",
+            "dataType": "string",
+            "sourceColumn": "Service",
+            "summarizeBy": "none",
+            "lineageTag": "b3fd29fb-fd83-5afd-b65c-159876cbd54f"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Projects",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Demo = Binary.Decompress(Binary.FromText(\"hZJNbsMgFIT3OYUPwMID+CfLKMmii0qWcgJk0chVDJJDWvX2JY2wTGfB7unBJ4bRNyz+047h7SSG1ySOt8m6IN6NM1e7iItdvqbR7oa6hjjZ2Vdnd40nc7xUxdXreiUTEKeDM7efMI33JyQZkglSK6TExX+Eb7P8PaSYUYnRK6PF4RH8bMLk3ZPSTOlENSuFPF7DUJOgdvOnbbyWmTYx2Hwpj9cx1XF7Oo/XM9Rze8ji7ZnZc3syj4eaqLii9lQWD2wEwO3pbTywEJDcHv7FYyWgSu6BjYAuuAcWAk3RPbASaEvugY1AV3APLAT6gnu/\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Demo else if DataMode = \"Folder\" then File.Contents(DataFolder & \"/Projects.csv\") else error \"DataMode must be Demo or Folder\",",
+                "    Parsed = Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Parsed, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"ProjectID\", type text}, {\"Project\", type text}, {\"Client\", type text}, {\"Manager\", type text}, {\"Service\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "lineageTag": "08d941e1-cb77-54b4-a0ae-5a816048a89e",
+        "columns": [
+          {
+            "name": "PeriodID",
+            "dataType": "string",
+            "sourceColumn": "PeriodID",
+            "summarizeBy": "none",
+            "lineageTag": "f66017f4-a056-5e9c-984b-8c54b9b3ac66",
+            "isHidden": true
+          },
+          {
+            "name": "ProjectID",
+            "dataType": "string",
+            "sourceColumn": "ProjectID",
+            "summarizeBy": "none",
+            "lineageTag": "0af0e93a-23b2-540a-a761-5771da828b91",
+            "isHidden": true
+          },
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Date",
+            "summarizeBy": "none",
+            "lineageTag": "8e7fbec7-d536-5287-866f-726273920c78",
+            "formatString": "dd MMM yyyy"
+          },
+          {
+            "name": "RecognizedRevenue",
+            "dataType": "decimal",
+            "sourceColumn": "RecognizedRevenue",
+            "summarizeBy": "none",
+            "lineageTag": "dd85ca20-8ebc-55e6-b358-11fea9493afd"
+          },
+          {
+            "name": "LaborCost",
+            "dataType": "decimal",
+            "sourceColumn": "LaborCost",
+            "summarizeBy": "none",
+            "lineageTag": "5874da61-fe3f-5fcb-be8e-ca3e9281a4c8"
+          },
+          {
+            "name": "SubcontractCost",
+            "dataType": "decimal",
+            "sourceColumn": "SubcontractCost",
+            "summarizeBy": "none",
+            "lineageTag": "f437db2f-593e-537c-a73f-9264faa49129"
+          },
+          {
+            "name": "Expenses",
+            "dataType": "decimal",
+            "sourceColumn": "Expenses",
+            "summarizeBy": "none",
+            "lineageTag": "ac589ee3-dae8-5046-8b4b-309f997af3a6"
+          },
+          {
+            "name": "ActualHours",
+            "dataType": "int64",
+            "sourceColumn": "ActualHours",
+            "summarizeBy": "none",
+            "lineageTag": "466c122e-a49f-5b73-bd72-ea7e25a01c91"
+          },
+          {
+            "name": "PlannedHours",
+            "dataType": "int64",
+            "sourceColumn": "PlannedHours",
+            "summarizeBy": "none",
+            "lineageTag": "80fd2618-a746-528f-8ff3-2bd94e234df8"
+          },
+          {
+            "name": "CostBudget",
+            "dataType": "decimal",
+            "sourceColumn": "CostBudget",
+            "summarizeBy": "none",
+            "lineageTag": "5c8bb077-8388-5fcf-a006-56cfcdbe1b6a"
+          },
+          {
+            "name": "Invoiced",
+            "dataType": "decimal",
+            "sourceColumn": "Invoiced",
+            "summarizeBy": "none",
+            "lineageTag": "1af38d49-a5a8-5198-84d3-fc583820e7a6"
+          },
+          {
+            "name": "Collected",
+            "dataType": "decimal",
+            "sourceColumn": "Collected",
+            "summarizeBy": "none",
+            "lineageTag": "62d5fa3b-b37a-5f98-8912-79c2eff145b4"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Performance",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Demo = Binary.Decompress(Binary.FromText(\"hVrdjpy3Db3fZ5l8EH8kSpdN00UD9MJIn8CxF0EKY7fwT1D06UtJ1IgcK6gv1t5Ew5FE8vCQR+9ePv/+9vHnn27vPr/96+XDV/3XT++/vtx+efnw9tvr7/99+fjLyx8vr99ebv94/+vb57++ffl6++e3Xz+8vX79/P7D1/H73/7z75fXLy9fbn/58PXb+09/f/v2+cvt3af3r68vH+cvfdmP3z7+9vL19vPrH2+/f3j5qP/t0yf9wpePT89we5cS3DBh+SHBD/2fLemfG1Ku+peMX+r4CQQ34HTjPFeshcJSL5GnZ+zG8GAMMm0z9jOfbFVuVK9GT8/UbZG3xfODVAS7yfELz48l9sbWQuFc68X56Zm7MQ7G0DbP82TzE3bMFKyhfVNGkSvD03Pu1rK3VuZukCvfD2gnp+qN2UJmQqGL+em5dGMl3FmZm2Hhdc51XGgUbq3YIUBqu1J7epZuTYK16UFq/Rw3dOdEaMGYmM1aGa5Wn55rN1aDsXnfBNSNzW+fP0GCC2wh5KrOugifnls31ryxbDc0TnFboSbh8m1NLojcLlFXQlJDkMKu7FTYePtyfh5qvDC0a9TDtgs0zKAnAMApzqDUuxvtc1IOccaQ1a1XK2qtZwCEDCD7KLZyT6d5ZYLemK3DIgnahX1rPQUgpACUcFL0oRFPaisBUSpcqN6EngQQkoDMnShlmzPP1bg7SzTN48oXqj+hZwHkE3LUti9u7eaMHEClXE1TCnoaQEiDMhcR9Wu2nBLbW3CDLeTWao8RzQLoaQAhDdiCrY29WYzY/UHYnK2kkgh5xkhPBAiJkO2jPG6OnB/ivdk6PWbWe+NurHnExWHM0KMUvm/K3McBPWwht1xavrKeFJOH3GnNXEVpWzMvYLTGK4pzoktdiuAxdxhji5A00MOuza6yBPhYK1nTOQ+fInrURedTBLxD29ob1INPi5pLfFXNeySPuvOklqhJ6k4DS9Tg0rWw5Eaa9oq6yB520QGlwRGA2U7fYdICSgW3QlfpdS972J3WbCOZXbzNnzF610JpteKsosXjrvepRmq5x8Y0VvDo0gZZD9qNicfd6YSF2IUft9aiE+ZC9ajexqWxi9VjLzrsBZ+fsjxxhF6NtnopHmHzyBt2Vvs5VmDYTzrsLAtJ05TX2KXkkXdubZW5EWw728MZbRF0UqE3pvsi8LCLruwBkcsCO+ux7OnNIly50xj0qIsexDOXHWj2wSYnEFeYVPRo6k4ij7rDHME6CG87FsrhqGuhIGsW9Jwi9qiLHsNTrbskGP2DcgJxLsI0koqyh13vA7s5S+rTxdE6v7QymAwVD7ozC4zuVCz3M5pTc7g3W6ioK5IuViwi8ahLjn7Q4HeLZuUVpCcSkgqBktN+cdXDLrmKQILOq+sy5VATGGrN5ao9eJsHXnL4QS2V+7aqxbOc8KNk1nLFGsCcPO4Oa2TnItj8dH5OQl7RsgkVFHbVDQwedoexsphKxfRAdjmUBFuovFmp7AXdGnrYnfdm+COjMPucx1iX18Kq/zdfVdkWk4ddciUBUv/7dgfJdKgGCh6NZzVg9ohLrhroZe9tLb4Kp2pADTXl+xmzR1xy7YFeD6fIKCNps3VZkijg9srCxSOuv34NRUfaVhGRw/2T6BnKNCcec2doJAuNnLa5uUUJLZotxKZ/9KD92qrH3GEN7DZmIzQ/aOUgNkK2UElE5Tpjo3ncndbMmzjYh7cWucdaV7R414s0QXPysDs9av6qabMFQ50cgW0lQeUCA4syeNSd1pLdbXI4aR9M0ZxdcFGWVS/sm0MPuzNubRHUTXZXqQuxa1+bRf1wQTdGHnSnSw3+asa9txXPAXbXylSVGo0Ck9nDLvlWOQs/7A04hC+vPqy3CVffW/aoywF1qY4EXXUPToCrVSHXS3rLXTzgsoehvPF7hRqnEwyJ8us2EDKLx9thDcLUI/YHcewBCwa0h6dLFIdy9YDLrsabP8Ez3ejQ+0JthvBKaqx5wGXXu5CUXUTNnSlycFtYWx9VJL23kjzgsitUSLjhe/UH7VCnMmilkkFmCnjAHdbIihKNRih0GxQ7SOPghMMLWvUKetRlz5pL2nuzCVQ7FT3RPohHRS7kUXcedFGL6dIZaWsqE+PtXmGU1HduWtjDLvuCEAZGixce+wPSPFKm2+8te9hlhx9K7TZQzvMWOqGHWiMcg5RSPOrOaFsw2HYqLCIYMHwt1KZEaLTKRTzqsqOAlHGXvkXejwxQFI1kurR62J1esJycjXdxB33ou22h+qJqJnQnNI+6/ta0kdv948qE47XlzKS9rRYrSR50PYLEmcBxb7ZSCTsijmmKgIfdaW6NHXGnwiKpsS6bowF7uCnoCnrQZT/TmjhpHrHtRv5hX1SUgdSrKBwJedTNfpaSys5PsxZ72/sspSIoD+97Y4+8wxrPy8U68Mh3Q9p1BjxKK0BAu/jUry175M2e1UsvRrdtKTa2i9E30Aov3VLxoDv3lb0D1uTi4IB7/JLSngv7nYlH3Xlnsgw8jni0WQx3Jma0gcAYA0r1qJv9dKG0TWUMkfgAHp3OZxy8SJoH3exZVqPvWr6IHotlpZ5VF2ka1ORBN/sGsuDOULPJId/Xwla1T+tUt4IH3emD+9xxb83CPfA/Xg6tpGyyF+WKHnOzVw9cw+KOe4AiaJoESnX7QcljbnY0nMqINF/5dNFxSl+VtV7UN8cedOfmFulsexYuJ49ahSxFW4QraXjU7DE3O8qGlffQbrW2sYlfwwNJTVtbNVY85GY3T7Qxis+DhzHKfZ5IHXK1ilbxkDsdahk02V9ohB7Yny1sTbvuwXNr9ZCb/cR5FKKd7A+dhk0wG7RMo9OozaOtvzEQ3HTerr8cLkxxe8zVuxKRPNpmN6THJvt4i5/FrdlCBW7R3l0jowUFrQxrCznclHMFS3Sm5bEWUG3QuuTSgoRWvIDgWwNTXspha9oXZr011vRsQUMrwZsjaOPsifngTiVPXPNF3VxQ0UrgkrzvbWmFsedezBCF83BpCypa8fXYaEwY6EYesyi9sj/UctDNBR2tuL6FSsePm29sMcWJ//K+VrTS06AFGa34bJ98zaDI3ECndO/WZHSPLeho4d7mCCUAOJ84uHoBtdno5ww6WvHt3oS14ow9wNpKhS5a5BEhHUUd6BaHHlZF70UwfT/HuqNH7qy5S0wpqGk+fM0LYaz+4IaVW4lYST12VSgFPW16dYG4bPJh53pQgW2htt1aSad0GBS1EjJ/TNb9gBLKUZ8j7IxyyEIpKGrFM3FfFCzywubuRBwUVq86zhoEtRLaIbSU2ncXJ5T3haLt8EVjc0FRK64hAnR6iQ0Hju0QN20oL+hiXwqKWnHSELKT9lfnF5J1Layi5XSgHKSgqBVP7edUPMyd41B8UXvWQCvjqQCkoKmJGyuitH3KpUmH3a2xYktKLi/onoAgqonjSCZGBmSqR46kTFiRaSQFBFltmONV92A6xDs23p1xS3WZFtWxuaCqias3CENijrMLxFPB0dYjtWtsLshq4nWTJPvSbL8QH22shVUbixl1EHQ18aguDuvsqMdpcZ+E0FWlWwu62rS2+J7XJ1bCRll4cTmN93RRV+chKGviw66KBdX2LD6c1uIuawnIo60HCOLa3F+yq8m7b1sD0NhSzoVZNOClFx2AoK7J90kRhrN/khWKqSaYAgSBLYTxfL8h+5OP7zfWQiWZOY+JKmBQ2MS1boR+wmJMs0ZIsbaCW+tMs0ceBp1NnM6mnez3L18oVtkltCmdyOOJD2BQ2sTNtrHWvbH1wYCf94WkWNvLLGAQ2sTLzX6GcWfqJ7m5j93raEYAg9I2N2fZM1X/UHmi6r8Wim6KB9kBDEqb+PH2NBfvLtrDNS2CAtxlXcCgtXkQIHRTQrs6aQcQgNy/d/AdwCC2Vdd6mUgZxTY8vZDKqNSOrjK2F9S26jpgq4zr4mJRXGtoiMQD2TEIbd6SHTQ+HoonXfa4EpXRFQIFqa16vjOFgbWvGSUnvt7FMZJJASiIbdUp//qNTlZcMnmkY6b9l0FQuiYOFOS26ubvimL46IgaEGDN4LNyYitkFPS26mZe2g+5B0mr9ERtyxgCSH8s1ROWguo2za2KMll2ABSI5milmp53DPiAgvBWXZ01rSygcZTK1kJ1GsCVx/aC9Fb9SCjPHAs04OHphNVtLT4NLuxZQUF7q64bs0ciYdwdH5qtXkwJdrZQCdpb9ZQHCfflrZcA0bcGhYqejYeUChTUt+rnQvMpQDAHR86jGYRtDOeAg/4WI5n3u9LV8JVDIBOTqC9Gm8JBgKthSl1dIN8feR1nQ4W4zFrGQYGrbk5NBLuvWKUsXt5ybZJKg0NxkOCqoynxMdGiUieWogu7yDLMBQmu+gcos634kznTgmdtiXnINcBBf2v+iQ0PIPZoJ8e3P9yfAgwJDjhocM1N+yxEdqrG6N39qdT5TJKDANd8OZzKcYg2OpbD/siJxoQUOAhwzWlmdk4/jI/nvL/20yIB46kIcFDgmi8SRv/n7hYKl1ORyIpLeKWOSzlocM2rZpOYWPCuEVFkJktfSw3B7AUVrvl5Atbvmic8vj1R6NDtdbUAcpDhmhMf7KFNyIX40GaJD8y1zNdTkIMQ1/wTD3C7W+qDnHBJ/1JmMlAzByWuuccsysLLd0WixXZnEZ5+kquM7QUprvlXBlT3wMPa4vgay9Zpz55lomYOWlzzbz0q7Yc7FovHIbPGnVa78ToDchDjmn8Y8P+eD9s6qtSfoeRxdUGMa76183POu+Bwau1QOUmy975BjmsB0mm7YGFmPkB6pqz1f+6uBD2ueYmVeQuPyzdReFzvgBWs56gZStDjmh/ZzcYzTJ4eCoTlmDTB+SALSlDkmhs8wRhnrKec9vMwd0LpXdbF8vQ/\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Demo else if DataMode = \"Folder\" then File.Contents(DataFolder & \"/Performance.csv\") else error \"DataMode must be Demo or Folder\",",
+                "    Parsed = Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Parsed, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"PeriodID\", type text}, {\"ProjectID\", type text}, {\"Date\", type date}, {\"RecognizedRevenue\", Currency.Type}, {\"LaborCost\", Currency.Type}, {\"SubcontractCost\", Currency.Type}, {\"Expenses\", Currency.Type}, {\"ActualHours\", Int64.Type}, {\"PlannedHours\", Int64.Type}, {\"CostBudget\", Currency.Type}, {\"Invoiced\", Currency.Type}, {\"Collected\", Currency.Type}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Metrics",
+        "lineageTag": "29e442aa-c3bd-52f5-82d1-3be5abb88dd3",
+        "columns": [
+          {
+            "name": "Label",
+            "dataType": "string",
+            "sourceColumn": "Label",
+            "summarizeBy": "none",
+            "lineageTag": "e9a90132-525f-5aa0-a47d-cc4ca6fc2f62",
+            "isHidden": true
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Metrics",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Demo = Binary.Decompress(Binary.FromText(\"80lMSs3hCo70C/FwDfF0VnBx9fXnAgA=\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Demo else if DataMode = \"Folder\" then File.Contents(DataFolder & \"/Metrics.csv\") else error \"DataMode must be Demo or Folder\",",
+                "    Parsed = Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Parsed, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"Label\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Recognized Revenue",
+            "expression": "SUM(Performance[RecognizedRevenue])",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Accrual revenue recognized for the reporting period.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "8f8d49d7-9e73-5834-9cc5-b0bc9bcb97dd"
+          },
+          {
+            "name": "Labor Cost",
+            "expression": "SUM(Performance[LaborCost])",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Sum of LaborCost at the recorded grain.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "8e9a75c8-cd9f-58db-9012-626085b5f64d"
+          },
+          {
+            "name": "Subcontract Cost",
+            "expression": "SUM(Performance[SubcontractCost])",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Sum of SubcontractCost at the recorded grain.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "235cef96-f582-512c-afcf-5401be456a25"
+          },
+          {
+            "name": "Expenses",
+            "expression": "SUM(Performance[Expenses])",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Sum of Expenses at the recorded grain.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "dc45819c-0fd9-5c02-aa3e-422aefd9fe58"
+          },
+          {
+            "name": "Delivery Cost",
+            "expression": "[Labor Cost] + [Subcontract Cost] + [Expenses]",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Direct project delivery cost excluding general overhead.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "41b0a7d5-10be-53e8-94b5-4fa044063535"
+          },
+          {
+            "name": "Project Profit",
+            "expression": "[Recognized Revenue] - [Delivery Cost]",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Recognized revenue less direct delivery cost.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "567644e8-0c7c-5e18-b0dc-4d59849aa2d3"
+          },
+          {
+            "name": "Project Margin",
+            "expression": "DIVIDE([Project Profit], [Recognized Revenue])",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "description": "Project profit / recognized revenue.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "4724d629-be8c-53a3-95ae-9f358a017ff8"
+          },
+          {
+            "name": "Cost Budget",
+            "expression": "SUM(Performance[CostBudget])",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Monthly allocated direct delivery budget.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "b4420c8a-7593-58d0-8b8f-5e8ab058ca80"
+          },
+          {
+            "name": "Budget Remaining",
+            "expression": "[Cost Budget] - [Delivery Cost]",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Allocated budget less actual cost; positive is under budget.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "17c4922b-20f5-5280-9497-27f952d41971"
+          },
+          {
+            "name": "Actual Hours",
+            "expression": "SUM(Performance[ActualHours])",
+            "formatString": "#,0",
+            "description": "Sum of ActualHours at the recorded grain.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "a6a71efb-6230-5eef-a4a0-00d0a1255560"
+          },
+          {
+            "name": "Planned Hours",
+            "expression": "SUM(Performance[PlannedHours])",
+            "formatString": "#,0",
+            "description": "Sum of PlannedHours at the recorded grain.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "d31fcf81-4272-59ff-85d8-a5adbd2bba8c"
+          },
+          {
+            "name": "Hours Variance",
+            "expression": "[Actual Hours] - [Planned Hours]",
+            "formatString": "#,0",
+            "description": "Positive means more hours consumed than planned.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "87b419db-a9b4-54a6-a566-9b973b8209f6"
+          },
+          {
+            "name": "Effective Revenue per Hour",
+            "expression": "DIVIDE([Recognized Revenue], [Actual Hours])",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Recognized revenue per actual delivery hour.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "9e9a36c1-3d64-51e2-8bea-4b2c6874200a"
+          },
+          {
+            "name": "Invoiced",
+            "expression": "SUM(Performance[Invoiced])",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Sum of Invoiced at the recorded grain.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "fa431fa0-353f-54a7-931f-77d31cad399e"
+          },
+          {
+            "name": "Collected",
+            "expression": "SUM(Performance[Collected])",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Sum of Collected at the recorded grain.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "f470689a-1df6-5669-a15b-182817a9ffe4"
+          },
+          {
+            "name": "Invoice Cash Gap",
+            "expression": "[Invoiced] - [Collected]",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Selected-period invoices minus collections. Not accounts-receivable balance or overdue debt.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "2a909266-0813-5a44-8f2b-6bc147c0c010"
+          }
+        ]
+      },
+      {
+        "name": "Calendar",
+        "lineageTag": "bf5a46d1-8dcc-58ab-bdd3-7ca97c751e78",
+        "columns": [
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Date",
+            "summarizeBy": "none",
+            "lineageTag": "b2919403-e773-52ab-88f4-b88bb6efec77",
+            "formatString": "dd MMM yyyy",
+            "isKey": true
+          },
+          {
+            "name": "Year",
+            "dataType": "int64",
+            "sourceColumn": "Year",
+            "summarizeBy": "none",
+            "lineageTag": "d991c44a-2d41-53d4-8895-bbc0a0db0560"
+          },
+          {
+            "name": "Month",
+            "dataType": "string",
+            "sourceColumn": "Month",
+            "summarizeBy": "none",
+            "lineageTag": "81ccf423-7e61-5260-91cb-78fe3acd9b28"
+          },
+          {
+            "name": "Quarter",
+            "dataType": "string",
+            "sourceColumn": "Quarter",
+            "summarizeBy": "none",
+            "lineageTag": "fc2c1468-61dc-5717-8cdb-6fc49523bf61"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Calendar",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Demo = Binary.Decompress(Binary.FromText(\"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\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Demo else if DataMode = \"Folder\" then File.Contents(DataFolder & \"/Calendar.csv\") else error \"DataMode must be Demo or Folder\",",
+                "    Parsed = Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Parsed, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"Date\", type date}, {\"Year\", Int64.Type}, {\"Month\", type text}, {\"Quarter\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "dataCategory": "Time"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "0af0e93a-23b2-540a-a761-5771da828b91",
+        "fromTable": "Performance",
+        "fromColumn": "ProjectID",
+        "toTable": "Projects",
+        "toColumn": "ProjectID",
+        "crossFilteringBehavior": "oneDirection",
+        "fromCardinality": "many",
+        "toCardinality": "one"
+      },
+      {
+        "name": "8e7fbec7-d536-5287-866f-726273920c78",
+        "fromTable": "Performance",
+        "fromColumn": "Date",
+        "toTable": "Calendar",
+        "toColumn": "Date",
+        "crossFilteringBehavior": "oneDirection",
+        "fromCardinality": "many",
+        "toCardinality": "one"
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DataMode",
+        "kind": "m",
+        "expression": "\"Demo\" meta [IsParameterQuery=true, List={\"Demo\", \"Folder\"}, DefaultValue=\"Demo\", Type=\"Text\", IsParameterQueryRequired=true]"
+      },
+      {
+        "name": "DataFolder",
+        "kind": "m",
+        "expression": "\"C:/PowerBI/Astra/power-bi/09-project-profitability/data/demo\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      }
+    ]
+  }
+}

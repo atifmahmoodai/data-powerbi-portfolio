@@ -1,0 +1,12 @@
+{
+  "method": "Independent Python reference totals; NOT evaluated by the DAX engine",
+  "scope": "All filters cleared; entire supplied period or snapshot",
+  "metrics": {
+    "Revenue": 152095000,
+    "Gross Profit": 40848467.67,
+    "Revenue Target": 98550000,
+    "Target Attainment": 1.543328259766616,
+    "Sales Transactions": 1267,
+    "Active Customers": 30
+  }
+}

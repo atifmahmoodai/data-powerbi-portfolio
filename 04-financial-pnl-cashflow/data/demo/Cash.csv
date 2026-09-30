@@ -1,0 +1,136 @@
+CashID,DepartmentID,Date,Category,CashMovement
+C1,D1,2026-01-01,Customer Receipts,110000
+C2,D1,2026-01-01,Supplier Payments,-200000
+C3,D1,2026-01-01,Payroll,-160000
+C4,D1,2026-01-01,Capital Expenditure,-190000
+C5,D1,2026-01-01,Loan Drawdown,170000
+C6,D2,2026-01-01,Customer Receipts,470000
+C7,D2,2026-01-01,Supplier Payments,-260000
+C8,D2,2026-01-01,Payroll,-350000
+C9,D2,2026-01-01,Capital Expenditure,-300000
+C10,D2,2026-01-01,Loan Drawdown,490000
+C11,D3,2026-01-01,Customer Receipts,260000
+C12,D3,2026-01-01,Supplier Payments,-210000
+C13,D3,2026-01-01,Payroll,-460000
+C14,D3,2026-01-01,Capital Expenditure,-120000
+C15,D3,2026-01-01,Loan Drawdown,160000
+C16,D1,2026-02-01,Customer Receipts,310000
+C17,D1,2026-02-01,Supplier Payments,-140000
+C18,D1,2026-02-01,Payroll,-320000
+C19,D1,2026-02-01,Capital Expenditure,-490000
+C20,D1,2026-02-01,Loan Drawdown,440000
+C21,D2,2026-02-01,Customer Receipts,450000
+C22,D2,2026-02-01,Supplier Payments,-400000
+C23,D2,2026-02-01,Payroll,-180000
+C24,D2,2026-02-01,Capital Expenditure,-240000
+C25,D2,2026-02-01,Loan Drawdown,190000
+C26,D3,2026-02-01,Customer Receipts,390000
+C27,D3,2026-02-01,Supplier Payments,-200000
+C28,D3,2026-02-01,Payroll,-230000
+C29,D3,2026-02-01,Capital Expenditure,-490000
+C30,D3,2026-02-01,Loan Drawdown,380000
+C31,D1,2026-03-01,Customer Receipts,400000
+C32,D1,2026-03-01,Supplier Payments,-490000
+C33,D1,2026-03-01,Payroll,-450000
+C34,D1,2026-03-01,Capital Expenditure,-360000
+C35,D1,2026-03-01,Loan Drawdown,450000
+C36,D2,2026-03-01,Customer Receipts,410000
+C37,D2,2026-03-01,Supplier Payments,-430000
+C38,D2,2026-03-01,Payroll,-430000
+C39,D2,2026-03-01,Capital Expenditure,-110000
+C40,D2,2026-03-01,Loan Drawdown,470000
+C41,D3,2026-03-01,Customer Receipts,170000
+C42,D3,2026-03-01,Supplier Payments,-150000
+C43,D3,2026-03-01,Payroll,-220000
+C44,D3,2026-03-01,Capital Expenditure,-470000
+C45,D3,2026-03-01,Loan Drawdown,250000
+C46,D1,2026-04-01,Customer Receipts,200000
+C47,D1,2026-04-01,Supplier Payments,-140000
+C48,D1,2026-04-01,Payroll,-100000
+C49,D1,2026-04-01,Capital Expenditure,-360000
+C50,D1,2026-04-01,Loan Drawdown,230000
+C51,D2,2026-04-01,Customer Receipts,240000
+C52,D2,2026-04-01,Supplier Payments,-250000
+C53,D2,2026-04-01,Payroll,-470000
+C54,D2,2026-04-01,Capital Expenditure,-150000
+C55,D2,2026-04-01,Loan Drawdown,220000
+C56,D3,2026-04-01,Customer Receipts,250000
+C57,D3,2026-04-01,Supplier Payments,-400000
+C58,D3,2026-04-01,Payroll,-220000
+C59,D3,2026-04-01,Capital Expenditure,-410000
+C60,D3,2026-04-01,Loan Drawdown,100000
+C61,D1,2026-05-01,Customer Receipts,140000
+C62,D1,2026-05-01,Supplier Payments,-120000
+C63,D1,2026-05-01,Payroll,-410000
+C64,D1,2026-05-01,Capital Expenditure,-130000
+C65,D1,2026-05-01,Loan Drawdown,350000
+C66,D2,2026-05-01,Customer Receipts,140000
+C67,D2,2026-05-01,Supplier Payments,-420000
+C68,D2,2026-05-01,Payroll,-180000
+C69,D2,2026-05-01,Capital Expenditure,-420000
+C70,D2,2026-05-01,Loan Drawdown,320000
+C71,D3,2026-05-01,Customer Receipts,270000
+C72,D3,2026-05-01,Supplier Payments,-370000
+C73,D3,2026-05-01,Payroll,-110000
+C74,D3,2026-05-01,Capital Expenditure,-260000
+C75,D3,2026-05-01,Loan Drawdown,320000
+C76,D1,2026-06-01,Customer Receipts,170000
+C77,D1,2026-06-01,Supplier Payments,-290000
+C78,D1,2026-06-01,Payroll,-130000
+C79,D1,2026-06-01,Capital Expenditure,-290000
+C80,D1,2026-06-01,Loan Drawdown,100000
+C81,D2,2026-06-01,Customer Receipts,330000
+C82,D2,2026-06-01,Supplier Payments,-250000
+C83,D2,2026-06-01,Payroll,-140000
+C84,D2,2026-06-01,Capital Expenditure,-270000
+C85,D2,2026-06-01,Loan Drawdown,160000
+C86,D3,2026-06-01,Customer Receipts,420000
+C87,D3,2026-06-01,Supplier Payments,-230000
+C88,D3,2026-06-01,Payroll,-490000
+C89,D3,2026-06-01,Capital Expenditure,-240000
+C90,D3,2026-06-01,Loan Drawdown,190000
+C91,D1,2026-07-01,Customer Receipts,370000
+C92,D1,2026-07-01,Supplier Payments,-290000
+C93,D1,2026-07-01,Payroll,-470000
+C94,D1,2026-07-01,Capital Expenditure,-240000
+C95,D1,2026-07-01,Loan Drawdown,230000
+C96,D2,2026-07-01,Customer Receipts,190000
+C97,D2,2026-07-01,Supplier Payments,-190000
+C98,D2,2026-07-01,Payroll,-250000
+C99,D2,2026-07-01,Capital Expenditure,-120000
+C100,D2,2026-07-01,Loan Drawdown,310000
+C101,D3,2026-07-01,Customer Receipts,230000
+C102,D3,2026-07-01,Supplier Payments,-140000
+C103,D3,2026-07-01,Payroll,-450000
+C104,D3,2026-07-01,Capital Expenditure,-280000
+C105,D3,2026-07-01,Loan Drawdown,210000
+C106,D1,2026-08-01,Customer Receipts,190000
+C107,D1,2026-08-01,Supplier Payments,-360000
+C108,D1,2026-08-01,Payroll,-170000
+C109,D1,2026-08-01,Capital Expenditure,-480000
+C110,D1,2026-08-01,Loan Drawdown,440000
+C111,D2,2026-08-01,Customer Receipts,170000
+C112,D2,2026-08-01,Supplier Payments,-430000
+C113,D2,2026-08-01,Payroll,-300000
+C114,D2,2026-08-01,Capital Expenditure,-400000
+C115,D2,2026-08-01,Loan Drawdown,260000
+C116,D3,2026-08-01,Customer Receipts,270000
+C117,D3,2026-08-01,Supplier Payments,-490000
+C118,D3,2026-08-01,Payroll,-470000
+C119,D3,2026-08-01,Capital Expenditure,-130000
+C120,D3,2026-08-01,Loan Drawdown,350000
+C121,D1,2026-09-01,Customer Receipts,310000
+C122,D1,2026-09-01,Supplier Payments,-260000
+C123,D1,2026-09-01,Payroll,-440000
+C124,D1,2026-09-01,Capital Expenditure,-180000
+C125,D1,2026-09-01,Loan Drawdown,490000
+C126,D2,2026-09-01,Customer Receipts,270000
+C127,D2,2026-09-01,Supplier Payments,-460000
+C128,D2,2026-09-01,Payroll,-170000
+C129,D2,2026-09-01,Capital Expenditure,-120000
+C130,D2,2026-09-01,Loan Drawdown,270000
+C131,D3,2026-09-01,Customer Receipts,190000
+C132,D3,2026-09-01,Supplier Payments,-230000
+C133,D3,2026-09-01,Payroll,-300000
+C134,D3,2026-09-01,Capital Expenditure,-330000
+C135,D3,2026-09-01,Loan Drawdown,460000

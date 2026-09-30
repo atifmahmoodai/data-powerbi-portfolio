@@ -1,0 +1,9 @@
+EVALUATE
+ROW(
+    "Net Revenue", [Net Revenue],
+    "Ad Spend", [Ad Spend],
+    "Contribution before Ads", [Contribution before Ads],
+    "Contribution after Ads", [Contribution after Ads],
+    "Order Count", [Order Count],
+    "Revenue to Ad Spend", [Revenue to Ad Spend]
+)

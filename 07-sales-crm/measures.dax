@@ -1,0 +1,47 @@
+// Count of opportunities created in the selected cohort.
+Opportunities =
+COUNTROWS(Opportunities)
+
+// Currently open opportunities in the creation cohort.
+Open Opportunities =
+CALCULATE(COUNTROWS(Opportunities), KEEPFILTERS(Opportunities[IsOpen] = 1))
+
+// Current amount of open opportunities.
+Open Pipeline =
+CALCULATE(SUM(Opportunities[Amount]), KEEPFILTERS(Opportunities[IsOpen] = 1))
+
+// Open amount × stage probability; heuristic, not a calibrated forecast.
+Weighted Pipeline =
+CALCULATE(SUMX(Opportunities, Opportunities[Amount] * Opportunities[Probability]), KEEPFILTERS(Opportunities[IsOpen] = 1))
+
+// Won opportunities in the selected creation cohort.
+Won Deals =
+CALCULATE(COUNTROWS(Opportunities), KEEPFILTERS(Opportunities[Stage] = "Won"))
+
+// Lost opportunities in the selected creation cohort.
+Lost Deals =
+CALCULATE(COUNTROWS(Opportunities), KEEPFILTERS(Opportunities[Stage] = "Lost"))
+
+// Won deal amount; bookings, not recognized accounting revenue.
+Won Value =
+CALCULATE(SUM(Opportunities[Amount]), KEEPFILTERS(Opportunities[Stage] = "Won"))
+
+// Wins divided by wins plus losses; excludes open deals.
+Win Rate =
+DIVIDE([Won Deals], [Won Deals] + [Lost Deals])
+
+// Won value / won count.
+Average Won Deal =
+DIVIDE([Won Value], [Won Deals])
+
+// Mean creation-to-close days for wins.
+Average Sales Cycle =
+CALCULATE(AVERAGE(Opportunities[CycleDays]), KEEPFILTERS(Opportunities[Stage] = "Won"))
+
+// Open deals with no activity for more than 14 days at the demo as-of date.
+Stale Open Deals =
+CALCULATE([Open Opportunities], KEEPFILTERS(Opportunities[LastActivityDate] < DATE(2026,9,30) - 14))
+
+// Amount of stale open deals at the demo as-of date.
+Stale Pipeline =
+CALCULATE([Open Pipeline], KEEPFILTERS(Opportunities[LastActivityDate] < DATE(2026,9,30) - 14))

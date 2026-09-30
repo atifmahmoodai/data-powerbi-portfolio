@@ -1,0 +1,9 @@
+EVALUATE
+ROW(
+    "Revenue", [Revenue],
+    "Operating Profit", [Operating Profit],
+    "Operating Margin", [Operating Margin],
+    "Net Cash Movement", [Net Cash Movement],
+    "Cash Inflow", [Cash Inflow],
+    "Cash Outflow", [Cash Outflow]
+)

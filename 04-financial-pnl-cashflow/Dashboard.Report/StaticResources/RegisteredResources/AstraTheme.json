@@ -1,0 +1,28 @@
+{
+  "name": "Astra Analytics",
+  "dataColors": [
+    "#137C82",
+    "#BE9154",
+    "#5064A1",
+    "#CF6558",
+    "#759C91",
+    "#7F6D92"
+  ],
+  "background": "#F3F5F7",
+  "foreground": "#182A3A",
+  "tableAccent": "#137C82",
+  "textClasses": {
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 11
+    },
+    "title": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 14
+    },
+    "callout": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 28
+    }
+  }
+}

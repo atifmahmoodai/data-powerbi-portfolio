@@ -1,0 +1,12 @@
+{
+  "method": "Independent Python reference totals; NOT evaluated by the DAX engine",
+  "scope": "All filters cleared; entire supplied period or snapshot",
+  "metrics": {
+    "Recognized Revenue": 65440000,
+    "Delivery Cost": 59749800,
+    "Project Profit": 5690200,
+    "Project Margin": 0.08695293398533008,
+    "Budget Remaining": 13150200,
+    "Invoice Cash Gap": 12686434.07
+  }
+}

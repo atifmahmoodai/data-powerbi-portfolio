@@ -1,0 +1,55 @@
+// Sum of Revenue at the recorded grain.
+Revenue =
+SUM(Sales[Revenue])
+
+// Sum of Cost at the recorded grain.
+Cost of Sales =
+SUM(Sales[Cost])
+
+// Revenue less cost of sales.
+Gross Profit =
+[Revenue] - [Cost of Sales]
+
+// Gross profit / revenue.
+Gross Margin =
+DIVIDE([Gross Profit], [Revenue])
+
+// Sum of Units at the recorded grain.
+Units Sold =
+SUM(Sales[Units])
+
+// Daily account targets; date and account filters affect actual and target.
+Revenue Target =
+SUM(Targets[TargetRevenue])
+
+// Revenue divided by target.
+Target Attainment =
+DIVIDE([Revenue], [Revenue Target])
+
+// Positive means ahead of target.
+Target Variance =
+[Revenue] - [Revenue Target]
+
+// Number of sales transactions.
+Sales Transactions =
+COUNTROWS(Sales)
+
+// Customers with a sale in the selected period.
+Active Customers =
+DISTINCTCOUNT(Sales[AccountID])
+
+// Revenue per sales transaction.
+Average Transaction =
+DIVIDE([Revenue], [Sales Transactions])
+
+// Calendar-year revenue through the last selected date; select a populated period.
+Revenue YTD =
+TOTALYTD([Revenue], 'Calendar'[Date])
+
+// Revenue in the date selection shifted back one month. Use a single month for month-over-month comparison.
+Previous Month Revenue =
+CALCULATE([Revenue], DATEADD('Calendar'[Date], -1, MONTH))
+
+// Revenue growth versus selected dates shifted back one month; blank if prior revenue is absent.
+Month Growth =
+DIVIDE([Revenue] - [Previous Month Revenue], [Previous Month Revenue])

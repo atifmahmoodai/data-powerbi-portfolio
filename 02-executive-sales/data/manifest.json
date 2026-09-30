@@ -1,0 +1,12 @@
+{
+  "label": "SYNTHETIC DEMO — no real clients",
+  "asOf": "2026-09-30",
+  "currency": "PKR",
+  "sha256": {
+    "Accounts": "4d2f9d1d52163bcedca3fd176b8a0fb15737c59355c621383f3eaf44cffeb1aa",
+    "Sales": "af8773714447981db223d757b8b2eb169efd7f07fc44cedb075d589cfa7db8a9",
+    "Targets": "96f849ab6ca6a0baccad735ea956e38023347059a620b7c2b3447b76ad5f196d",
+    "Metrics": "3ee5336e1d736596f4ecb481ace8b79d0c453958841163e7e779fcbe0f2deac3",
+    "Calendar": "6feb5ebe4b28b8c056e050395d37cabddecc9c8b0d1aa409d6e92ed1cf3644f3"
+  }
+}

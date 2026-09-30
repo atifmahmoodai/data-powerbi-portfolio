@@ -1,0 +1,447 @@
+{
+  "name": "Model",
+  "compatibilityLevel": 1567,
+  "model": {
+    "culture": "en-US",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Departments",
+        "lineageTag": "521c6820-85df-557a-b0ec-205a04235233",
+        "columns": [
+          {
+            "name": "DepartmentID",
+            "dataType": "string",
+            "sourceColumn": "DepartmentID",
+            "summarizeBy": "none",
+            "lineageTag": "74170050-bd0a-547c-91d1-03ed444e48d0",
+            "isHidden": true
+          },
+          {
+            "name": "Department",
+            "dataType": "string",
+            "sourceColumn": "Department",
+            "summarizeBy": "none",
+            "lineageTag": "d4cbb931-4334-5b4e-b44e-6013a8379071"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Departments",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Demo = Binary.Decompress(Binary.FromText(\"c0ktSCwqyU3NK/F00XGBc7hcDHWCE3NSi7lcjHSCU4vKMpNBbGMdx5TczLzM4pKixJLM/DwuAA==\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Demo else if DataMode = \"Folder\" then File.Contents(DataFolder & \"/Departments.csv\") else error \"DataMode must be Demo or Folder\",",
+                "    Parsed = Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Parsed, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"DepartmentID\", type text}, {\"Department\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "PnL",
+        "lineageTag": "39ae4c49-5d6f-584e-90ab-6ae8b75b356c",
+        "columns": [
+          {
+            "name": "LineID",
+            "dataType": "string",
+            "sourceColumn": "LineID",
+            "summarizeBy": "none",
+            "lineageTag": "fca9d17a-125e-5bde-ae67-15e620d78000",
+            "isHidden": true
+          },
+          {
+            "name": "DepartmentID",
+            "dataType": "string",
+            "sourceColumn": "DepartmentID",
+            "summarizeBy": "none",
+            "lineageTag": "bea766e1-371d-5e15-86cb-f98e5387db55",
+            "isHidden": true
+          },
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Date",
+            "summarizeBy": "none",
+            "lineageTag": "b96cdf11-128d-5132-8126-b301d3d09fd7",
+            "formatString": "dd MMM yyyy"
+          },
+          {
+            "name": "Category",
+            "dataType": "string",
+            "sourceColumn": "Category",
+            "summarizeBy": "none",
+            "lineageTag": "24e765c9-76e6-51e0-b392-9cf427c5bb2e"
+          },
+          {
+            "name": "Actual",
+            "dataType": "decimal",
+            "sourceColumn": "Actual",
+            "summarizeBy": "none",
+            "lineageTag": "a832d60c-d6eb-509b-a341-fefa46d98f0a"
+          },
+          {
+            "name": "Budget",
+            "dataType": "decimal",
+            "sourceColumn": "Budget",
+            "summarizeBy": "none",
+            "lineageTag": "40bd7f19-8506-56a9-b1a7-f9868b9189ec"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "PnL",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Demo = Binary.Decompress(Binary.FromText(\"fZftaiVFEIb/n6vwAsam67v6p25EBGGDXkHQQ1jQGGIievdWT/c66XLOhiUQ9uni7be+en789HT94W67uz4/vLz+fn167X88vF63D/Hr8Y+Xf7Zvfnl9e/ht+/bt18fr6+UetjvYsKJ+XSH+bT9d/7o+vV03gho/GzGLUyG83GMiP3z8/ucNbMdAmRkLt8s9Jezj8/Xl4fXT0+NX3/39fH3687rtkeNMVQbeQ/N2h6cieIgQcaYifLmXRO4icAZsCMjF7XKvCTsRMe4HCE2kVLnc23ZHZyJ4RGcQalYkruiJHCJoinCqrVgEbAn7vwgc90NGBSlGkY562IeLFTiswEauBeOOAAkdCZkyGK1x0bAMMHEnZvg45ERIhfshOhxcdPDQwdK4UQEIlBO66ACs4ZpqcJK4234otNYKhdWgh4mrDpg6mKI0tOuwhA4dMvPcwrnSIi3giTvRgdOPVl2G2e0wkZa8jPhUOf6vWOjAmtChY4asSIJFI9UIiTvJy+wuqdbqXnqIh4mLDh1VqlURQ3KkECmh78sUQeNuBboOTtztjoVqLCVyiXJ4uMjwKcM1pO9pR03osGNwLYpjumEJO8nKsBrNhVuJTKIfDvJixvBN3ACxSB9eLaHDjDaTRyi69x/VxJ2YMSs7zhAU8zgEh4N8MjqiY82x+0aYyCHD5higVmMMRO6IEnci43NBuTYvHHckPixcZNh/tcHGpXVUEjp06DRYK8meFdLEnWRlHtJoXigcDUB2eChn49wsblokMkie0FEcbY5SEtWxVFribvYsVnD3onGI62HiosNGfEOMBi8U92RI6PBjhkRjteJxNcbEnegYwdG5Me81xXSYuPoxZzprNHjhjnJClxnGDjrWIEvibvZsCyZy3mPr4aEu3TIK2irG/iy1h7eEDhlzZcayFygU6WNP3ImMqT3mJLS99rgdHupZeRCpwT7SpSZ0WS3hXjQghg6BxJ2kZfaYNiAu/SWBh4WLDBvL0MhjfoxHByV0fXXEwrd9kgon7kTGHL/MzlC8B5fDQ1vSMhpLe3lggY5qQhc7YnfHkMFumyXuJC08S0qNrFBsOPHDw0UHjwxyrOTo2r5ZpCU0vzy87RWnNXEnfsBcR2yg+xRTOExcdJDPbjHViB86FBP6frVEtfbdAjF1lRL3ha7V/mzqb1Llw0RfdMyhHlO9RbvEoFFJ6PsphmAeLzaKPaGauNtlGipic/UppnaY6Cd5ocYaz+jetuoJHXU6LUbBeGTuV2uJu922Up19r1Orh4mLDrG5XaD3S9dhkNDUL/HmLtQ5TNztZzrEg7PtM8fefWC0RceILyixXva9bJzQZctFA2ItGH6YJO62H910Kxb9Yu++MRYdn6d6haimwh21hA4d8vklJhJzJvrFPHG3ty0pKBbvl3z3mbHqGHkhbeoxJvt3S03o8jIFcucS48MhYV9oF6ToAaTLvw==\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Demo else if DataMode = \"Folder\" then File.Contents(DataFolder & \"/PnL.csv\") else error \"DataMode must be Demo or Folder\",",
+                "    Parsed = Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Parsed, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"LineID\", type text}, {\"DepartmentID\", type text}, {\"Date\", type date}, {\"Category\", type text}, {\"Actual\", Currency.Type}, {\"Budget\", Currency.Type}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Cash",
+        "lineageTag": "3fcb1fd0-a98d-5c06-a3a4-fa8ed8d469e1",
+        "columns": [
+          {
+            "name": "CashID",
+            "dataType": "string",
+            "sourceColumn": "CashID",
+            "summarizeBy": "none",
+            "lineageTag": "34b86af4-c1bc-5d6a-a268-c818e7d43fa2",
+            "isHidden": true
+          },
+          {
+            "name": "DepartmentID",
+            "dataType": "string",
+            "sourceColumn": "DepartmentID",
+            "summarizeBy": "none",
+            "lineageTag": "8dd44c9e-b034-5058-88ac-5c7a1b2b08aa",
+            "isHidden": true
+          },
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Date",
+            "summarizeBy": "none",
+            "lineageTag": "8a3409a8-a6b4-5348-bccb-5eb6ca701cce",
+            "formatString": "dd MMM yyyy"
+          },
+          {
+            "name": "Category",
+            "dataType": "string",
+            "sourceColumn": "Category",
+            "summarizeBy": "none",
+            "lineageTag": "be318341-af9a-58c7-b73d-3e5a60fa3af8"
+          },
+          {
+            "name": "CashMovement",
+            "dataType": "decimal",
+            "sourceColumn": "CashMovement",
+            "summarizeBy": "none",
+            "lineageTag": "6b0ec359-1425-5c9c-9f94-da3bdb7c47ec"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Cash",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Demo = Binary.Decompress(Binary.FromText(\"hZhdalsxEIXfu4os4AakGelKerb7UGihtCsw7aUNJLGxnf7svg6euVKOR2oIISEfOjqa0ZHkze7088N22i6H3fH8tDyfX//YnZdpc/nxY3/8e/nl9PPT/tfy+s93Gz9t/USO5nvnL9/T5uV03j8tx7svy7fl4XA+Td67y9e7DQH59eVweHy4kJ93f1/HOk335K4oA3ohjvvHx+nez1cgoOru8HDePd69/3NYnr8/nF+OywUuVzgC/HG/e77bHne/v+9/P08+Xal52tLYSBAyAWkZkXlmQFcjHK9AQVXLCMuyeAf0WydB/PpLTXhsRefnCVDLi9TPM7CrmaCjBRQ2y0JCR6ChLjroXMtHthvWGSZADTc+CJuBraXR+RUUttzoopMDGmojsuRrCTtugrQGEaCGmyCdQQxs3TFZiIDClhvSaUagoTZqeq4l7NVG0QToYPtTBnZ1QyxEQeFRbdgB/dYNyxJxk2XcqY0GFAFq1UbVGdi6b6TSHFDYTAHZEByBhk7TQZtA67mRfcMJUMuNrDxnYKsbJQoKmykg2sEBDW4kc0OTaR03GuSBALVSQBYpMLC10yQFQkBhs9NUOwL91g2pbJNpoZPQ0mkhATrItJCBrSmgoxUUHnVadECDGyl4bDKt50ZmGAlQKwVkkSIDWztNVjsGFDY7TceLQIMbKXhsMq3nRkdMgA4SOmZgbzotFhQ2O032zeyAhoQW2bnJtNjZN1KbmQC1Ok3mOjOwtTY6v4DCZm2kheYINCS0LPjcZNr/3CRArdqomwzszek5FxQ2ayPjJQc0uFGsybSOG9IrJwFquGFlGdjqRmqTAgqbdwFJgRSB7rhpMm0eJ3RKgFopIKdnysBWN9I7qaCw6UbGyw5oe9/kJtM6blj0MwE6yLTMwFY30rc5oLDpRlYyR6DtO3RuMq3jRns3J0AtN+o8A1tTQFe7oPDo1lkc0PatszSZljq1kfUpBOig0woDe3PelIDCQzcRaPv0LE2mddysxhOgVkIrm4Gt540+PQsKD19rzgEOMaBvMNekWsePWveOgB092BwDfHOP9i6gtlmgrHgEHCq0WmqiLY9L5F0C1kpqfdq6DHCNg6RIQW3z5FFL3gFuP0O9b/KtZ0mn4AnYwfPAewa4vqudIgG1TUsrHgGHKuli+ibkOpZotZSAHbzfvM8A3wSD9wW1R7cdTw5w+7rjqUm68p/PPoiAHXws5YkBrpa0QyigtmlJG48i4J3PpqiJu46ltUqUgLWqtFrKAN/uJSqoPUw8doBD4+mw3CRex9IaD0zADo5Xzwzw7V7igNrmg24dMQIOVbou5j8=\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Demo else if DataMode = \"Folder\" then File.Contents(DataFolder & \"/Cash.csv\") else error \"DataMode must be Demo or Folder\",",
+                "    Parsed = Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Parsed, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"CashID\", type text}, {\"DepartmentID\", type text}, {\"Date\", type date}, {\"Category\", type text}, {\"CashMovement\", Currency.Type}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Metrics",
+        "lineageTag": "467f8ce2-cfc9-5f82-a934-2e128b5e04b8",
+        "columns": [
+          {
+            "name": "Label",
+            "dataType": "string",
+            "sourceColumn": "Label",
+            "summarizeBy": "none",
+            "lineageTag": "31feb2ea-dd98-5dae-a788-bf7c3f71ccf7",
+            "isHidden": true
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Metrics",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Demo = Binary.Decompress(Binary.FromText(\"80lMSs3hCo70C/FwDfF0VnBx9fXnAgA=\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Demo else if DataMode = \"Folder\" then File.Contents(DataFolder & \"/Metrics.csv\") else error \"DataMode must be Demo or Folder\",",
+                "    Parsed = Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Parsed, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"Label\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Revenue",
+            "expression": "CALCULATE(SUM(PnL[Actual]), PnL[Category] = \"Revenue\")",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Accrual revenue; not customer receipts.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "429baba1-745d-52d3-b65f-91795ed03ca6"
+          },
+          {
+            "name": "Cost of Sales",
+            "expression": "CALCULATE(SUM(PnL[Actual]), PnL[Category] = \"COGS\")",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Positive cost of goods sold.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "88c2f2d8-bb6a-5d15-b564-8e5b124af54c"
+          },
+          {
+            "name": "Operating Expense",
+            "expression": "CALCULATE(SUM(PnL[Actual]), PnL[Category] = \"Operating Expense\")",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Positive operating expense excluding COGS.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "ca41003d-216c-5e3f-9b04-8413032cd3a1"
+          },
+          {
+            "name": "Gross Profit",
+            "expression": "[Revenue] - [Cost of Sales]",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Revenue less COGS.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "f118b937-42d7-50d2-9872-d96bc68d05cc"
+          },
+          {
+            "name": "Operating Profit",
+            "expression": "[Gross Profit] - [Operating Expense]",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Before interest, tax and exceptional items.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "b5a643f8-7d81-510c-9fc3-04037be7d295"
+          },
+          {
+            "name": "Operating Margin",
+            "expression": "DIVIDE([Operating Profit], [Revenue])",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "description": "Operating profit / accrual revenue.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "ab9ca607-3573-5e6f-a161-c9fc5363a269"
+          },
+          {
+            "name": "Budget Profit",
+            "expression": "SUMX(PnL, IF(PnL[Category] = \"Revenue\", PnL[Budget], -PnL[Budget]))",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Budget revenue less budget costs.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "04553248-35f2-5dfb-b9c2-9960e4f43f03"
+          },
+          {
+            "name": "Profit Variance",
+            "expression": "[Operating Profit] - [Budget Profit]",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Positive means operating profit ahead of budget.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "53b6d2ee-c757-5852-bef2-cf7444458a65"
+          },
+          {
+            "name": "Signed Actual",
+            "expression": "SUMX(PnL, IF(PnL[Category] = \"Revenue\", PnL[Actual], -PnL[Actual]))",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Category-level signed P&L contribution.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "bbeadc42-c1b3-5e41-ad93-c467307bc249"
+          },
+          {
+            "name": "Signed Budget",
+            "expression": "SUMX(PnL, IF(PnL[Category] = \"Revenue\", PnL[Budget], -PnL[Budget]))",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Category-level signed budget contribution.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "82d55ed5-8cb7-5449-94a9-4209be1060af"
+          },
+          {
+            "name": "Cash Inflow",
+            "expression": "CALCULATE(SUM(Cash[CashMovement]), KEEPFILTERS(Cash[CashMovement] > 0))",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "All positive cash movements including financing.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "b0f23942-1a7f-5776-a6de-802b42db1acb"
+          },
+          {
+            "name": "Cash Outflow",
+            "expression": "-CALCULATE(SUM(Cash[CashMovement]), KEEPFILTERS(Cash[CashMovement] < 0))",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Absolute value of all negative cash movements.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "1e8dfa14-2453-55b2-b401-baa86617760c"
+          },
+          {
+            "name": "Net Cash Movement",
+            "expression": "SUM(Cash[CashMovement])",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Cash receipts less payments; not a cash balance.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "14f72b23-7f93-5283-9fa4-317a0314385d"
+          },
+          {
+            "name": "Operating Cash Movement",
+            "expression": "CALCULATE([Net Cash Movement], KEEPFILTERS(Cash[Category] IN {\"Customer Receipts\", \"Supplier Payments\", \"Payroll\"}))",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Receipts less supplier payments and payroll; excludes capex and loans.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "7d60f42c-8eb7-5b5f-8ee7-9001adf2719e"
+          }
+        ]
+      },
+      {
+        "name": "Calendar",
+        "lineageTag": "4d36f81c-afe9-5db3-b2f1-d984a5a8cc13",
+        "columns": [
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Date",
+            "summarizeBy": "none",
+            "lineageTag": "79b9496d-df46-58cc-9d9c-39047cc33945",
+            "formatString": "dd MMM yyyy",
+            "isKey": true
+          },
+          {
+            "name": "Year",
+            "dataType": "int64",
+            "sourceColumn": "Year",
+            "summarizeBy": "none",
+            "lineageTag": "5706397e-d0c0-5f2a-96f9-20497557096d"
+          },
+          {
+            "name": "Month",
+            "dataType": "string",
+            "sourceColumn": "Month",
+            "summarizeBy": "none",
+            "lineageTag": "1693dcc4-d32f-5e19-bbfa-688be13d05d7"
+          },
+          {
+            "name": "Quarter",
+            "dataType": "string",
+            "sourceColumn": "Quarter",
+            "summarizeBy": "none",
+            "lineageTag": "ff0ea001-958f-5019-adde-5197d46cb832"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Calendar",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Demo = Binary.Decompress(Binary.FromText(\"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\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Demo else if DataMode = \"Folder\" then File.Contents(DataFolder & \"/Calendar.csv\") else error \"DataMode must be Demo or Folder\",",
+                "    Parsed = Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Parsed, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"Date\", type date}, {\"Year\", Int64.Type}, {\"Month\", type text}, {\"Quarter\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "dataCategory": "Time"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "bea766e1-371d-5e15-86cb-f98e5387db55",
+        "fromTable": "PnL",
+        "fromColumn": "DepartmentID",
+        "toTable": "Departments",
+        "toColumn": "DepartmentID",
+        "crossFilteringBehavior": "oneDirection",
+        "fromCardinality": "many",
+        "toCardinality": "one"
+      },
+      {
+        "name": "8dd44c9e-b034-5058-88ac-5c7a1b2b08aa",
+        "fromTable": "Cash",
+        "fromColumn": "DepartmentID",
+        "toTable": "Departments",
+        "toColumn": "DepartmentID",
+        "crossFilteringBehavior": "oneDirection",
+        "fromCardinality": "many",
+        "toCardinality": "one"
+      },
+      {
+        "name": "b96cdf11-128d-5132-8126-b301d3d09fd7",
+        "fromTable": "PnL",
+        "fromColumn": "Date",
+        "toTable": "Calendar",
+        "toColumn": "Date",
+        "crossFilteringBehavior": "oneDirection",
+        "fromCardinality": "many",
+        "toCardinality": "one"
+      },
+      {
+        "name": "8a3409a8-a6b4-5348-bccb-5eb6ca701cce",
+        "fromTable": "Cash",
+        "fromColumn": "Date",
+        "toTable": "Calendar",
+        "toColumn": "Date",
+        "crossFilteringBehavior": "oneDirection",
+        "fromCardinality": "many",
+        "toCardinality": "one"
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DataMode",
+        "kind": "m",
+        "expression": "\"Demo\" meta [IsParameterQuery=true, List={\"Demo\", \"Folder\"}, DefaultValue=\"Demo\", Type=\"Text\", IsParameterQueryRequired=true]"
+      },
+      {
+        "name": "DataFolder",
+        "kind": "m",
+        "expression": "\"C:/PowerBI/Astra/power-bi/04-financial-pnl-cashflow/data/demo\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      }
+    ]
+  }
+}

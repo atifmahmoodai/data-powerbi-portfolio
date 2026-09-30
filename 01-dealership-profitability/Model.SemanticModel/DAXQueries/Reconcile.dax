@@ -1,0 +1,10 @@
+EVALUATE
+ROW(
+    "Units Sold", [Units Sold],
+    "Sales Revenue", [Sales Revenue],
+    "Gross Profit", [Gross Profit],
+    "Gross Margin", [Gross Margin],
+    "Stock Units", [Stock Units],
+    "Stock Value", [Stock Value],
+    "Aged Stock Units", [Aged Stock Units]
+)

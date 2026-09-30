@@ -1,0 +1,10 @@
+EVALUATE
+ROW(
+    "Jobs Created", [Jobs Created],
+    "Completed Jobs", [Completed Jobs],
+    "Open Jobs", [Open Jobs],
+    "On Time Rate", [On Time Rate],
+    "Overdue Open Jobs", [Overdue Open Jobs],
+    "First Pass Yield", [First Pass Yield],
+    "Recorded Cost", [Recorded Cost]
+)

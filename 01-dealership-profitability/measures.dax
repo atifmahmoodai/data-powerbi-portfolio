@@ -1,0 +1,47 @@
+// Count of vehicles with completed sales.
+Units Sold =
+CALCULATE(COUNTROWS(Vehicles), KEEPFILTERS(Vehicles[Status] = "Sold"))
+
+// Sale price of sold vehicles, excluding tax.
+Sales Revenue =
+CALCULATE(SUM(Vehicles[SalePrice]), KEEPFILTERS(Vehicles[Status] = "Sold"))
+
+// Purchase plus reconditioning cost of sold vehicles.
+Sold Vehicle Cost =
+CALCULATE(SUMX(Vehicles, Vehicles[PurchaseCost] + Vehicles[Reconditioning]), KEEPFILTERS(Vehicles[Status] = "Sold"))
+
+// Vehicle gross profit before finance costs and operating overhead.
+Gross Profit =
+[Sales Revenue] - [Sold Vehicle Cost]
+
+// Vehicle gross profit divided by sales revenue.
+Gross Margin =
+DIVIDE([Gross Profit], [Sales Revenue])
+
+// Vehicles in stock at the 30 September 2026 snapshot.
+Stock Units =
+CALCULATE(COUNTROWS(Vehicles), KEEPFILTERS(Vehicles[Status] = "In Stock"))
+
+// Capitalized purchase and reconditioning cost of current stock.
+Stock Value =
+CALCULATE(SUMX(Vehicles, Vehicles[PurchaseCost] + Vehicles[Reconditioning]), KEEPFILTERS(Vehicles[Status] = "In Stock"))
+
+// Average days since purchase for current stock.
+Average Stock Age =
+CALCULATE(AVERAGE(Vehicles[DaysHeld]), KEEPFILTERS(Vehicles[Status] = "In Stock"))
+
+// Current unsold vehicles older than 90 days.
+Aged Stock Units =
+CALCULATE([Stock Units], KEEPFILTERS(Vehicles[DaysHeld] > 90))
+
+// Cost tied up in stock older than 90 days.
+Aged Stock Value =
+CALCULATE([Stock Value], KEEPFILTERS(Vehicles[DaysHeld] > 90))
+
+// Mean purchase-to-sale duration of completed sales.
+Average Days to Sell =
+CALCULATE(AVERAGE(Vehicles[DaysHeld]), KEEPFILTERS(Vehicles[Status] = "Sold"))
+
+// Mean gross profit per sold vehicle.
+Profit per Vehicle =
+DIVIDE([Gross Profit], [Units Sold])

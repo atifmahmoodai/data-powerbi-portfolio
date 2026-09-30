@@ -1,0 +1,47 @@
+// Sum of OnHand at the recorded grain.
+On Hand Units =
+SUM(Stock[OnHand])
+
+// Sum of Reserved at the recorded grain.
+Reserved Units =
+SUM(Stock[Reserved])
+
+// Physical stock less reservations.
+Available Units =
+[On Hand Units] - [Reserved Units]
+
+// Physical stock valued at lot unit cost.
+Stock Value =
+SUMX(Stock, Stock[OnHand] * Stock[UnitCost])
+
+// Unreserved stock valued at cost.
+Available Value =
+SUMX(Stock, (Stock[OnHand] - Stock[Reserved]) * Stock[UnitCost])
+
+// Stock received more than 90 days before the snapshot.
+Aged Units =
+CALCULATE([On Hand Units], KEEPFILTERS(Stock[AgeDays] > 90))
+
+// Value of stock older than 90 days.
+Aged Value =
+CALCULATE([Stock Value], KEEPFILTERS(Stock[AgeDays] > 90))
+
+// Aged value / all selected stock value.
+Aged Value Share =
+DIVIDE([Aged Value], [Stock Value])
+
+// Unit-weighted age of on-hand stock.
+Weighted Stock Age =
+DIVIDE(SUMX(Stock, Stock[AgeDays] * Stock[OnHand]), [On Hand Units])
+
+// Lots with positive physical stock.
+Occupied Lots =
+COUNTROWS(FILTER(Stock, Stock[OnHand] > 0))
+
+// Reserved units / on-hand units.
+Reserved Share =
+DIVIDE([Reserved Units], [On Hand Units])
+
+// Distinct products represented in selected snapshot lots.
+Product Count =
+DISTINCTCOUNT(Stock[ProductID])

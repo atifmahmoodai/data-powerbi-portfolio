@@ -1,0 +1,9 @@
+EVALUATE
+ROW(
+    "On Hand Units", [On Hand Units],
+    "Available Units", [Available Units],
+    "Stock Value", [Stock Value],
+    "Aged Value", [Aged Value],
+    "Aged Value Share", [Aged Value Share],
+    "Weighted Stock Age", [Weighted Stock Age]
+)

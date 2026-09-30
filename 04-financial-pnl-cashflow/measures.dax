@@ -1,0 +1,55 @@
+// Accrual revenue; not customer receipts.
+Revenue =
+CALCULATE(SUM(PnL[Actual]), PnL[Category] = "Revenue")
+
+// Positive cost of goods sold.
+Cost of Sales =
+CALCULATE(SUM(PnL[Actual]), PnL[Category] = "COGS")
+
+// Positive operating expense excluding COGS.
+Operating Expense =
+CALCULATE(SUM(PnL[Actual]), PnL[Category] = "Operating Expense")
+
+// Revenue less COGS.
+Gross Profit =
+[Revenue] - [Cost of Sales]
+
+// Before interest, tax and exceptional items.
+Operating Profit =
+[Gross Profit] - [Operating Expense]
+
+// Operating profit / accrual revenue.
+Operating Margin =
+DIVIDE([Operating Profit], [Revenue])
+
+// Budget revenue less budget costs.
+Budget Profit =
+SUMX(PnL, IF(PnL[Category] = "Revenue", PnL[Budget], -PnL[Budget]))
+
+// Positive means operating profit ahead of budget.
+Profit Variance =
+[Operating Profit] - [Budget Profit]
+
+// Category-level signed P&L contribution.
+Signed Actual =
+SUMX(PnL, IF(PnL[Category] = "Revenue", PnL[Actual], -PnL[Actual]))
+
+// Category-level signed budget contribution.
+Signed Budget =
+SUMX(PnL, IF(PnL[Category] = "Revenue", PnL[Budget], -PnL[Budget]))
+
+// All positive cash movements including financing.
+Cash Inflow =
+CALCULATE(SUM(Cash[CashMovement]), KEEPFILTERS(Cash[CashMovement] > 0))
+
+// Absolute value of all negative cash movements.
+Cash Outflow =
+-CALCULATE(SUM(Cash[CashMovement]), KEEPFILTERS(Cash[CashMovement] < 0))
+
+// Cash receipts less payments; not a cash balance.
+Net Cash Movement =
+SUM(Cash[CashMovement])
+
+// Receipts less supplier payments and payroll; excludes capex and loans.
+Operating Cash Movement =
+CALCULATE([Net Cash Movement], KEEPFILTERS(Cash[Category] IN {"Customer Receipts", "Supplier Payments", "Payroll"}))

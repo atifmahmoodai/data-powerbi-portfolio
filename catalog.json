@@ -1,0 +1,92 @@
+[
+  {
+    "folder": "01-dealership-profitability",
+    "title": "Car Dealership Profitability & Inventory",
+    "entrypoint": "01-dealership-profitability/Dashboard.pbip",
+    "tables": 3,
+    "measures": 12,
+    "pages": 3,
+    "status": "source-built; Desktop acceptance pending"
+  },
+  {
+    "folder": "02-executive-sales",
+    "title": "Executive Sales Performance Dashboard",
+    "entrypoint": "02-executive-sales/Dashboard.pbip",
+    "tables": 5,
+    "measures": 14,
+    "pages": 3,
+    "status": "source-built; Desktop acceptance pending"
+  },
+  {
+    "folder": "03-inventory-stock-ageing",
+    "title": "Inventory & Stock Ageing Analytics",
+    "entrypoint": "03-inventory-stock-ageing/Dashboard.pbip",
+    "tables": 3,
+    "measures": 12,
+    "pages": 3,
+    "status": "source-built; Desktop acceptance pending"
+  },
+  {
+    "folder": "04-financial-pnl-cashflow",
+    "title": "Financial P&L / Cash Flow Dashboard",
+    "entrypoint": "04-financial-pnl-cashflow/Dashboard.pbip",
+    "tables": 5,
+    "measures": 14,
+    "pages": 3,
+    "status": "source-built; Desktop acceptance pending"
+  },
+  {
+    "folder": "05-retail-performance",
+    "title": "Retail Store Performance Dashboard",
+    "entrypoint": "05-retail-performance/Dashboard.pbip",
+    "tables": 4,
+    "measures": 14,
+    "pages": 3,
+    "status": "source-built; Desktop acceptance pending"
+  },
+  {
+    "folder": "06-ecommerce-profitability",
+    "title": "E-commerce Profitability Dashboard",
+    "entrypoint": "06-ecommerce-profitability/Dashboard.pbip",
+    "tables": 5,
+    "measures": 14,
+    "pages": 3,
+    "status": "source-built; Desktop acceptance pending"
+  },
+  {
+    "folder": "07-sales-crm",
+    "title": "Sales CRM Analytics Dashboard",
+    "entrypoint": "07-sales-crm/Dashboard.pbip",
+    "tables": 4,
+    "measures": 12,
+    "pages": 3,
+    "status": "source-built; Desktop acceptance pending"
+  },
+  {
+    "folder": "08-hr-workforce",
+    "title": "HR / Workforce Analytics System",
+    "entrypoint": "08-hr-workforce/Dashboard.pbip",
+    "tables": 4,
+    "measures": 12,
+    "pages": 3,
+    "status": "source-built; Desktop acceptance pending"
+  },
+  {
+    "folder": "09-project-profitability",
+    "title": "Project Profitability Dashboard",
+    "entrypoint": "09-project-profitability/Dashboard.pbip",
+    "tables": 4,
+    "measures": 16,
+    "pages": 3,
+    "status": "source-built; Desktop acceptance pending"
+  },
+  {
+    "folder": "10-operations-kpis",
+    "title": "Operations & Management KPI Dashboard",
+    "entrypoint": "10-operations-kpis/Dashboard.pbip",
+    "tables": 4,
+    "measures": 13,
+    "pages": 3,
+    "status": "source-built; Desktop acceptance pending"
+  }
+]

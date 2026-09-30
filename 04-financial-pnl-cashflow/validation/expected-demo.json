@@ -1,0 +1,12 @@
+{
+  "method": "Independent Python reference totals; NOT evaluated by the DAX engine",
+  "scope": "All filters cleared; entire supplied period or snapshot",
+  "metrics": {
+    "Revenue": 12920000,
+    "Operating Profit": 2800000,
+    "Operating Margin": 0.21671826625386997,
+    "Net Cash Movement": -8120000,
+    "Cash Inflow": 15330000,
+    "Cash Outflow": 23450000
+  }
+}

@@ -1,0 +1,9 @@
+EVALUATE
+ROW(
+    "Open Opportunities", [Open Opportunities],
+    "Open Pipeline", [Open Pipeline],
+    "Weighted Pipeline", [Weighted Pipeline],
+    "Won Deals", [Won Deals],
+    "Win Rate", [Win Rate],
+    "Stale Open Deals", [Stale Open Deals]
+)

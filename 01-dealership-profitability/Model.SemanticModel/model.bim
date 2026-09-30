@@ -1,0 +1,347 @@
+{
+  "name": "Model",
+  "compatibilityLevel": 1567,
+  "model": {
+    "culture": "en-US",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Vehicles",
+        "lineageTag": "8030aae4-77a3-5715-810c-ab87752a3ded",
+        "columns": [
+          {
+            "name": "VehicleID",
+            "dataType": "string",
+            "sourceColumn": "VehicleID",
+            "summarizeBy": "none",
+            "lineageTag": "1ddfa21b-09c3-50bc-9132-1aeaeeda5537",
+            "isHidden": true
+          },
+          {
+            "name": "Make",
+            "dataType": "string",
+            "sourceColumn": "Make",
+            "summarizeBy": "none",
+            "lineageTag": "8ffc192d-1022-52b5-896b-4f44ca8b9be6"
+          },
+          {
+            "name": "Model",
+            "dataType": "string",
+            "sourceColumn": "Model",
+            "summarizeBy": "none",
+            "lineageTag": "491784f6-b389-5652-a6cd-f41c43793e49"
+          },
+          {
+            "name": "Branch",
+            "dataType": "string",
+            "sourceColumn": "Branch",
+            "summarizeBy": "none",
+            "lineageTag": "75c18e5b-2a6a-596a-a874-8ddef5970df8"
+          },
+          {
+            "name": "Salesperson",
+            "dataType": "string",
+            "sourceColumn": "Salesperson",
+            "summarizeBy": "none",
+            "lineageTag": "f1f4b2df-c71b-5ce7-9c1b-d53444c7fef9"
+          },
+          {
+            "name": "Status",
+            "dataType": "string",
+            "sourceColumn": "Status",
+            "summarizeBy": "none",
+            "lineageTag": "0b99bb09-5eff-5f75-bb0b-4405fe038d0b"
+          },
+          {
+            "name": "PurchaseDate",
+            "dataType": "dateTime",
+            "sourceColumn": "PurchaseDate",
+            "summarizeBy": "none",
+            "lineageTag": "95f79532-5555-5a65-b88d-2801f6331ce0",
+            "formatString": "dd MMM yyyy"
+          },
+          {
+            "name": "SaleDate",
+            "dataType": "dateTime",
+            "sourceColumn": "SaleDate",
+            "summarizeBy": "none",
+            "lineageTag": "24954e87-3d7e-5f2f-9a4a-b8566d525a70",
+            "formatString": "dd MMM yyyy"
+          },
+          {
+            "name": "PurchaseCost",
+            "dataType": "decimal",
+            "sourceColumn": "PurchaseCost",
+            "summarizeBy": "none",
+            "lineageTag": "69f0cfef-097b-5ff4-9c25-3654fa064ff6"
+          },
+          {
+            "name": "Reconditioning",
+            "dataType": "decimal",
+            "sourceColumn": "Reconditioning",
+            "summarizeBy": "none",
+            "lineageTag": "d046a0cc-49ff-5356-8835-c2db27e7ac1a"
+          },
+          {
+            "name": "SalePrice",
+            "dataType": "decimal",
+            "sourceColumn": "SalePrice",
+            "summarizeBy": "none",
+            "lineageTag": "8e18f3e3-d454-58cc-8894-133057f42280"
+          },
+          {
+            "name": "DaysHeld",
+            "dataType": "int64",
+            "sourceColumn": "DaysHeld",
+            "summarizeBy": "none",
+            "lineageTag": "f381ba58-c95a-54d3-a873-36ef19ea5ec0"
+          },
+          {
+            "name": "AgeBand",
+            "dataType": "string",
+            "sourceColumn": "AgeBand",
+            "summarizeBy": "none",
+            "lineageTag": "21b803fd-fd93-5da2-b8f5-3e644821a3e3"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Vehicles",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Demo = Binary.Decompress(Binary.FromText(\"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\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Demo else if DataMode = \"Folder\" then File.Contents(DataFolder & \"/Vehicles.csv\") else error \"DataMode must be Demo or Folder\",",
+                "    Parsed = Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Parsed, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"VehicleID\", type text}, {\"Make\", type text}, {\"Model\", type text}, {\"Branch\", type text}, {\"Salesperson\", type text}, {\"Status\", type text}, {\"PurchaseDate\", type date}, {\"SaleDate\", type date}, {\"PurchaseCost\", Currency.Type}, {\"Reconditioning\", Currency.Type}, {\"SalePrice\", Currency.Type}, {\"DaysHeld\", Int64.Type}, {\"AgeBand\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Metrics",
+        "lineageTag": "801e62bd-5049-5ece-bb8c-75469907dea6",
+        "columns": [
+          {
+            "name": "Label",
+            "dataType": "string",
+            "sourceColumn": "Label",
+            "summarizeBy": "none",
+            "lineageTag": "c2227322-8f05-5877-9d34-cab9621e5b89",
+            "isHidden": true
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Metrics",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Demo = Binary.Decompress(Binary.FromText(\"80lMSs3hCo70C/FwDfF0VnBx9fXnAgA=\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Demo else if DataMode = \"Folder\" then File.Contents(DataFolder & \"/Metrics.csv\") else error \"DataMode must be Demo or Folder\",",
+                "    Parsed = Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Parsed, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"Label\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Units Sold",
+            "expression": "CALCULATE(COUNTROWS(Vehicles), KEEPFILTERS(Vehicles[Status] = \"Sold\"))",
+            "formatString": "#,0",
+            "description": "Count of vehicles with completed sales.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "1dd20ebf-d0a0-5071-a28a-bca04010e0da"
+          },
+          {
+            "name": "Sales Revenue",
+            "expression": "CALCULATE(SUM(Vehicles[SalePrice]), KEEPFILTERS(Vehicles[Status] = \"Sold\"))",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Sale price of sold vehicles, excluding tax.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "52401810-ffa0-5d10-b6ff-6be2575b548b"
+          },
+          {
+            "name": "Sold Vehicle Cost",
+            "expression": "CALCULATE(SUMX(Vehicles, Vehicles[PurchaseCost] + Vehicles[Reconditioning]), KEEPFILTERS(Vehicles[Status] = \"Sold\"))",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Purchase plus reconditioning cost of sold vehicles.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "03e0080f-b749-56e5-9c48-58b56f6affbb"
+          },
+          {
+            "name": "Gross Profit",
+            "expression": "[Sales Revenue] - [Sold Vehicle Cost]",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Vehicle gross profit before finance costs and operating overhead.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "49ee90ad-69bf-5fe0-94ba-1bcf67c783ec"
+          },
+          {
+            "name": "Gross Margin",
+            "expression": "DIVIDE([Gross Profit], [Sales Revenue])",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "description": "Vehicle gross profit divided by sales revenue.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "85159cc8-3e81-50a1-aec1-6b86561da145"
+          },
+          {
+            "name": "Stock Units",
+            "expression": "CALCULATE(COUNTROWS(Vehicles), KEEPFILTERS(Vehicles[Status] = \"In Stock\"))",
+            "formatString": "#,0",
+            "description": "Vehicles in stock at the 30 September 2026 snapshot.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "caa6ac9c-030f-59c2-b577-315ac2713866"
+          },
+          {
+            "name": "Stock Value",
+            "expression": "CALCULATE(SUMX(Vehicles, Vehicles[PurchaseCost] + Vehicles[Reconditioning]), KEEPFILTERS(Vehicles[Status] = \"In Stock\"))",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Capitalized purchase and reconditioning cost of current stock.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "c039caa0-a260-57a4-805d-03c0474cf8a4"
+          },
+          {
+            "name": "Average Stock Age",
+            "expression": "CALCULATE(AVERAGE(Vehicles[DaysHeld]), KEEPFILTERS(Vehicles[Status] = \"In Stock\"))",
+            "formatString": "#,0.0",
+            "description": "Average days since purchase for current stock.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "48a39863-c84a-54eb-8d4a-05b516e69c79"
+          },
+          {
+            "name": "Aged Stock Units",
+            "expression": "CALCULATE([Stock Units], KEEPFILTERS(Vehicles[DaysHeld] > 90))",
+            "formatString": "#,0",
+            "description": "Current unsold vehicles older than 90 days.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "4406f1fa-8d56-5b39-b88d-1809b8585ec2"
+          },
+          {
+            "name": "Aged Stock Value",
+            "expression": "CALCULATE([Stock Value], KEEPFILTERS(Vehicles[DaysHeld] > 90))",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Cost tied up in stock older than 90 days.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "5227d6a1-61d1-5b0f-80ea-49dad45331fe"
+          },
+          {
+            "name": "Average Days to Sell",
+            "expression": "CALCULATE(AVERAGE(Vehicles[DaysHeld]), KEEPFILTERS(Vehicles[Status] = \"Sold\"))",
+            "formatString": "#,0.0",
+            "description": "Mean purchase-to-sale duration of completed sales.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "28c55a0c-34a0-5fa5-99ed-e7630fe02a5a"
+          },
+          {
+            "name": "Profit per Vehicle",
+            "expression": "DIVIDE([Gross Profit], [Units Sold])",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Mean gross profit per sold vehicle.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "2c426308-6a7c-547c-adc0-c1b4f0cdecee"
+          }
+        ]
+      },
+      {
+        "name": "Calendar",
+        "lineageTag": "920002b7-2210-515a-8784-0366920ad96d",
+        "columns": [
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Date",
+            "summarizeBy": "none",
+            "lineageTag": "9e9e2a02-7963-5974-92dc-65d77abe2ba5",
+            "formatString": "dd MMM yyyy",
+            "isKey": true
+          },
+          {
+            "name": "Year",
+            "dataType": "int64",
+            "sourceColumn": "Year",
+            "summarizeBy": "none",
+            "lineageTag": "cc527976-473d-5b88-89ae-ff2a72b1c474"
+          },
+          {
+            "name": "Month",
+            "dataType": "string",
+            "sourceColumn": "Month",
+            "summarizeBy": "none",
+            "lineageTag": "21975d70-951a-598f-a94f-f19ce8c152aa"
+          },
+          {
+            "name": "Quarter",
+            "dataType": "string",
+            "sourceColumn": "Quarter",
+            "summarizeBy": "none",
+            "lineageTag": "54d1a52c-1ee1-5adc-8622-457fb169f9fa"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Calendar",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Demo = Binary.Decompress(Binary.FromText(\"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\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Demo else if DataMode = \"Folder\" then File.Contents(DataFolder & \"/Calendar.csv\") else error \"DataMode must be Demo or Folder\",",
+                "    Parsed = Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Parsed, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"Date\", type date}, {\"Year\", Int64.Type}, {\"Month\", type text}, {\"Quarter\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "dataCategory": "Time"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "24954e87-3d7e-5f2f-9a4a-b8566d525a70",
+        "fromTable": "Vehicles",
+        "fromColumn": "SaleDate",
+        "toTable": "Calendar",
+        "toColumn": "Date",
+        "crossFilteringBehavior": "oneDirection",
+        "fromCardinality": "many",
+        "toCardinality": "one"
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DataMode",
+        "kind": "m",
+        "expression": "\"Demo\" meta [IsParameterQuery=true, List={\"Demo\", \"Folder\"}, DefaultValue=\"Demo\", Type=\"Text\", IsParameterQueryRequired=true]"
+      },
+      {
+        "name": "DataFolder",
+        "kind": "m",
+        "expression": "\"C:/PowerBI/Astra/power-bi/01-dealership-profitability/data/demo\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      }
+    ]
+  }
+}

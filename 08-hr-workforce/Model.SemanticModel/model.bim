@@ -1,0 +1,390 @@
+{
+  "name": "Model",
+  "compatibilityLevel": 1567,
+  "model": {
+    "culture": "en-US",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Departments",
+        "lineageTag": "a0ea3d01-cf5e-5c69-a7e5-f03b6008ea52",
+        "columns": [
+          {
+            "name": "DepartmentID",
+            "dataType": "string",
+            "sourceColumn": "DepartmentID",
+            "summarizeBy": "none",
+            "lineageTag": "b5ee56c6-92e5-5f78-b83e-1580a2ee0858",
+            "isHidden": true
+          },
+          {
+            "name": "Department",
+            "dataType": "string",
+            "sourceColumn": "Department",
+            "summarizeBy": "none",
+            "lineageTag": "e301ea92-f83d-596b-9685-f1f597a32ff7"
+          },
+          {
+            "name": "Location",
+            "dataType": "string",
+            "sourceColumn": "Location",
+            "summarizeBy": "none",
+            "lineageTag": "8a6a0b1c-8e0b-5838-8c8a-8157fa8afe18"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Departments",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Demo = Binary.Decompress(Binary.FromText(\"RctBCoUwDEXRedfyJup3B1EQhT9wBaEEDWhaYt2/IKjDC+eSZPayi5WBQG9gSpGLJgtUobNFTcTVFky8JpdANWbe5MDIznHVQA3+Wfx+jlf90KuxRflci/nMOXl50AU=\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Demo else if DataMode = \"Folder\" then File.Contents(DataFolder & \"/Departments.csv\") else error \"DataMode must be Demo or Folder\",",
+                "    Parsed = Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Parsed, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"DepartmentID\", type text}, {\"Department\", type text}, {\"Location\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Workforce",
+        "lineageTag": "ae3b2e1c-8cd4-5d32-9b90-70108b0582f2",
+        "columns": [
+          {
+            "name": "SnapshotID",
+            "dataType": "string",
+            "sourceColumn": "SnapshotID",
+            "summarizeBy": "none",
+            "lineageTag": "b30981d7-5aab-5f9b-bfbc-ee860a080419",
+            "isHidden": true
+          },
+          {
+            "name": "DepartmentID",
+            "dataType": "string",
+            "sourceColumn": "DepartmentID",
+            "summarizeBy": "none",
+            "lineageTag": "52ea0da1-6792-5848-bd08-fd9b511ab33c",
+            "isHidden": true
+          },
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Date",
+            "summarizeBy": "none",
+            "lineageTag": "11451532-3f81-5d7d-8d35-a39c43ac4fa7",
+            "formatString": "dd MMM yyyy"
+          },
+          {
+            "name": "OpeningHeadcount",
+            "dataType": "int64",
+            "sourceColumn": "OpeningHeadcount",
+            "summarizeBy": "none",
+            "lineageTag": "172b4585-4d80-5d59-bd26-e7403e341fa2"
+          },
+          {
+            "name": "ClosingHeadcount",
+            "dataType": "int64",
+            "sourceColumn": "ClosingHeadcount",
+            "summarizeBy": "none",
+            "lineageTag": "a6a79637-8f0b-5734-9f79-e16b340ccd79"
+          },
+          {
+            "name": "Hires",
+            "dataType": "int64",
+            "sourceColumn": "Hires",
+            "summarizeBy": "none",
+            "lineageTag": "c3d63ac7-086f-5201-983b-1e5cdf3ceeb6"
+          },
+          {
+            "name": "Leavers",
+            "dataType": "int64",
+            "sourceColumn": "Leavers",
+            "summarizeBy": "none",
+            "lineageTag": "2546d2e5-0a8e-56e0-8f48-0966e51a7515"
+          },
+          {
+            "name": "ScheduledHours",
+            "dataType": "int64",
+            "sourceColumn": "ScheduledHours",
+            "summarizeBy": "none",
+            "lineageTag": "d9998d4a-5edd-544f-8560-bdfe871c1507"
+          },
+          {
+            "name": "AbsentHours",
+            "dataType": "int64",
+            "sourceColumn": "AbsentHours",
+            "summarizeBy": "none",
+            "lineageTag": "934d0c14-9e6d-5f3b-b2df-7a2ebbca5383"
+          },
+          {
+            "name": "OvertimeHours",
+            "dataType": "int64",
+            "sourceColumn": "OvertimeHours",
+            "summarizeBy": "none",
+            "lineageTag": "6d3dd5fd-7898-5879-b2d3-a555deca2483"
+          },
+          {
+            "name": "Payroll",
+            "dataType": "decimal",
+            "sourceColumn": "Payroll",
+            "summarizeBy": "none",
+            "lineageTag": "949524cd-be2a-5ccd-b8d5-5f01e744e55e"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Workforce",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Demo = Binary.Decompress(Binary.FromText(\"bZbdahtBDIXv+ywyzGg0f5elvnChkEKewE2WJpDYwXYKffseaWazCrQ1pOvMGenok7S9Px3frk/n2/c97Ze34+X2upzs4Xhb6O5tOT2ffh+W4+PD+f10o28v5+unLw7Pl+VKP5bjn+VypfuHp+Xx/WV5PJzf8fj11xWXjX/f4cDt+XUZTz+Pfy/nl5cvh0j7SBy47ELcpUgpUSqUiSlzCxR7ohgCcWsBf74cmPbsz9dAFRdQpBgZB2MT/LpQ5DoVifbpU4RASahAIzhBvVKu+CaM00J78adLpZIokCCNyviZECsIdclDkGmfvUA67sXliWoTJB4bJY7UiozzZTPMO27qVvT6gDQKUmtRzVIuM6G6GbbzcFs6TiONmCBoXFC0jqeahqJthkcE0Q8KRFk0o4IIOWyW+2bZzsOvWQ5aeTCQnpEbyhSmhRg2z6aAYb0QEWppenNF/VHaMCNERzlZkbSQpEG0LIAGEUCkVqfAYTYBLBdAVQyoPk6jDLkI5b7m5DCbQl1rgOlaAjLuuIXXEI70CGG29e+wHWEbwTbS0aE2BTxnpIAQ2mqk9GreSEeHWnbJLEswE6VpAKVWhWQFER1rE8AyPoMEGoJq1+/0J0+FY20KHR8lncb4pIpWRNS0puRYjwgwDbofprVVuWlv1ZkUO9gmUcsZHpI5telDXRvPKrFjnf/HumtKfWPNjrUJhmt1MVyrItekAz5ts4NtksFbm1w6FGMBIIu0bg0He8TI1lJkw4ysKoYoICDLGsLBNgU852Y2dBWRYIoqU/sok4NdVtjJXBhspJcZFVir5FCXFTVGzPaMmQ4YxIbGmuTYkTaB9jd2k5KWuWcYlqXFKXCoR4SuCWdbHDpCMYA9GiJyL3NTOtQmgeGcrWG7dlNJGHVB3DZdJMe6GmuYFuuN0eFZh1AX7KxqcqzrXK812vYb6zWjIQVdjvUx2yM51ibBffjoUGSMga4xrDOUtqwuHGsTwDW8j92RocAqA2VqfY3gUNcVtZKQgbooR5S2xtW2Y93MNs6OkahWWXSTYJhLXQWOtgnguYo101jisTBhdfSy1snRbtO0KLxpWj+t6HjP8w52m/tSN6TO9YCNXVmiK6s41m01ney9YqZBHmtN5v3iQHfr7qym7S2nb92s48PbJhPH2c7DLco+DOtrEXsbCeJJynxrieM8QrBG0X4t9uJFDEYzjAlSgeM8YqCouOGjqPb6xaB16VPhQJsChrP+50HMKZhhLWmZy5ihfw==\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Demo else if DataMode = \"Folder\" then File.Contents(DataFolder & \"/Workforce.csv\") else error \"DataMode must be Demo or Folder\",",
+                "    Parsed = Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Parsed, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"SnapshotID\", type text}, {\"DepartmentID\", type text}, {\"Date\", type date}, {\"OpeningHeadcount\", Int64.Type}, {\"ClosingHeadcount\", Int64.Type}, {\"Hires\", Int64.Type}, {\"Leavers\", Int64.Type}, {\"ScheduledHours\", Int64.Type}, {\"AbsentHours\", Int64.Type}, {\"OvertimeHours\", Int64.Type}, {\"Payroll\", Currency.Type}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Metrics",
+        "lineageTag": "56bca1e6-7366-5b37-8c67-7cc843c51756",
+        "columns": [
+          {
+            "name": "Label",
+            "dataType": "string",
+            "sourceColumn": "Label",
+            "summarizeBy": "none",
+            "lineageTag": "7ab01429-70c6-58f0-99f3-e795148c9a0e",
+            "isHidden": true
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Metrics",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Demo = Binary.Decompress(Binary.FromText(\"80lMSs3hCo70C/FwDfF0VnBx9fXnAgA=\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Demo else if DataMode = \"Folder\" then File.Contents(DataFolder & \"/Metrics.csv\") else error \"DataMode must be Demo or Folder\",",
+                "    Parsed = Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Parsed, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"Label\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Headcount",
+            "expression": "VAR LastMonth = MAX(Workforce[Date]) RETURN CALCULATE(SUM(Workforce[ClosingHeadcount]), Workforce[Date] = LastMonth)",
+            "formatString": "#,0",
+            "description": "Closing headcount at the latest snapshot in the selected period; never sum months.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "c3b4f2f7-7edf-5904-a4ca-632fd76d0dce"
+          },
+          {
+            "name": "Average Opening Headcount",
+            "expression": "AVERAGEX(VALUES(Workforce[Date]), CALCULATE(SUM(Workforce[OpeningHeadcount])))",
+            "formatString": "#,0.0",
+            "description": "Average of selected monthly opening headcounts.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "2afbb4dd-8dfa-568f-a111-913d10548594"
+          },
+          {
+            "name": "Hires",
+            "expression": "SUM(Workforce[Hires])",
+            "formatString": "#,0",
+            "description": "Sum of Hires at the recorded grain.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "ac8525ac-d851-5383-b9aa-6c7268e5fbec"
+          },
+          {
+            "name": "Leavers",
+            "expression": "SUM(Workforce[Leavers])",
+            "formatString": "#,0",
+            "description": "Sum of Leavers at the recorded grain.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "2ef48ba0-b5a0-5b4f-8c5c-416f6f46eabe"
+          },
+          {
+            "name": "Net Hiring",
+            "expression": "[Hires] - [Leavers]",
+            "formatString": "#,0",
+            "description": "Period hires less leavers.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "bb9e26fc-522e-53fa-b30b-fbade360858f"
+          },
+          {
+            "name": "Period Attrition",
+            "expression": "DIVIDE([Leavers], [Average Opening Headcount])",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "description": "Leavers in selected months / average monthly opening headcount. Period rate, not annualized.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "12545cda-f7cb-5dc8-9a05-b8f1747c42ae"
+          },
+          {
+            "name": "Scheduled Hours",
+            "expression": "SUM(Workforce[ScheduledHours])",
+            "formatString": "#,0",
+            "description": "Sum of ScheduledHours at the recorded grain.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "8a44e9ed-7093-58fc-b766-e62593467e7e"
+          },
+          {
+            "name": "Absent Hours",
+            "expression": "SUM(Workforce[AbsentHours])",
+            "formatString": "#,0",
+            "description": "Sum of AbsentHours at the recorded grain.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "c9b0f390-d2cb-5738-8e91-056e912036e5"
+          },
+          {
+            "name": "Absence Rate",
+            "expression": "DIVIDE([Absent Hours], [Scheduled Hours])",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "description": "Absent hours / scheduled hours.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "f468d399-b6e5-50a4-9a6d-aa8f30e7a892"
+          },
+          {
+            "name": "Overtime Hours",
+            "expression": "SUM(Workforce[OvertimeHours])",
+            "formatString": "#,0",
+            "description": "Sum of OvertimeHours at the recorded grain.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "e1c42226-df89-56b2-b6de-6385915392e1"
+          },
+          {
+            "name": "Payroll",
+            "expression": "SUM(Workforce[Payroll])",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Total payroll over selected months.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "820fda6c-74b6-5d39-8252-254bc652dd38"
+          },
+          {
+            "name": "Payroll per Employee Month",
+            "expression": "DIVIDE([Payroll], SUM(Workforce[ClosingHeadcount]))",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Payroll / sum of monthly closing headcounts; employee-month cost, not payroll / latest headcount.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "1c0aff8f-ae40-55d4-bb69-a828390583d9"
+          }
+        ]
+      },
+      {
+        "name": "Calendar",
+        "lineageTag": "22c1aaf5-d787-54d7-9819-8da27a5ef515",
+        "columns": [
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Date",
+            "summarizeBy": "none",
+            "lineageTag": "a2d71cc9-5078-5984-a6f1-42aa7fc297da",
+            "formatString": "dd MMM yyyy",
+            "isKey": true
+          },
+          {
+            "name": "Year",
+            "dataType": "int64",
+            "sourceColumn": "Year",
+            "summarizeBy": "none",
+            "lineageTag": "4d8a7987-fe06-50fe-8711-35eab46b8dbe"
+          },
+          {
+            "name": "Month",
+            "dataType": "string",
+            "sourceColumn": "Month",
+            "summarizeBy": "none",
+            "lineageTag": "f4f268f9-0057-5160-912d-280c0ddcb819"
+          },
+          {
+            "name": "Quarter",
+            "dataType": "string",
+            "sourceColumn": "Quarter",
+            "summarizeBy": "none",
+            "lineageTag": "a95581ae-7b5f-5725-b20d-505bc573893a"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Calendar",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Demo = Binary.Decompress(Binary.FromText(\"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\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Demo else if DataMode = \"Folder\" then File.Contents(DataFolder & \"/Calendar.csv\") else error \"DataMode must be Demo or Folder\",",
+                "    Parsed = Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Parsed, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"Date\", type date}, {\"Year\", Int64.Type}, {\"Month\", type text}, {\"Quarter\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "dataCategory": "Time"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "52ea0da1-6792-5848-bd08-fd9b511ab33c",
+        "fromTable": "Workforce",
+        "fromColumn": "DepartmentID",
+        "toTable": "Departments",
+        "toColumn": "DepartmentID",
+        "crossFilteringBehavior": "oneDirection",
+        "fromCardinality": "many",
+        "toCardinality": "one"
+      },
+      {
+        "name": "11451532-3f81-5d7d-8d35-a39c43ac4fa7",
+        "fromTable": "Workforce",
+        "fromColumn": "Date",
+        "toTable": "Calendar",
+        "toColumn": "Date",
+        "crossFilteringBehavior": "oneDirection",
+        "fromCardinality": "many",
+        "toCardinality": "one"
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DataMode",
+        "kind": "m",
+        "expression": "\"Demo\" meta [IsParameterQuery=true, List={\"Demo\", \"Folder\"}, DefaultValue=\"Demo\", Type=\"Text\", IsParameterQueryRequired=true]"
+      },
+      {
+        "name": "DataFolder",
+        "kind": "m",
+        "expression": "\"C:/PowerBI/Astra/power-bi/08-hr-workforce/data/demo\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      }
+    ]
+  }
+}

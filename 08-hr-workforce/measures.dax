@@ -1,0 +1,47 @@
+// Closing headcount at the latest snapshot in the selected period; never sum months.
+Headcount =
+VAR LastMonth = MAX(Workforce[Date]) RETURN CALCULATE(SUM(Workforce[ClosingHeadcount]), Workforce[Date] = LastMonth)
+
+// Average of selected monthly opening headcounts.
+Average Opening Headcount =
+AVERAGEX(VALUES(Workforce[Date]), CALCULATE(SUM(Workforce[OpeningHeadcount])))
+
+// Sum of Hires at the recorded grain.
+Hires =
+SUM(Workforce[Hires])
+
+// Sum of Leavers at the recorded grain.
+Leavers =
+SUM(Workforce[Leavers])
+
+// Period hires less leavers.
+Net Hiring =
+[Hires] - [Leavers]
+
+// Leavers in selected months / average monthly opening headcount. Period rate, not annualized.
+Period Attrition =
+DIVIDE([Leavers], [Average Opening Headcount])
+
+// Sum of ScheduledHours at the recorded grain.
+Scheduled Hours =
+SUM(Workforce[ScheduledHours])
+
+// Sum of AbsentHours at the recorded grain.
+Absent Hours =
+SUM(Workforce[AbsentHours])
+
+// Absent hours / scheduled hours.
+Absence Rate =
+DIVIDE([Absent Hours], [Scheduled Hours])
+
+// Sum of OvertimeHours at the recorded grain.
+Overtime Hours =
+SUM(Workforce[OvertimeHours])
+
+// Total payroll over selected months.
+Payroll =
+SUM(Workforce[Payroll])
+
+// Payroll / sum of monthly closing headcounts; employee-month cost, not payroll / latest headcount.
+Payroll per Employee Month =
+DIVIDE([Payroll], SUM(Workforce[ClosingHeadcount]))

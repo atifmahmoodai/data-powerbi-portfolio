@@ -1,0 +1,13 @@
+{
+  "method": "Independent Python reference totals; NOT evaluated by the DAX engine",
+  "scope": "All filters cleared; entire supplied period or snapshot",
+  "metrics": {
+    "Jobs Created": 720,
+    "Completed Jobs": 573,
+    "Open Jobs": 147,
+    "On Time Rate": 0.16055846422338568,
+    "Overdue Open Jobs": 137,
+    "First Pass Yield": 0.9109947643979057,
+    "Recorded Cost": 14209000
+  }
+}

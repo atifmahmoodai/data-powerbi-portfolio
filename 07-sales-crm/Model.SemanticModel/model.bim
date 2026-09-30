@@ -1,0 +1,392 @@
+{
+  "name": "Model",
+  "compatibilityLevel": 1567,
+  "model": {
+    "culture": "en-US",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Owners",
+        "lineageTag": "e3a41e0b-3a9e-551c-8b63-c0510e6a2e1f",
+        "columns": [
+          {
+            "name": "OwnerID",
+            "dataType": "string",
+            "sourceColumn": "OwnerID",
+            "summarizeBy": "none",
+            "lineageTag": "92c82f9b-77d6-59a2-a9ba-bc53043af6c1",
+            "isHidden": true
+          },
+          {
+            "name": "Owner",
+            "dataType": "string",
+            "sourceColumn": "Owner",
+            "summarizeBy": "none",
+            "lineageTag": "4fce81b0-5436-5496-8271-69d5b799dcb5"
+          },
+          {
+            "name": "Team",
+            "dataType": "string",
+            "sourceColumn": "Team",
+            "summarizeBy": "none",
+            "lineageTag": "213e55ed-0f12-587f-b1eb-95c4c99aebfa"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Owners",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Demo = Binary.Decompress(Binary.FromText(\"8y/PSy3ydNHxB9E6IamJuVxBhjqOKWWZxflFCoY6rnklqUUFRZnFqVxBRnBxI52AxKISoI5iriBjuKixjmdeUn5pXgpXkAlc0ATFCFO4uCmSEWZwUTOEEeZwQXMUIyzg4hZIRljCRS3hRgAA\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Demo else if DataMode = \"Folder\" then File.Contents(DataFolder & \"/Owners.csv\") else error \"DataMode must be Demo or Folder\",",
+                "    Parsed = Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Parsed, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"OwnerID\", type text}, {\"Owner\", type text}, {\"Team\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Opportunities",
+        "lineageTag": "651f90db-b139-5a59-bc66-c6c64f29bd8d",
+        "columns": [
+          {
+            "name": "OpportunityID",
+            "dataType": "string",
+            "sourceColumn": "OpportunityID",
+            "summarizeBy": "none",
+            "lineageTag": "09bfb5dc-7fc2-5633-b7e2-2d9bda307a97",
+            "isHidden": true
+          },
+          {
+            "name": "OwnerID",
+            "dataType": "string",
+            "sourceColumn": "OwnerID",
+            "summarizeBy": "none",
+            "lineageTag": "abe04111-4399-5e8a-9537-90c1342bc4ea",
+            "isHidden": true
+          },
+          {
+            "name": "Source",
+            "dataType": "string",
+            "sourceColumn": "Source",
+            "summarizeBy": "none",
+            "lineageTag": "41e1f773-d596-5623-8c76-a196859b9468"
+          },
+          {
+            "name": "Stage",
+            "dataType": "string",
+            "sourceColumn": "Stage",
+            "summarizeBy": "none",
+            "lineageTag": "1ae08e1d-16a4-559e-baca-6678d3b997c4"
+          },
+          {
+            "name": "CreatedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "CreatedDate",
+            "summarizeBy": "none",
+            "lineageTag": "470e6eff-dce6-590b-8e90-46ef6de185ec",
+            "formatString": "dd MMM yyyy"
+          },
+          {
+            "name": "ClosedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "ClosedDate",
+            "summarizeBy": "none",
+            "lineageTag": "95154e3e-1b71-5da5-ae13-f685868868d7",
+            "formatString": "dd MMM yyyy"
+          },
+          {
+            "name": "LastActivityDate",
+            "dataType": "dateTime",
+            "sourceColumn": "LastActivityDate",
+            "summarizeBy": "none",
+            "lineageTag": "4252304b-c593-5531-8439-ea6e4e9803d0",
+            "formatString": "dd MMM yyyy"
+          },
+          {
+            "name": "Amount",
+            "dataType": "decimal",
+            "sourceColumn": "Amount",
+            "summarizeBy": "none",
+            "lineageTag": "4e84921b-9139-504a-aca4-015d494684fc"
+          },
+          {
+            "name": "Probability",
+            "dataType": "decimal",
+            "sourceColumn": "Probability",
+            "summarizeBy": "none",
+            "lineageTag": "f3c05ed5-55b1-56bb-8b52-321acf0ebac8"
+          },
+          {
+            "name": "CycleDays",
+            "dataType": "int64",
+            "sourceColumn": "CycleDays",
+            "summarizeBy": "none",
+            "lineageTag": "e7e4a01d-d8ad-5a94-9d73-f2ecf3d6ea67"
+          },
+          {
+            "name": "IsOpen",
+            "dataType": "int64",
+            "sourceColumn": "IsOpen",
+            "summarizeBy": "none",
+            "lineageTag": "a1c993a2-6390-5526-8965-136bc5aca5c4"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Opportunities",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Demo = Binary.Decompress(Binary.FromText(\"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\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Demo else if DataMode = \"Folder\" then File.Contents(DataFolder & \"/Opportunities.csv\") else error \"DataMode must be Demo or Folder\",",
+                "    Parsed = Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Parsed, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"OpportunityID\", type text}, {\"OwnerID\", type text}, {\"Source\", type text}, {\"Stage\", type text}, {\"CreatedDate\", type date}, {\"ClosedDate\", type date}, {\"LastActivityDate\", type date}, {\"Amount\", Currency.Type}, {\"Probability\", Currency.Type}, {\"CycleDays\", Int64.Type}, {\"IsOpen\", Int64.Type}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Metrics",
+        "lineageTag": "a536c553-0799-5788-b4bf-4c251755ba55",
+        "columns": [
+          {
+            "name": "Label",
+            "dataType": "string",
+            "sourceColumn": "Label",
+            "summarizeBy": "none",
+            "lineageTag": "59094d16-20e2-536f-8ac5-9fd8e89376fb",
+            "isHidden": true
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Metrics",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Demo = Binary.Decompress(Binary.FromText(\"80lMSs3hCo70C/FwDfF0VnBx9fXnAgA=\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Demo else if DataMode = \"Folder\" then File.Contents(DataFolder & \"/Metrics.csv\") else error \"DataMode must be Demo or Folder\",",
+                "    Parsed = Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Parsed, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"Label\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Opportunities",
+            "expression": "COUNTROWS(Opportunities)",
+            "formatString": "#,0",
+            "description": "Count of opportunities created in the selected cohort.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "7c1b7519-8dd1-521a-b1ae-d97e2569c6a2"
+          },
+          {
+            "name": "Open Opportunities",
+            "expression": "CALCULATE(COUNTROWS(Opportunities), KEEPFILTERS(Opportunities[IsOpen] = 1))",
+            "formatString": "#,0",
+            "description": "Currently open opportunities in the creation cohort.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "4c446096-59b5-5342-a580-46bbdda12f69"
+          },
+          {
+            "name": "Open Pipeline",
+            "expression": "CALCULATE(SUM(Opportunities[Amount]), KEEPFILTERS(Opportunities[IsOpen] = 1))",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Current amount of open opportunities.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "08cd67e9-112b-57f5-836c-c716348d1538"
+          },
+          {
+            "name": "Weighted Pipeline",
+            "expression": "CALCULATE(SUMX(Opportunities, Opportunities[Amount] * Opportunities[Probability]), KEEPFILTERS(Opportunities[IsOpen] = 1))",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Open amount × stage probability; heuristic, not a calibrated forecast.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "c488196f-9722-541d-b065-9fba7e5b6008"
+          },
+          {
+            "name": "Won Deals",
+            "expression": "CALCULATE(COUNTROWS(Opportunities), KEEPFILTERS(Opportunities[Stage] = \"Won\"))",
+            "formatString": "#,0",
+            "description": "Won opportunities in the selected creation cohort.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "5de48464-819d-531a-992e-793b4987057f"
+          },
+          {
+            "name": "Lost Deals",
+            "expression": "CALCULATE(COUNTROWS(Opportunities), KEEPFILTERS(Opportunities[Stage] = \"Lost\"))",
+            "formatString": "#,0",
+            "description": "Lost opportunities in the selected creation cohort.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "60157fd4-223d-5a23-8310-5b50d25acf48"
+          },
+          {
+            "name": "Won Value",
+            "expression": "CALCULATE(SUM(Opportunities[Amount]), KEEPFILTERS(Opportunities[Stage] = \"Won\"))",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Won deal amount; bookings, not recognized accounting revenue.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "fb9bcc7d-3d19-5379-9e1d-96b43403e0c6"
+          },
+          {
+            "name": "Win Rate",
+            "expression": "DIVIDE([Won Deals], [Won Deals] + [Lost Deals])",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "description": "Wins divided by wins plus losses; excludes open deals.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "016e2436-176e-52fb-8f55-7029cb354115"
+          },
+          {
+            "name": "Average Won Deal",
+            "expression": "DIVIDE([Won Value], [Won Deals])",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Won value / won count.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "b9c45e31-01bc-5f87-b1d7-22f25b23287f"
+          },
+          {
+            "name": "Average Sales Cycle",
+            "expression": "CALCULATE(AVERAGE(Opportunities[CycleDays]), KEEPFILTERS(Opportunities[Stage] = \"Won\"))",
+            "formatString": "#,0.0",
+            "description": "Mean creation-to-close days for wins.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "e84f480a-0ea0-5574-9413-636d19870ea9"
+          },
+          {
+            "name": "Stale Open Deals",
+            "expression": "CALCULATE([Open Opportunities], KEEPFILTERS(Opportunities[LastActivityDate] < DATE(2026,9,30) - 14))",
+            "formatString": "#,0",
+            "description": "Open deals with no activity for more than 14 days at the demo as-of date.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "853afcab-fb5a-53f7-8516-b8b1eafb1100"
+          },
+          {
+            "name": "Stale Pipeline",
+            "expression": "CALCULATE([Open Pipeline], KEEPFILTERS(Opportunities[LastActivityDate] < DATE(2026,9,30) - 14))",
+            "formatString": "\"PKR \"#,0;(\"PKR \"#,0);\"PKR \"0",
+            "description": "Amount of stale open deals at the demo as-of date.",
+            "displayFolder": "Business metrics",
+            "lineageTag": "9fe34026-43b4-574e-b4a9-74f7b013d76d"
+          }
+        ]
+      },
+      {
+        "name": "Calendar",
+        "lineageTag": "f7903c27-7def-55d1-97d8-eca3bdace2eb",
+        "columns": [
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Date",
+            "summarizeBy": "none",
+            "lineageTag": "9d245d7b-815a-5e90-b913-01df7424ee1a",
+            "formatString": "dd MMM yyyy",
+            "isKey": true
+          },
+          {
+            "name": "Year",
+            "dataType": "int64",
+            "sourceColumn": "Year",
+            "summarizeBy": "none",
+            "lineageTag": "202451ae-d06e-5b9e-9473-af58e22cdeab"
+          },
+          {
+            "name": "Month",
+            "dataType": "string",
+            "sourceColumn": "Month",
+            "summarizeBy": "none",
+            "lineageTag": "9e8bea0a-14b5-5230-9b57-f80957660d78"
+          },
+          {
+            "name": "Quarter",
+            "dataType": "string",
+            "sourceColumn": "Quarter",
+            "summarizeBy": "none",
+            "lineageTag": "a1660fbb-2c2e-5656-9490-3f78b2da04e8"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Calendar",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Demo = Binary.Decompress(Binary.FromText(\"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\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Demo else if DataMode = \"Folder\" then File.Contents(DataFolder & \"/Calendar.csv\") else error \"DataMode must be Demo or Folder\",",
+                "    Parsed = Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Parsed, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"Date\", type date}, {\"Year\", Int64.Type}, {\"Month\", type text}, {\"Quarter\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "dataCategory": "Time"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "abe04111-4399-5e8a-9537-90c1342bc4ea",
+        "fromTable": "Opportunities",
+        "fromColumn": "OwnerID",
+        "toTable": "Owners",
+        "toColumn": "OwnerID",
+        "crossFilteringBehavior": "oneDirection",
+        "fromCardinality": "many",
+        "toCardinality": "one"
+      },
+      {
+        "name": "470e6eff-dce6-590b-8e90-46ef6de185ec",
+        "fromTable": "Opportunities",
+        "fromColumn": "CreatedDate",
+        "toTable": "Calendar",
+        "toColumn": "Date",
+        "crossFilteringBehavior": "oneDirection",
+        "fromCardinality": "many",
+        "toCardinality": "one"
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DataMode",
+        "kind": "m",
+        "expression": "\"Demo\" meta [IsParameterQuery=true, List={\"Demo\", \"Folder\"}, DefaultValue=\"Demo\", Type=\"Text\", IsParameterQueryRequired=true]"
+      },
+      {
+        "name": "DataFolder",
+        "kind": "m",
+        "expression": "\"C:/PowerBI/Astra/power-bi/07-sales-crm/data/demo\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      }
+    ]
+  }
+}

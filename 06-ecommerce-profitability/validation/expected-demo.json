@@ -1,0 +1,12 @@
+{
+  "method": "Independent Python reference totals; NOT evaluated by the DAX engine",
+  "scope": "All filters cleared; entire supplied period or snapshot",
+  "metrics": {
+    "Net Revenue": 6746032.69,
+    "Ad Spend": 955600,
+    "Contribution before Ads": 2752583.17,
+    "Contribution after Ads": 1796983.17,
+    "Order Count": 900,
+    "Revenue to Ad Spend": 7.059473304730013
+  }
+}

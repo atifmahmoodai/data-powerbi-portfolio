@@ -1,0 +1,9 @@
+EVALUATE
+ROW(
+    "Revenue", [Revenue],
+    "Gross Profit", [Gross Profit],
+    "Revenue Target", [Revenue Target],
+    "Target Attainment", [Target Attainment],
+    "Sales Transactions", [Sales Transactions],
+    "Active Customers", [Active Customers]
+)
