@@ -1,0 +1,11 @@
+Service Jobs Logged =
+COUNTROWS(Data)
+
+SLA Breaches =
+CALCULATE(COUNTROWS(Data), Data[status] = "SLA breach")
+
+Service Revenue =
+SUM(Data[actual])
+
+Service Cost =
+SUM(Data[cost])

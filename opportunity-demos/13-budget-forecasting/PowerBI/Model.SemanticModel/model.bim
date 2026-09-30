@@ -1,0 +1,164 @@
+{
+  "name": "Model",
+  "compatibilityLevel": 1567,
+  "model": {
+    "culture": "en-US",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Data",
+        "lineageTag": "af83eef5-31aa-521c-bedb-354781b3b291",
+        "columns": [
+          {
+            "name": "period",
+            "dataType": "string",
+            "sourceColumn": "period",
+            "summarizeBy": "none",
+            "lineageTag": "ca4c646e-978f-5567-a645-0b0f02b5b773"
+          },
+          {
+            "name": "group",
+            "dataType": "string",
+            "sourceColumn": "group",
+            "summarizeBy": "none",
+            "lineageTag": "9b708030-5973-5b20-a66a-2c3f14be379f"
+          },
+          {
+            "name": "item",
+            "dataType": "string",
+            "sourceColumn": "item",
+            "summarizeBy": "none",
+            "lineageTag": "f9bfdc48-c9d8-5540-9292-b141b2632fe1"
+          },
+          {
+            "name": "status",
+            "dataType": "string",
+            "sourceColumn": "status",
+            "summarizeBy": "none",
+            "lineageTag": "bf791d13-9071-5225-a247-33e199aa76ab"
+          },
+          {
+            "name": "actual",
+            "dataType": "decimal",
+            "sourceColumn": "actual",
+            "summarizeBy": "none",
+            "lineageTag": "8145d17d-5b5d-549b-addd-d320a1272208"
+          },
+          {
+            "name": "cost",
+            "dataType": "decimal",
+            "sourceColumn": "cost",
+            "summarizeBy": "none",
+            "lineageTag": "e384f583-2fed-539f-a749-20ef531c7258"
+          },
+          {
+            "name": "target",
+            "dataType": "decimal",
+            "sourceColumn": "target",
+            "summarizeBy": "none",
+            "lineageTag": "f202098b-bb40-5f0d-a1b9-bdc68156eaae"
+          },
+          {
+            "name": "units",
+            "dataType": "decimal",
+            "sourceColumn": "units",
+            "summarizeBy": "none",
+            "lineageTag": "117b8d95-2dbd-58ce-91ad-97b1b3bfc6e9"
+          },
+          {
+            "name": "extra",
+            "dataType": "decimal",
+            "sourceColumn": "extra",
+            "summarizeBy": "none",
+            "lineageTag": "5aab278e-a956-5904-8ff9-480f557ff36a"
+          },
+          {
+            "name": "variance",
+            "dataType": "decimal",
+            "sourceColumn": "variance",
+            "summarizeBy": "none",
+            "lineageTag": "9fee39b7-ae72-5272-ac92-68dbbde9bac7"
+          },
+          {
+            "name": "variancepct",
+            "dataType": "decimal",
+            "sourceColumn": "variancepct",
+            "summarizeBy": "none",
+            "lineageTag": "2e47dc7c-756e-5a7f-97f2-ea1f8fd65584"
+          }
+        ],
+        "measures": [
+          {
+            "name": "Actual Spend",
+            "expression": "SUM(Data[actual])",
+            "formatString": "\"PKR \"#,0",
+            "displayFolder": "Analytics",
+            "description": "Actual Spend",
+            "lineageTag": "f983a137-f29a-5453-aaab-d10eebd3a32f"
+          },
+          {
+            "name": "Budget",
+            "expression": "SUM(Data[target])",
+            "formatString": "\"PKR \"#,0",
+            "displayFolder": "Analytics",
+            "description": "Budget",
+            "lineageTag": "200bc4c4-78ff-5057-827f-9d35629010ab"
+          },
+          {
+            "name": "Budget Variance",
+            "expression": "SUM(Data[target]) - SUM(Data[actual])",
+            "formatString": "\"PKR \"#,0",
+            "displayFolder": "Analytics",
+            "description": "Budget Variance",
+            "lineageTag": "10776100-4f1c-5f89-a842-7ae9fc612b5a"
+          },
+          {
+            "name": "Variance Percent",
+            "expression": "DIVIDE([Budget Variance], [Budget])",
+            "formatString": "0.0%",
+            "displayFolder": "Analytics",
+            "description": "Variance Percent",
+            "lineageTag": "02a87169-fb70-5e6c-a915-0b06a53891a3"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Data",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Sample = Binary.Decompress(Binary.FromText(\"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\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Sample else File.Contents(DataFolder),",
+                "    Parsed = Table.PromoteHeaders(Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]), [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Parsed, {{\"period\", type text}, {\"group\", type text}, {\"item\", type text}, {\"status\", type text}, {\"actual\", Currency.Type}, {\"cost\", Currency.Type}, {\"target\", Currency.Type}, {\"units\", Currency.Type}, {\"extra\", Currency.Type}, {\"variance\", Currency.Type}, {\"variancepct\", Currency.Type}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DataMode",
+        "kind": "m",
+        "expression": "\"Demo\" meta [IsParameterQuery=true, List={\"Demo\", \"CSV\"}, DefaultValue=\"Demo\", Type=\"Text\", IsParameterQueryRequired=true]"
+      },
+      {
+        "name": "DataFolder",
+        "kind": "m",
+        "expression": "\"C:/Astra/13-budget-forecasting/data.csv\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      }
+    ]
+  }
+}

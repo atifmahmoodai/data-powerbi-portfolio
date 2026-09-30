@@ -1,0 +1,630 @@
+{
+  "slug": "11-overdue-collections",
+  "title": "Overdue Collections",
+  "groupLabel": "Invoice",
+  "plural": "Collections",
+  "rows": [
+    {
+      "period": "2025-01",
+      "group": "Retail",
+      "item": "INV-1042",
+      "status": "Current",
+      "actual": 135443.66,
+      "cost": 118740.13,
+      "target": 118271.75,
+      "units": 36,
+      "extra": 114.5
+    },
+    {
+      "period": "2025-02",
+      "group": "Workshop",
+      "item": "INV-1042",
+      "status": "1\u201330 overdue",
+      "actual": 81216.17,
+      "cost": 106416.49,
+      "target": 115916.33,
+      "units": 40,
+      "extra": 70.1
+    },
+    {
+      "period": "2025-03",
+      "group": "Fleet",
+      "item": "INV-1042",
+      "status": "31\u201360 overdue",
+      "actual": 151011.84,
+      "cost": 79968.64,
+      "target": 151201.33,
+      "units": 27,
+      "extra": 99.9
+    },
+    {
+      "period": "2025-04",
+      "group": "Corporate",
+      "item": "INV-1042",
+      "status": "61+ overdue",
+      "actual": 170098.94,
+      "cost": 110912.91,
+      "target": 155908.07,
+      "units": 45,
+      "extra": 109.1
+    },
+    {
+      "period": "2025-05",
+      "group": "Retail",
+      "item": "INV-1068",
+      "status": "Current",
+      "actual": 34146.83,
+      "cost": 52716.74,
+      "target": 89958.87,
+      "units": 17,
+      "extra": 38.0
+    },
+    {
+      "period": "2025-06",
+      "group": "Workshop",
+      "item": "INV-1068",
+      "status": "1\u201330 overdue",
+      "actual": 106484.46,
+      "cost": 56807.02,
+      "target": 104233.9,
+      "units": 26,
+      "extra": 102.2
+    },
+    {
+      "period": "2025-07",
+      "group": "Fleet",
+      "item": "INV-1068",
+      "status": "31\u201360 overdue",
+      "actual": 113956.73,
+      "cost": 58448.61,
+      "target": 97578.12,
+      "units": 31,
+      "extra": 116.8
+    },
+    {
+      "period": "2025-08",
+      "group": "Corporate",
+      "item": "INV-1068",
+      "status": "61+ overdue",
+      "actual": 52608.44,
+      "cost": 100714.34,
+      "target": 118715.69,
+      "units": 44,
+      "extra": 44.3
+    },
+    {
+      "period": "2025-09",
+      "group": "Retail",
+      "item": "INV-1104",
+      "status": "Current",
+      "actual": 53862.98,
+      "cost": 73973.4,
+      "target": 86888.63,
+      "units": 24,
+      "extra": 62.0
+    },
+    {
+      "period": "2025-10",
+      "group": "Workshop",
+      "item": "INV-1104",
+      "status": "1\u201330 overdue",
+      "actual": 57452.45,
+      "cost": 95201.36,
+      "target": 84327.01,
+      "units": 31,
+      "extra": 68.1
+    },
+    {
+      "period": "2025-11",
+      "group": "Fleet",
+      "item": "INV-1104",
+      "status": "31\u201360 overdue",
+      "actual": 101903.07,
+      "cost": 58909.61,
+      "target": 95831.48,
+      "units": 29,
+      "extra": 106.3
+    },
+    {
+      "period": "2025-12",
+      "group": "Corporate",
+      "item": "INV-1104",
+      "status": "61+ overdue",
+      "actual": 151595.05,
+      "cost": 84453.14,
+      "target": 159670.31,
+      "units": 51,
+      "extra": 94.9
+    },
+    {
+      "period": "2026-01",
+      "group": "Retail",
+      "item": "INV-1117",
+      "status": "Current",
+      "actual": 35536.15,
+      "cost": 63938.6,
+      "target": 106258.08,
+      "units": 35,
+      "extra": 33.4
+    },
+    {
+      "period": "2026-02",
+      "group": "Workshop",
+      "item": "INV-1117",
+      "status": "1\u201330 overdue",
+      "actual": 92677.93,
+      "cost": 61040.08,
+      "target": 84654.28,
+      "units": 27,
+      "extra": 109.5
+    },
+    {
+      "period": "2026-03",
+      "group": "Fleet",
+      "item": "INV-1117",
+      "status": "31\u201360 overdue",
+      "actual": 147126.19,
+      "cost": 74646.76,
+      "target": 160704.97,
+      "units": 30,
+      "extra": 91.6
+    },
+    {
+      "period": "2026-04",
+      "group": "Corporate",
+      "item": "INV-1117",
+      "status": "61+ overdue",
+      "actual": 27639.88,
+      "cost": 100801.12,
+      "target": 126058.65,
+      "units": 36,
+      "extra": 21.9
+    },
+    {
+      "period": "2026-05",
+      "group": "Retail",
+      "item": "INV-1042",
+      "status": "Current",
+      "actual": 42232.37,
+      "cost": 91140.98,
+      "target": 90252.57,
+      "units": 33,
+      "extra": 46.8
+    },
+    {
+      "period": "2026-06",
+      "group": "Workshop",
+      "item": "INV-1042",
+      "status": "1\u201330 overdue",
+      "actual": 51243.58,
+      "cost": 69084.73,
+      "target": 87508.23,
+      "units": 24,
+      "extra": 58.6
+    },
+    {
+      "period": "2026-07",
+      "group": "Fleet",
+      "item": "INV-1042",
+      "status": "31\u201360 overdue",
+      "actual": 99136.41,
+      "cost": 90670.34,
+      "target": 91283.03,
+      "units": 29,
+      "extra": 108.6
+    },
+    {
+      "period": "2026-08",
+      "group": "Corporate",
+      "item": "INV-1042",
+      "status": "61+ overdue",
+      "actual": 36980.9,
+      "cost": 61261.0,
+      "target": 112698.06,
+      "units": 24,
+      "extra": 32.8
+    },
+    {
+      "period": "2026-09",
+      "group": "Retail",
+      "item": "INV-1068",
+      "status": "Current",
+      "actual": 106768.13,
+      "cost": 62711.23,
+      "target": 127290.36,
+      "units": 36,
+      "extra": 83.9
+    },
+    {
+      "period": "2026-10",
+      "group": "Workshop",
+      "item": "INV-1068",
+      "status": "1\u201330 overdue",
+      "actual": 136528.64,
+      "cost": 41259.26,
+      "target": 128400.26,
+      "units": 24,
+      "extra": 106.3
+    },
+    {
+      "period": "2026-11",
+      "group": "Fleet",
+      "item": "INV-1068",
+      "status": "31\u201360 overdue",
+      "actual": 173747.87,
+      "cost": 81632.73,
+      "target": 159993.78,
+      "units": 29,
+      "extra": 108.6
+    },
+    {
+      "period": "2026-12",
+      "group": "Corporate",
+      "item": "INV-1068",
+      "status": "61+ overdue",
+      "actual": 29222.51,
+      "cost": 103550.72,
+      "target": 84564.09,
+      "units": 32,
+      "extra": 34.6
+    },
+    {
+      "period": "2027-01",
+      "group": "Retail",
+      "item": "INV-1104",
+      "status": "Current",
+      "actual": 144653.26,
+      "cost": 67190.06,
+      "target": 132606.06,
+      "units": 27,
+      "extra": 109.1
+    },
+    {
+      "period": "2027-02",
+      "group": "Workshop",
+      "item": "INV-1104",
+      "status": "1\u201330 overdue",
+      "actual": 106738.05,
+      "cost": 45375.05,
+      "target": 100821.9,
+      "units": 23,
+      "extra": 105.9
+    },
+    {
+      "period": "2027-03",
+      "group": "Fleet",
+      "item": "INV-1104",
+      "status": "31\u201360 overdue",
+      "actual": 77924.51,
+      "cost": 82785.37,
+      "target": 122567.79,
+      "units": 26,
+      "extra": 63.6
+    },
+    {
+      "period": "2027-04",
+      "group": "Corporate",
+      "item": "INV-1104",
+      "status": "61+ overdue",
+      "actual": 63294.59,
+      "cost": 32856.34,
+      "target": 99219.36,
+      "units": 19,
+      "extra": 63.8
+    },
+    {
+      "period": "2027-05",
+      "group": "Retail",
+      "item": "INV-1117",
+      "status": "Current",
+      "actual": 57194.06,
+      "cost": 94374.38,
+      "target": 104890.42,
+      "units": 32,
+      "extra": 54.5
+    },
+    {
+      "period": "2027-06",
+      "group": "Workshop",
+      "item": "INV-1117",
+      "status": "1\u201330 overdue",
+      "actual": 126341.04,
+      "cost": 164298.67,
+      "target": 151106.89,
+      "units": 54,
+      "extra": 83.6
+    },
+    {
+      "period": "2027-07",
+      "group": "Fleet",
+      "item": "INV-1117",
+      "status": "31\u201360 overdue",
+      "actual": 58824.99,
+      "cost": 106563.21,
+      "target": 130059.29,
+      "units": 35,
+      "extra": 45.2
+    },
+    {
+      "period": "2027-08",
+      "group": "Corporate",
+      "item": "INV-1117",
+      "status": "61+ overdue",
+      "actual": 69549.13,
+      "cost": 53193.74,
+      "target": 104211.85,
+      "units": 21,
+      "extra": 66.7
+    },
+    {
+      "period": "2027-09",
+      "group": "Retail",
+      "item": "INV-1042",
+      "status": "Current",
+      "actual": 115732.05,
+      "cost": 65399.26,
+      "target": 108830.63,
+      "units": 26,
+      "extra": 106.3
+    },
+    {
+      "period": "2027-10",
+      "group": "Workshop",
+      "item": "INV-1042",
+      "status": "1\u201330 overdue",
+      "actual": 76955.72,
+      "cost": 126476.5,
+      "target": 118986.2,
+      "units": 39,
+      "extra": 64.7
+    },
+    {
+      "period": "2027-11",
+      "group": "Fleet",
+      "item": "INV-1042",
+      "status": "31\u201360 overdue",
+      "actual": 70914.95,
+      "cost": 77906.02,
+      "target": 86500.8,
+      "units": 31,
+      "extra": 82.0
+    },
+    {
+      "period": "2027-12",
+      "group": "Corporate",
+      "item": "INV-1042",
+      "status": "61+ overdue",
+      "actual": 147330.42,
+      "cost": 107215.42,
+      "target": 126921.55,
+      "units": 36,
+      "extra": 116.1
+    },
+    {
+      "period": "2028-01",
+      "group": "Retail",
+      "item": "INV-1068",
+      "status": "Current",
+      "actual": 35166.37,
+      "cost": 69270.59,
+      "target": 89119.15,
+      "units": 33,
+      "extra": 39.5
+    },
+    {
+      "period": "2028-02",
+      "group": "Workshop",
+      "item": "INV-1068",
+      "status": "1\u201330 overdue",
+      "actual": 138472.22,
+      "cost": 78755.69,
+      "target": 144822.1,
+      "units": 43,
+      "extra": 95.6
+    },
+    {
+      "period": "2028-03",
+      "group": "Fleet",
+      "item": "INV-1068",
+      "status": "31\u201360 overdue",
+      "actual": 22833.83,
+      "cost": 76686.56,
+      "target": 95919.15,
+      "units": 28,
+      "extra": 23.8
+    },
+    {
+      "period": "2028-04",
+      "group": "Corporate",
+      "item": "INV-1068",
+      "status": "61+ overdue",
+      "actual": 45006.8,
+      "cost": 123499.08,
+      "target": 118417.11,
+      "units": 44,
+      "extra": 38.0
+    },
+    {
+      "period": "2028-05",
+      "group": "Retail",
+      "item": "INV-1104",
+      "status": "Current",
+      "actual": 86564.82,
+      "cost": 89202.94,
+      "target": 141593.13,
+      "units": 45,
+      "extra": 61.1
+    },
+    {
+      "period": "2028-06",
+      "group": "Workshop",
+      "item": "INV-1104",
+      "status": "1\u201330 overdue",
+      "actual": 93294.88,
+      "cost": 112939.19,
+      "target": 145768.6,
+      "units": 36,
+      "extra": 64.0
+    },
+    {
+      "period": "2028-07",
+      "group": "Fleet",
+      "item": "INV-1104",
+      "status": "31\u201360 overdue",
+      "actual": 78424.52,
+      "cost": 65555.17,
+      "target": 95061.26,
+      "units": 34,
+      "extra": 82.5
+    },
+    {
+      "period": "2028-08",
+      "group": "Corporate",
+      "item": "INV-1104",
+      "status": "61+ overdue",
+      "actual": 99460.11,
+      "cost": 138118.07,
+      "target": 149904.37,
+      "units": 44,
+      "extra": 66.3
+    },
+    {
+      "period": "2028-09",
+      "group": "Retail",
+      "item": "INV-1117",
+      "status": "Current",
+      "actual": 50723.75,
+      "cost": 104584.26,
+      "target": 94706.11,
+      "units": 35,
+      "extra": 53.6
+    },
+    {
+      "period": "2028-10",
+      "group": "Workshop",
+      "item": "INV-1117",
+      "status": "1\u201330 overdue",
+      "actual": 109693.43,
+      "cost": 45662.45,
+      "target": 118073.49,
+      "units": 21,
+      "extra": 92.9
+    },
+    {
+      "period": "2028-11",
+      "group": "Fleet",
+      "item": "INV-1117",
+      "status": "31\u201360 overdue",
+      "actual": 63635.95,
+      "cost": 103184.4,
+      "target": 128568.82,
+      "units": 37,
+      "extra": 49.5
+    },
+    {
+      "period": "2028-12",
+      "group": "Corporate",
+      "item": "INV-1117",
+      "status": "61+ overdue",
+      "actual": 86448.23,
+      "cost": 161528.27,
+      "target": 144220.61,
+      "units": 52,
+      "extra": 59.9
+    }
+  ],
+  "cards": [
+    {
+      "label": "Outstanding balance",
+      "key": "actual",
+      "kind": "sum",
+      "note": "Open invoice balance"
+    },
+    {
+      "label": "Overdue balance",
+      "key": "actual",
+      "kind": "sum",
+      "note": "Filter ageing status to isolate overdue"
+    },
+    {
+      "label": "Overdue invoices",
+      "key": "actual",
+      "kind": "count",
+      "note": "Counts selected invoice rows"
+    },
+    {
+      "label": "Average days overdue",
+      "key": "extra",
+      "kind": "avg",
+      "note": "Synthetic ageing indicator"
+    }
+  ],
+  "columns": [
+    {
+      "key": "period",
+      "label": "Period"
+    },
+    {
+      "key": "group",
+      "label": "Invoice"
+    },
+    {
+      "key": "item",
+      "label": "Collection"
+    },
+    {
+      "key": "status",
+      "label": "Status"
+    },
+    {
+      "key": "actual",
+      "label": "Outstanding PKR",
+      "format": "money"
+    },
+    {
+      "key": "cost",
+      "label": "Cost / baseline",
+      "format": "money"
+    },
+    {
+      "key": "target",
+      "label": "Target",
+      "format": "money"
+    },
+    {
+      "key": "units",
+      "label": "Units"
+    },
+    {
+      "key": "extra",
+      "label": "Indicator %"
+    }
+  ],
+  "chartTitle": "Invoice balance",
+  "cardDefs": [
+    [
+      "Outstanding balance",
+      "actual",
+      "sum",
+      "Open invoice balance"
+    ],
+    [
+      "Overdue balance",
+      "actual",
+      "sum",
+      "Filter ageing status to isolate overdue"
+    ],
+    [
+      "Overdue invoices",
+      "status",
+      "count",
+      "Counts selected invoice rows"
+    ],
+    [
+      "Average days overdue",
+      "extra",
+      "avg",
+      "Synthetic ageing indicator"
+    ]
+  ]
+}

@@ -1,0 +1,11 @@
+Outstanding Balance =
+SUM(Data[actual])
+
+Overdue Invoices =
+CALCULATE(COUNTROWS(Data), Data[status] <> "Current")
+
+Overdue Balance =
+CALCULATE(SUM(Data[actual]), Data[status] <> "Current")
+
+Average Days Overdue =
+AVERAGE(Data[extra])

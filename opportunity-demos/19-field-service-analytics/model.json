@@ -1,0 +1,679 @@
+{
+  "slug": "19-field-service-analytics",
+  "title": "Field-service Analytics",
+  "groupLabel": "Technician",
+  "plural": "Service jobs",
+  "rows": [
+    {
+      "period": "2025-01",
+      "group": "Karachi team",
+      "item": "SV-9041",
+      "status": "SLA breach",
+      "actual": 26.76,
+      "cost": 23.31,
+      "target": 25.52,
+      "units": 26,
+      "extra": 104.9,
+      "breach": 1
+    },
+    {
+      "period": "2025-02",
+      "group": "Lahore team",
+      "item": "SV-9041",
+      "status": "Complete",
+      "actual": 33.48,
+      "cost": 26.19,
+      "target": 45.81,
+      "units": 32,
+      "extra": 73.1,
+      "breach": 0
+    },
+    {
+      "period": "2025-03",
+      "group": "North team",
+      "item": "SV-9041",
+      "status": "Complete",
+      "actual": 39.75,
+      "cost": 23.61,
+      "target": 34.96,
+      "units": 38,
+      "extra": 113.7,
+      "breach": 0
+    },
+    {
+      "period": "2025-04",
+      "group": "Central team",
+      "item": "SV-9041",
+      "status": "Complete",
+      "actual": 35.35,
+      "cost": 32.59,
+      "target": 42.45,
+      "units": 34,
+      "extra": 83.3,
+      "breach": 0
+    },
+    {
+      "period": "2025-05",
+      "group": "Karachi team",
+      "item": "SV-9083",
+      "status": "Complete",
+      "actual": 27.93,
+      "cost": 23.81,
+      "target": 30.87,
+      "units": 27,
+      "extra": 90.5,
+      "breach": 0
+    },
+    {
+      "period": "2025-06",
+      "group": "Lahore team",
+      "item": "SV-9083",
+      "status": "Complete",
+      "actual": 37.89,
+      "cost": 27.74,
+      "target": 40.63,
+      "units": 37,
+      "extra": 93.3,
+      "breach": 0
+    },
+    {
+      "period": "2025-07",
+      "group": "North team",
+      "item": "SV-9083",
+      "status": "Complete",
+      "actual": 24.36,
+      "cost": 21.16,
+      "target": 29.59,
+      "units": 23,
+      "extra": 82.3,
+      "breach": 0
+    },
+    {
+      "period": "2025-08",
+      "group": "Central team",
+      "item": "SV-9083",
+      "status": "SLA breach",
+      "actual": 33.78,
+      "cost": 19.51,
+      "target": 31.05,
+      "units": 33,
+      "extra": 108.8,
+      "breach": 1
+    },
+    {
+      "period": "2025-09",
+      "group": "Karachi team",
+      "item": "SV-9150",
+      "status": "Complete",
+      "actual": 20.05,
+      "cost": 18.19,
+      "target": 28.82,
+      "units": 19,
+      "extra": 69.6,
+      "breach": 0
+    },
+    {
+      "period": "2025-10",
+      "group": "Lahore team",
+      "item": "SV-9150",
+      "status": "Complete",
+      "actual": 25.64,
+      "cost": 20.96,
+      "target": 30.82,
+      "units": 25,
+      "extra": 83.2,
+      "breach": 0
+    },
+    {
+      "period": "2025-11",
+      "group": "North team",
+      "item": "SV-9150",
+      "status": "Complete",
+      "actual": 37.17,
+      "cost": 26.12,
+      "target": 27.72,
+      "units": 36,
+      "extra": 134.1,
+      "breach": 0
+    },
+    {
+      "period": "2025-12",
+      "group": "Central team",
+      "item": "SV-9150",
+      "status": "Complete",
+      "actual": 44.3,
+      "cost": 24.1,
+      "target": 36.19,
+      "units": 43,
+      "extra": 122.4,
+      "breach": 0
+    },
+    {
+      "period": "2026-01",
+      "group": "Karachi team",
+      "item": "SV-9218",
+      "status": "Complete",
+      "actual": 35.28,
+      "cost": 22.0,
+      "target": 31.46,
+      "units": 34,
+      "extra": 112.1,
+      "breach": 0
+    },
+    {
+      "period": "2026-02",
+      "group": "Lahore team",
+      "item": "SV-9218",
+      "status": "Complete",
+      "actual": 26.0,
+      "cost": 17.46,
+      "target": 33.15,
+      "units": 25,
+      "extra": 78.4,
+      "breach": 0
+    },
+    {
+      "period": "2026-03",
+      "group": "North team",
+      "item": "SV-9218",
+      "status": "SLA breach",
+      "actual": 29.98,
+      "cost": 20.45,
+      "target": 32.18,
+      "units": 29,
+      "extra": 93.2,
+      "breach": 1
+    },
+    {
+      "period": "2026-04",
+      "group": "Central team",
+      "item": "SV-9218",
+      "status": "Complete",
+      "actual": 35.74,
+      "cost": 21.85,
+      "target": 37.15,
+      "units": 35,
+      "extra": 96.2,
+      "breach": 0
+    },
+    {
+      "period": "2026-05",
+      "group": "Karachi team",
+      "item": "SV-9041",
+      "status": "Complete",
+      "actual": 43.83,
+      "cost": 38.9,
+      "target": 39.47,
+      "units": 42,
+      "extra": 111.0,
+      "breach": 0
+    },
+    {
+      "period": "2026-06",
+      "group": "Lahore team",
+      "item": "SV-9041",
+      "status": "Complete",
+      "actual": 38.1,
+      "cost": 33.51,
+      "target": 33.81,
+      "units": 37,
+      "extra": 112.7,
+      "breach": 0
+    },
+    {
+      "period": "2026-07",
+      "group": "North team",
+      "item": "SV-9041",
+      "status": "Complete",
+      "actual": 31.66,
+      "cost": 19.44,
+      "target": 37.86,
+      "units": 31,
+      "extra": 83.6,
+      "breach": 0
+    },
+    {
+      "period": "2026-08",
+      "group": "Central team",
+      "item": "SV-9041",
+      "status": "Complete",
+      "actual": 33.23,
+      "cost": 24.61,
+      "target": 37.33,
+      "units": 32,
+      "extra": 89.0,
+      "breach": 0
+    },
+    {
+      "period": "2026-09",
+      "group": "Karachi team",
+      "item": "SV-9083",
+      "status": "Complete",
+      "actual": 24.09,
+      "cost": 15.4,
+      "target": 31.51,
+      "units": 23,
+      "extra": 76.5,
+      "breach": 0
+    },
+    {
+      "period": "2026-10",
+      "group": "Lahore team",
+      "item": "SV-9083",
+      "status": "SLA breach",
+      "actual": 28.97,
+      "cost": 20.58,
+      "target": 38.66,
+      "units": 28,
+      "extra": 74.9,
+      "breach": 1
+    },
+    {
+      "period": "2026-11",
+      "group": "North team",
+      "item": "SV-9083",
+      "status": "Complete",
+      "actual": 32.13,
+      "cost": 16.72,
+      "target": 41.28,
+      "units": 31,
+      "extra": 77.9,
+      "breach": 0
+    },
+    {
+      "period": "2026-12",
+      "group": "Central team",
+      "item": "SV-9083",
+      "status": "Complete",
+      "actual": 36.86,
+      "cost": 24.93,
+      "target": 27.72,
+      "units": 36,
+      "extra": 133.0,
+      "breach": 0
+    },
+    {
+      "period": "2027-01",
+      "group": "Karachi team",
+      "item": "SV-9150",
+      "status": "Complete",
+      "actual": 23.8,
+      "cost": 15.27,
+      "target": 24.12,
+      "units": 23,
+      "extra": 98.7,
+      "breach": 0
+    },
+    {
+      "period": "2027-02",
+      "group": "Lahore team",
+      "item": "SV-9150",
+      "status": "Complete",
+      "actual": 57.88,
+      "cost": 44.06,
+      "target": 42.2,
+      "units": 56,
+      "extra": 137.2,
+      "breach": 0
+    },
+    {
+      "period": "2027-03",
+      "group": "North team",
+      "item": "SV-9150",
+      "status": "Complete",
+      "actual": 62.04,
+      "cost": 56.12,
+      "target": 45.16,
+      "units": 60,
+      "extra": 137.4,
+      "breach": 0
+    },
+    {
+      "period": "2027-04",
+      "group": "Central team",
+      "item": "SV-9150",
+      "status": "Complete",
+      "actual": 49.99,
+      "cost": 32.62,
+      "target": 40.94,
+      "units": 49,
+      "extra": 122.1,
+      "breach": 0
+    },
+    {
+      "period": "2027-05",
+      "group": "Karachi team",
+      "item": "SV-9218",
+      "status": "SLA breach",
+      "actual": 24.6,
+      "cost": 18.68,
+      "target": 35.9,
+      "units": 24,
+      "extra": 68.5,
+      "breach": 1
+    },
+    {
+      "period": "2027-06",
+      "group": "Lahore team",
+      "item": "SV-9218",
+      "status": "Complete",
+      "actual": 36.77,
+      "cost": 19.2,
+      "target": 33.66,
+      "units": 36,
+      "extra": 109.3,
+      "breach": 0
+    },
+    {
+      "period": "2027-07",
+      "group": "North team",
+      "item": "SV-9218",
+      "status": "Complete",
+      "actual": 37.69,
+      "cost": 20.89,
+      "target": 45.63,
+      "units": 36,
+      "extra": 82.6,
+      "breach": 0
+    },
+    {
+      "period": "2027-08",
+      "group": "Central team",
+      "item": "SV-9218",
+      "status": "Complete",
+      "actual": 22.74,
+      "cost": 17.52,
+      "target": 32.94,
+      "units": 22,
+      "extra": 69.0,
+      "breach": 0
+    },
+    {
+      "period": "2027-09",
+      "group": "Karachi team",
+      "item": "SV-9041",
+      "status": "Complete",
+      "actual": 22.11,
+      "cost": 14.9,
+      "target": 26.3,
+      "units": 21,
+      "extra": 84.1,
+      "breach": 0
+    },
+    {
+      "period": "2027-10",
+      "group": "Lahore team",
+      "item": "SV-9041",
+      "status": "Complete",
+      "actual": 32.04,
+      "cost": 19.8,
+      "target": 44.79,
+      "units": 31,
+      "extra": 71.5,
+      "breach": 0
+    },
+    {
+      "period": "2027-11",
+      "group": "North team",
+      "item": "SV-9041",
+      "status": "Complete",
+      "actual": 31.92,
+      "cost": 17.56,
+      "target": 29.7,
+      "units": 31,
+      "extra": 107.5,
+      "breach": 0
+    },
+    {
+      "period": "2027-12",
+      "group": "Central team",
+      "item": "SV-9041",
+      "status": "SLA breach",
+      "actual": 41.78,
+      "cost": 31.74,
+      "target": 36.68,
+      "units": 40,
+      "extra": 113.9,
+      "breach": 1
+    },
+    {
+      "period": "2028-01",
+      "group": "Karachi team",
+      "item": "SV-9083",
+      "status": "Complete",
+      "actual": 33.75,
+      "cost": 19.87,
+      "target": 24.52,
+      "units": 33,
+      "extra": 137.6,
+      "breach": 0
+    },
+    {
+      "period": "2028-02",
+      "group": "Lahore team",
+      "item": "SV-9083",
+      "status": "Complete",
+      "actual": 24.05,
+      "cost": 12.32,
+      "target": 36.7,
+      "units": 23,
+      "extra": 65.5,
+      "breach": 0
+    },
+    {
+      "period": "2028-03",
+      "group": "North team",
+      "item": "SV-9083",
+      "status": "Complete",
+      "actual": 38.45,
+      "cost": 24.39,
+      "target": 31.11,
+      "units": 37,
+      "extra": 123.6,
+      "breach": 0
+    },
+    {
+      "period": "2028-04",
+      "group": "Central team",
+      "item": "SV-9083",
+      "status": "Complete",
+      "actual": 20.39,
+      "cost": 9.65,
+      "target": 25.87,
+      "units": 19,
+      "extra": 78.8,
+      "breach": 0
+    },
+    {
+      "period": "2028-05",
+      "group": "Karachi team",
+      "item": "SV-9150",
+      "status": "Complete",
+      "actual": 25.43,
+      "cost": 20.78,
+      "target": 34.55,
+      "units": 24,
+      "extra": 73.6,
+      "breach": 0
+    },
+    {
+      "period": "2028-06",
+      "group": "Lahore team",
+      "item": "SV-9150",
+      "status": "Complete",
+      "actual": 30.92,
+      "cost": 16.68,
+      "target": 30.56,
+      "units": 30,
+      "extra": 101.2,
+      "breach": 0
+    },
+    {
+      "period": "2028-07",
+      "group": "North team",
+      "item": "SV-9150",
+      "status": "SLA breach",
+      "actual": 35.35,
+      "cost": 21.91,
+      "target": 30.91,
+      "units": 34,
+      "extra": 114.4,
+      "breach": 1
+    },
+    {
+      "period": "2028-08",
+      "group": "Central team",
+      "item": "SV-9150",
+      "status": "Complete",
+      "actual": 50.4,
+      "cost": 38.26,
+      "target": 37.31,
+      "units": 49,
+      "extra": 135.1,
+      "breach": 0
+    },
+    {
+      "period": "2028-09",
+      "group": "Karachi team",
+      "item": "SV-9218",
+      "status": "Complete",
+      "actual": 31.09,
+      "cost": 19.62,
+      "target": 34.19,
+      "units": 30,
+      "extra": 90.9,
+      "breach": 0
+    },
+    {
+      "period": "2028-10",
+      "group": "Lahore team",
+      "item": "SV-9218",
+      "status": "Complete",
+      "actual": 51.22,
+      "cost": 45.06,
+      "target": 36.83,
+      "units": 50,
+      "extra": 139.1,
+      "breach": 0
+    },
+    {
+      "period": "2028-11",
+      "group": "North team",
+      "item": "SV-9218",
+      "status": "Complete",
+      "actual": 45.45,
+      "cost": 37.08,
+      "target": 43.88,
+      "units": 44,
+      "extra": 103.6,
+      "breach": 0
+    },
+    {
+      "period": "2028-12",
+      "group": "Central team",
+      "item": "SV-9218",
+      "status": "Complete",
+      "actual": 50.98,
+      "cost": 30.28,
+      "target": 44.61,
+      "units": 49,
+      "extra": 114.3,
+      "breach": 0
+    }
+  ],
+  "cards": [
+    {
+      "label": "Service jobs logged",
+      "key": "actual",
+      "kind": "count",
+      "note": "Selected work orders"
+    },
+    {
+      "label": "SLA breach rate",
+      "key": "breach",
+      "kind": "percent",
+      "denominator": "actual",
+      "note": "Breach jobs divided by all jobs"
+    },
+    {
+      "label": "Service revenue",
+      "key": "actual",
+      "kind": "sum",
+      "note": "Recorded work value"
+    },
+    {
+      "label": "Service cost",
+      "key": "cost",
+      "kind": "sum",
+      "note": "Direct operating cost"
+    }
+  ],
+  "columns": [
+    {
+      "key": "period",
+      "label": "Period"
+    },
+    {
+      "key": "group",
+      "label": "Technician"
+    },
+    {
+      "key": "item",
+      "label": "Service job"
+    },
+    {
+      "key": "status",
+      "label": "Status"
+    },
+    {
+      "key": "actual",
+      "label": "Jobs",
+      "format": "money"
+    },
+    {
+      "key": "cost",
+      "label": "Cost / baseline",
+      "format": "money"
+    },
+    {
+      "key": "target",
+      "label": "Target",
+      "format": "money"
+    },
+    {
+      "key": "units",
+      "label": "Units"
+    },
+    {
+      "key": "extra",
+      "label": "Indicator %"
+    }
+  ],
+  "chartTitle": "Completed jobs",
+  "cardDefs": [
+    [
+      "Service jobs logged",
+      "status",
+      "count",
+      "Selected work orders"
+    ],
+    [
+      "SLA breach rate",
+      "breach",
+      "percent",
+      "Breach jobs divided by all jobs"
+    ],
+    [
+      "Service revenue",
+      "actual",
+      "sum",
+      "Recorded work value"
+    ],
+    [
+      "Service cost",
+      "cost",
+      "sum",
+      "Direct operating cost"
+    ]
+  ]
+}

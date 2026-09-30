@@ -1,0 +1,11 @@
+Net Sales =
+SUM(Data[actual])
+
+Sales Target =
+SUM(Data[target])
+
+Direct Cost =
+SUM(Data[cost])
+
+Gross Profit =
+SUM(Data[actual]) - SUM(Data[cost])

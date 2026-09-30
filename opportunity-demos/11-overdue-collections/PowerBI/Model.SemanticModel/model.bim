@@ -1,0 +1,150 @@
+{
+  "name": "Model",
+  "compatibilityLevel": 1567,
+  "model": {
+    "culture": "en-US",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Data",
+        "lineageTag": "31250e18-e9bb-52b4-bf28-7f2a52f10eca",
+        "columns": [
+          {
+            "name": "period",
+            "dataType": "string",
+            "sourceColumn": "period",
+            "summarizeBy": "none",
+            "lineageTag": "3e2d7c7e-ee22-57d3-bb2b-1f045bd2b0ac"
+          },
+          {
+            "name": "group",
+            "dataType": "string",
+            "sourceColumn": "group",
+            "summarizeBy": "none",
+            "lineageTag": "f28d1960-b785-515f-9feb-dde8f1f6f936"
+          },
+          {
+            "name": "item",
+            "dataType": "string",
+            "sourceColumn": "item",
+            "summarizeBy": "none",
+            "lineageTag": "3579d549-2fdb-5d93-b7e3-c8e72df6c905"
+          },
+          {
+            "name": "status",
+            "dataType": "string",
+            "sourceColumn": "status",
+            "summarizeBy": "none",
+            "lineageTag": "73ea84eb-66f3-516f-b6f3-adbf8f7ab0f1"
+          },
+          {
+            "name": "actual",
+            "dataType": "decimal",
+            "sourceColumn": "actual",
+            "summarizeBy": "none",
+            "lineageTag": "7a8c2cb4-2d90-5a30-afcc-1ed46047315a"
+          },
+          {
+            "name": "cost",
+            "dataType": "decimal",
+            "sourceColumn": "cost",
+            "summarizeBy": "none",
+            "lineageTag": "10a3e973-b2d2-5c86-a9da-dd887a637988"
+          },
+          {
+            "name": "target",
+            "dataType": "decimal",
+            "sourceColumn": "target",
+            "summarizeBy": "none",
+            "lineageTag": "15aa359c-1b95-55ba-bdec-cb9fa97066b8"
+          },
+          {
+            "name": "units",
+            "dataType": "decimal",
+            "sourceColumn": "units",
+            "summarizeBy": "none",
+            "lineageTag": "5f337ff3-e44e-5378-a9d7-8f646e7bd012"
+          },
+          {
+            "name": "extra",
+            "dataType": "decimal",
+            "sourceColumn": "extra",
+            "summarizeBy": "none",
+            "lineageTag": "59730c65-831f-505a-a9c9-761247ef4606"
+          }
+        ],
+        "measures": [
+          {
+            "name": "Outstanding Balance",
+            "expression": "SUM(Data[actual])",
+            "formatString": "\"PKR \"#,0",
+            "displayFolder": "Analytics",
+            "description": "Outstanding Balance",
+            "lineageTag": "a7a7be6d-791f-5b01-a9f6-df9998757b50"
+          },
+          {
+            "name": "Overdue Invoices",
+            "expression": "CALCULATE(COUNTROWS(Data), Data[status] <> \"Current\")",
+            "formatString": "#,0",
+            "displayFolder": "Analytics",
+            "description": "Overdue Invoices",
+            "lineageTag": "beff9d5f-8c4e-5033-9a22-fe2c194c31b8"
+          },
+          {
+            "name": "Overdue Balance",
+            "expression": "CALCULATE(SUM(Data[actual]), Data[status] <> \"Current\")",
+            "formatString": "\"PKR \"#,0",
+            "displayFolder": "Analytics",
+            "description": "Overdue Balance",
+            "lineageTag": "75974637-37b3-56c3-b166-148ad4af7a32"
+          },
+          {
+            "name": "Average Days Overdue",
+            "expression": "AVERAGE(Data[extra])",
+            "formatString": "0.0",
+            "displayFolder": "Analytics",
+            "description": "Average Days Overdue",
+            "lineageTag": "08fbf967-6d94-5923-b747-c075d1adee38"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Data",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Sample = Binary.Decompress(Binary.FromText(\"hVe7biNHEMz9Fc49N5ie6Wd8gAEnDhzYMXFHnAXLR4EiDYf+B/+hv8TVy+VDuyucImpJlbqrq6qbL/vj0+Fz+XI8nF/K02n/Z3k97U7n17L7dDrvnsunw+upnHbHL/tTOX99Or2W/d+n4+673rp8aFR+2Z92T8/lp59//UCNe/l4Ph73X0+FhjCPqlqI3LhVGvmqG1WTMvIxV5lhevntcPzj9ffDyx2I/vvn39G+P/y1P34+74tTJ61khZoyXnEAQQKvxijciuE/zGij/Pi8R7k3qJFYescioUZUnYtFqFflfNQbJVa3ElFjxuLy8XB8ORx3p/0dT+mHO5a1Fl4DENSCeg0CmETz2qywoN64VSZv6VK/0TWYWKuPImBIq3HxCPHqaNjKANgMoUuqALKgKhlyrqxF1JtV0Jtlj1GjdBDfeu0zmr2hClArqmiEoB4U5sygikqYmFdKWvE2ip6xfEUV8B6pkq5ghcFUa4bpD560QVI1Ch4zHs1Y8YYoyjHMRMlwBclebISNCp7UHXVhcFzwzswTtQVPibHgSYylV4woZJq9FufRwRdla9DFPDaiR5YSaMVSo2gjBy4emHeyJD6ospceOZBrZ6BtwVLivRGUQNZSoRUQLqNSijMU+kZRAmC+iFOX7iMI5SYnkQG3SNEREE8OXTvkhCENuA+8zRBL5yXIgqboalZjoMoGHwPCWYVr9/RKyltmsDfGS6QVT2zUUVcUY4XeDYVps4aW8OFWgqrOWCvjJd4jT93QW3VPNTnGB2aB3dCkTvnS6caTvJtS3PvodcDyiKOWsgpMqVdBOYiVWdy6Ybt1QiFBEHgCzcP8nJZxEwi+T9LMumYs+1Y+RRCmx5h1m+bOKK879DUuarpDrT23iKeh4egLz7pSbTBcx5OKflATWr/2F+8mE36x9ALmj2iibIe69WhpmPTMuPK88txWNg2VPiUuU5eomUfdubV81fluFV3YbjOcbBhbZqSTohlQDqtEjGq+YGrtu2U69egdg0emNbinVevQuShXcDMwI75A2cp2D+FEDGeMbEUNiZA004AodSLc7rvANpy3DqikPqNfsEeGTZmQYk9llxxDkwv1trTeRkSZRedsDyvYJSVPvYtatWkp6Li1t3beIqFANUJIkhbHbkh5RqdIPcDZQPIZSd7NJwE9nKQEY4R1pIsZ0VnTDb3IfBrY2ngbAQVJY33W5E+5Q91qmaIpJQ9gpUSvzdm3IkrcwVNMoS3opUMQo7WUamR2slyWp22YbxlRGsKRzpFBKUqe9nBeHoJ4KooAnKHi/TuKxCBtcAllxcUwzX20aeXp3TC24b91SBlqktQ2SGPTKrmCw7WCd8yOrxUtzLcRUoZrB0RJKisFDruowMdpU4jssohty3jLC4ptjGny1KzjGuCpOkiqynwp6sU1vjo4Hy8oIRAKXeMvEZqQpyPUI5cgonzMW8o3js2tlHI2XEm9GDJ8uk9gbUc+UOGB3X7Rky9vzY2M6gjukYedqYJmgeRxtU5l5QKdzeJbl+YioBjsQtHgZjCEAPlhdExWMStcT9cb0Ve+ewgojAgzdswq8NHpamVE5kiR4hDCirgSvfLdOp5iyoHcwNQDBFOyJLkspsWQ0TmD2TfTyTnTCcIQ/OSZH9JQDQSOeIGarsNbe24RThGsLSnBDMFP3mQEunBiQBqgSWe7+OrIfIwnCHHk9xSg4+7NMoIN7AMXGSDjOv/1mbkRTy0UDHMyrDodnCis5fEaGQPRLynuy0NzI5106JA0HZYU5Y2f2xNXfo40+7upfOPOXISTa97zuUaUciXnemLcQy2vV0xC8kvQ/w==\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Sample else File.Contents(DataFolder),",
+                "    Parsed = Table.PromoteHeaders(Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]), [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Parsed, {{\"period\", type text}, {\"group\", type text}, {\"item\", type text}, {\"status\", type text}, {\"actual\", Currency.Type}, {\"cost\", Currency.Type}, {\"target\", Currency.Type}, {\"units\", Currency.Type}, {\"extra\", Currency.Type}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DataMode",
+        "kind": "m",
+        "expression": "\"Demo\" meta [IsParameterQuery=true, List={\"Demo\", \"CSV\"}, DefaultValue=\"Demo\", Type=\"Text\", IsParameterQueryRequired=true]"
+      },
+      {
+        "name": "DataFolder",
+        "kind": "m",
+        "expression": "\"C:/Astra/11-overdue-collections/data.csv\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      }
+    ]
+  }
+}

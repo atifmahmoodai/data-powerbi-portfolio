@@ -1,0 +1,678 @@
+{
+  "slug": "20-business-central-reporting",
+  "title": "Automated Reporting / Business Central",
+  "groupLabel": "Account group",
+  "plural": "Ledger periods",
+  "rows": [
+    {
+      "period": "2025-01",
+      "group": "Revenue",
+      "item": "GL-4000",
+      "status": "Review",
+      "actual": 122027.62,
+      "cost": 94921.47,
+      "target": 173418.46,
+      "units": 30,
+      "extra": 70.4,
+      "variance": -51390.84
+    },
+    {
+      "period": "2025-02",
+      "group": "Direct costs",
+      "item": "GL-4000",
+      "status": "Reconciled",
+      "actual": 169789.92,
+      "cost": 143908.59,
+      "target": 178281.49,
+      "units": 41,
+      "extra": 95.2,
+      "variance": -8491.57
+    },
+    {
+      "period": "2025-03",
+      "group": "Payroll",
+      "item": "GL-4000",
+      "status": "Reconciled",
+      "actual": 226633.3,
+      "cost": 163080.08,
+      "target": 166165.2,
+      "units": 55,
+      "extra": 136.4,
+      "variance": 60468.1
+    },
+    {
+      "period": "2025-04",
+      "group": "Overheads",
+      "item": "GL-4000",
+      "status": "Reconciled",
+      "actual": 64208.06,
+      "cost": 37555.15,
+      "target": 98717.58,
+      "units": 15,
+      "extra": 65.0,
+      "variance": -34509.52
+    },
+    {
+      "period": "2025-05",
+      "group": "Revenue",
+      "item": "GL-5100",
+      "status": "Reconciled",
+      "actual": 179203.26,
+      "cost": 109811.92,
+      "target": 154633.96,
+      "units": 44,
+      "extra": 115.9,
+      "variance": 24569.3
+    },
+    {
+      "period": "2025-06",
+      "group": "Direct costs",
+      "item": "GL-5100",
+      "status": "Reconciled",
+      "actual": 133937.21,
+      "cost": 117968.71,
+      "target": 173561.72,
+      "units": 33,
+      "extra": 77.2,
+      "variance": -39624.51
+    },
+    {
+      "period": "2025-07",
+      "group": "Payroll",
+      "item": "GL-5100",
+      "status": "Reconciled",
+      "actual": 165792.91,
+      "cost": 101233.4,
+      "target": 128545.0,
+      "units": 40,
+      "extra": 129.0,
+      "variance": 37247.91
+    },
+    {
+      "period": "2025-08",
+      "group": "Overheads",
+      "item": "GL-5100",
+      "status": "Reconciled",
+      "actual": 116280.52,
+      "cost": 94596.21,
+      "target": 114849.32,
+      "units": 28,
+      "extra": 101.2,
+      "variance": 1431.2
+    },
+    {
+      "period": "2025-09",
+      "group": "Revenue",
+      "item": "GL-6200",
+      "status": "Reconciled",
+      "actual": 111748.4,
+      "cost": 73697.69,
+      "target": 107410.4,
+      "units": 27,
+      "extra": 104.0,
+      "variance": 4338.0
+    },
+    {
+      "period": "2025-10",
+      "group": "Direct costs",
+      "item": "GL-6200",
+      "status": "Reconciled",
+      "actual": 161450.8,
+      "cost": 81959.65,
+      "target": 119183.18,
+      "units": 39,
+      "extra": 135.5,
+      "variance": 42267.62
+    },
+    {
+      "period": "2025-11",
+      "group": "Payroll",
+      "item": "GL-6200",
+      "status": "Reconciled",
+      "actual": 137104.89,
+      "cost": 84678.3,
+      "target": 143693.25,
+      "units": 33,
+      "extra": 95.4,
+      "variance": -6588.36
+    },
+    {
+      "period": "2025-12",
+      "group": "Overheads",
+      "item": "GL-6200",
+      "status": "Review",
+      "actual": 224551.0,
+      "cost": 160191.95,
+      "target": 181234.45,
+      "units": 55,
+      "extra": 123.9,
+      "variance": 43316.55
+    },
+    {
+      "period": "2026-01",
+      "group": "Revenue",
+      "item": "GL-7100",
+      "status": "Reconciled",
+      "actual": 105925.09,
+      "cost": 53687.31,
+      "target": 102716.39,
+      "units": 26,
+      "extra": 103.1,
+      "variance": 3208.7
+    },
+    {
+      "period": "2026-02",
+      "group": "Direct costs",
+      "item": "GL-7100",
+      "status": "Reconciled",
+      "actual": 129969.51,
+      "cost": 118837.35,
+      "target": 173380.2,
+      "units": 32,
+      "extra": 75.0,
+      "variance": -43410.69
+    },
+    {
+      "period": "2026-03",
+      "group": "Payroll",
+      "item": "GL-7100",
+      "status": "Reconciled",
+      "actual": 168287.11,
+      "cost": 137651.12,
+      "target": 160759.94,
+      "units": 41,
+      "extra": 104.7,
+      "variance": 7527.17
+    },
+    {
+      "period": "2026-04",
+      "group": "Overheads",
+      "item": "GL-7100",
+      "status": "Reconciled",
+      "actual": 96108.28,
+      "cost": 75852.44,
+      "target": 126349.05,
+      "units": 23,
+      "extra": 76.1,
+      "variance": -30240.77
+    },
+    {
+      "period": "2026-05",
+      "group": "Revenue",
+      "item": "GL-4000",
+      "status": "Reconciled",
+      "actual": 135098.11,
+      "cost": 62233.07,
+      "target": 174883.19,
+      "units": 33,
+      "extra": 77.3,
+      "variance": -39785.08
+    },
+    {
+      "period": "2026-06",
+      "group": "Direct costs",
+      "item": "GL-4000",
+      "status": "Reconciled",
+      "actual": 111326.15,
+      "cost": 78474.77,
+      "target": 105039.67,
+      "units": 27,
+      "extra": 106.0,
+      "variance": 6286.48
+    },
+    {
+      "period": "2026-07",
+      "group": "Payroll",
+      "item": "GL-4000",
+      "status": "Reconciled",
+      "actual": 126168.9,
+      "cost": 80357.86,
+      "target": 178352.88,
+      "units": 31,
+      "extra": 70.7,
+      "variance": -52183.98
+    },
+    {
+      "period": "2026-08",
+      "group": "Overheads",
+      "item": "GL-4000",
+      "status": "Reconciled",
+      "actual": 139624.33,
+      "cost": 128022.64,
+      "target": 121219.41,
+      "units": 34,
+      "extra": 115.2,
+      "variance": 18404.92
+    },
+    {
+      "period": "2026-09",
+      "group": "Revenue",
+      "item": "GL-5100",
+      "status": "Reconciled",
+      "actual": 138611.23,
+      "cost": 116814.62,
+      "target": 112439.06,
+      "units": 34,
+      "extra": 123.3,
+      "variance": 26172.17
+    },
+    {
+      "period": "2026-10",
+      "group": "Direct costs",
+      "item": "GL-5100",
+      "status": "Reconciled",
+      "actual": 127231.2,
+      "cost": 68472.31,
+      "target": 106539.93,
+      "units": 31,
+      "extra": 119.4,
+      "variance": 20691.27
+    },
+    {
+      "period": "2026-11",
+      "group": "Payroll",
+      "item": "GL-5100",
+      "status": "Review",
+      "actual": 187101.86,
+      "cost": 95138.44,
+      "target": 150086.52,
+      "units": 46,
+      "extra": 124.7,
+      "variance": 37015.34
+    },
+    {
+      "period": "2026-12",
+      "group": "Overheads",
+      "item": "GL-5100",
+      "status": "Reconciled",
+      "actual": 122156.27,
+      "cost": 91869.71,
+      "target": 106228.16,
+      "units": 30,
+      "extra": 115.0,
+      "variance": 15928.11
+    },
+    {
+      "period": "2027-01",
+      "group": "Revenue",
+      "item": "GL-6200",
+      "status": "Reconciled",
+      "actual": 142968.73,
+      "cost": 80567.13,
+      "target": 118616.67,
+      "units": 35,
+      "extra": 120.5,
+      "variance": 24352.06
+    },
+    {
+      "period": "2027-02",
+      "group": "Direct costs",
+      "item": "GL-6200",
+      "status": "Reconciled",
+      "actual": 186135.39,
+      "cost": 141023.06,
+      "target": 159213.18,
+      "units": 45,
+      "extra": 116.9,
+      "variance": 26922.21
+    },
+    {
+      "period": "2027-03",
+      "group": "Payroll",
+      "item": "GL-6200",
+      "status": "Reconciled",
+      "actual": 85646.77,
+      "cost": 38732.78,
+      "target": 127766.74,
+      "units": 21,
+      "extra": 67.0,
+      "variance": -42119.97
+    },
+    {
+      "period": "2027-04",
+      "group": "Overheads",
+      "item": "GL-6200",
+      "status": "Reconciled",
+      "actual": 149071.58,
+      "cost": 130278.93,
+      "target": 153706.25,
+      "units": 36,
+      "extra": 97.0,
+      "variance": -4634.67
+    },
+    {
+      "period": "2027-05",
+      "group": "Revenue",
+      "item": "GL-7100",
+      "status": "Reconciled",
+      "actual": 162380.97,
+      "cost": 105265.23,
+      "target": 159336.41,
+      "units": 40,
+      "extra": 101.9,
+      "variance": 3044.56
+    },
+    {
+      "period": "2027-06",
+      "group": "Direct costs",
+      "item": "GL-7100",
+      "status": "Reconciled",
+      "actual": 135114.07,
+      "cost": 119098.4,
+      "target": 162166.42,
+      "units": 33,
+      "extra": 83.3,
+      "variance": -27052.35
+    },
+    {
+      "period": "2027-07",
+      "group": "Payroll",
+      "item": "GL-7100",
+      "status": "Reconciled",
+      "actual": 133983.49,
+      "cost": 83278.21,
+      "target": 170020.38,
+      "units": 33,
+      "extra": 78.8,
+      "variance": -36036.89
+    },
+    {
+      "period": "2027-08",
+      "group": "Overheads",
+      "item": "GL-7100",
+      "status": "Reconciled",
+      "actual": 167973.73,
+      "cost": 117298.31,
+      "target": 153578.72,
+      "units": 41,
+      "extra": 109.4,
+      "variance": 14395.01
+    },
+    {
+      "period": "2027-09",
+      "group": "Revenue",
+      "item": "GL-4000",
+      "status": "Reconciled",
+      "actual": 173881.27,
+      "cost": 114902.37,
+      "target": 157935.83,
+      "units": 42,
+      "extra": 110.1,
+      "variance": 15945.44
+    },
+    {
+      "period": "2027-10",
+      "group": "Direct costs",
+      "item": "GL-4000",
+      "status": "Review",
+      "actual": 216188.56,
+      "cost": 109393.78,
+      "target": 161994.45,
+      "units": 53,
+      "extra": 133.5,
+      "variance": 54194.11
+    },
+    {
+      "period": "2027-11",
+      "group": "Payroll",
+      "item": "GL-4000",
+      "status": "Reconciled",
+      "actual": 74740.48,
+      "cost": 50976.65,
+      "target": 110922.22,
+      "units": 18,
+      "extra": 67.4,
+      "variance": -36181.74
+    },
+    {
+      "period": "2027-12",
+      "group": "Overheads",
+      "item": "GL-4000",
+      "status": "Reconciled",
+      "actual": 123770.99,
+      "cost": 88095.78,
+      "target": 149294.29,
+      "units": 30,
+      "extra": 82.9,
+      "variance": -25523.3
+    },
+    {
+      "period": "2028-01",
+      "group": "Revenue",
+      "item": "GL-5100",
+      "status": "Reconciled",
+      "actual": 116514.99,
+      "cost": 90024.5,
+      "target": 149066.43,
+      "units": 28,
+      "extra": 78.2,
+      "variance": -32551.44
+    },
+    {
+      "period": "2028-02",
+      "group": "Direct costs",
+      "item": "GL-5100",
+      "status": "Reconciled",
+      "actual": 124507.37,
+      "cost": 81866.14,
+      "target": 118462.43,
+      "units": 30,
+      "extra": 105.1,
+      "variance": 6044.94
+    },
+    {
+      "period": "2028-03",
+      "group": "Payroll",
+      "item": "GL-5100",
+      "status": "Reconciled",
+      "actual": 200641.21,
+      "cost": 97731.9,
+      "target": 147554.86,
+      "units": 49,
+      "extra": 136.0,
+      "variance": 53086.35
+    },
+    {
+      "period": "2028-04",
+      "group": "Overheads",
+      "item": "GL-5100",
+      "status": "Reconciled",
+      "actual": 226566.37,
+      "cost": 167619.15,
+      "target": 176844.9,
+      "units": 55,
+      "extra": 128.1,
+      "variance": 49721.47
+    },
+    {
+      "period": "2028-05",
+      "group": "Revenue",
+      "item": "GL-6200",
+      "status": "Reconciled",
+      "actual": 112346.92,
+      "cost": 74961.77,
+      "target": 144783.59,
+      "units": 27,
+      "extra": 77.6,
+      "variance": -32436.67
+    },
+    {
+      "period": "2028-06",
+      "group": "Direct costs",
+      "item": "GL-6200",
+      "status": "Reconciled",
+      "actual": 106763.46,
+      "cost": 87185.76,
+      "target": 103128.93,
+      "units": 26,
+      "extra": 103.5,
+      "variance": 3634.53
+    },
+    {
+      "period": "2028-07",
+      "group": "Payroll",
+      "item": "GL-6200",
+      "status": "Reconciled",
+      "actual": 176408.68,
+      "cost": 100105.63,
+      "target": 182153.84,
+      "units": 43,
+      "extra": 96.8,
+      "variance": -5745.16
+    },
+    {
+      "period": "2028-08",
+      "group": "Overheads",
+      "item": "GL-6200",
+      "status": "Reconciled",
+      "actual": 103607.83,
+      "cost": 60727.08,
+      "target": 98539.21,
+      "units": 25,
+      "extra": 105.1,
+      "variance": 5068.62
+    },
+    {
+      "period": "2028-09",
+      "group": "Revenue",
+      "item": "GL-7100",
+      "status": "Review",
+      "actual": 227982.58,
+      "cost": 157240.48,
+      "target": 181471.44,
+      "units": 56,
+      "extra": 125.6,
+      "variance": 46511.14
+    },
+    {
+      "period": "2028-10",
+      "group": "Direct costs",
+      "item": "GL-7100",
+      "status": "Reconciled",
+      "actual": 159083.44,
+      "cost": 121383.75,
+      "target": 143138.99,
+      "units": 39,
+      "extra": 111.1,
+      "variance": 15944.45
+    },
+    {
+      "period": "2028-11",
+      "group": "Payroll",
+      "item": "GL-7100",
+      "status": "Reconciled",
+      "actual": 175211.9,
+      "cost": 96881.43,
+      "target": 147731.82,
+      "units": 43,
+      "extra": 118.6,
+      "variance": 27480.08
+    },
+    {
+      "period": "2028-12",
+      "group": "Overheads",
+      "item": "GL-7100",
+      "status": "Reconciled",
+      "actual": 207528.88,
+      "cost": 191409.63,
+      "target": 175872.38,
+      "units": 51,
+      "extra": 118.0,
+      "variance": 31656.5
+    }
+  ],
+  "cards": [
+    {
+      "label": "Net balance",
+      "key": "actual",
+      "kind": "sum",
+      "note": "Debits positive, credits negative (simplified)"
+    },
+    {
+      "label": "Ledger lines",
+      "key": "actual",
+      "kind": "count",
+      "note": "Selected ledger entries"
+    },
+    {
+      "label": "Review lines",
+      "key": "actual",
+      "kind": "count",
+      "note": "Review status requires reconciliation"
+    },
+    {
+      "label": "Period variance",
+      "key": "variance",
+      "kind": "sum",
+      "note": "Against synthetic control total"
+    }
+  ],
+  "columns": [
+    {
+      "key": "period",
+      "label": "Period"
+    },
+    {
+      "key": "group",
+      "label": "Account group"
+    },
+    {
+      "key": "item",
+      "label": "Ledger period"
+    },
+    {
+      "key": "status",
+      "label": "Status"
+    },
+    {
+      "key": "actual",
+      "label": "Net amount PKR",
+      "format": "money"
+    },
+    {
+      "key": "cost",
+      "label": "Cost / baseline",
+      "format": "money"
+    },
+    {
+      "key": "target",
+      "label": "Target",
+      "format": "money"
+    },
+    {
+      "key": "units",
+      "label": "Units"
+    },
+    {
+      "key": "extra",
+      "label": "Indicator %"
+    }
+  ],
+  "chartTitle": "Operating balance",
+  "cardDefs": [
+    [
+      "Net balance",
+      "actual",
+      "sum",
+      "Debits positive, credits negative (simplified)"
+    ],
+    [
+      "Ledger lines",
+      "count",
+      "count",
+      "Selected ledger entries"
+    ],
+    [
+      "Review lines",
+      "status",
+      "count",
+      "Review status requires reconciliation"
+    ],
+    [
+      "Period variance",
+      "variance",
+      "sum",
+      "Against synthetic control total"
+    ]
+  ]
+}

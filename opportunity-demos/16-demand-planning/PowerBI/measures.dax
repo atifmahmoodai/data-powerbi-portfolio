@@ -1,0 +1,11 @@
+Observed Units =
+SUM(Data[units])
+
+Forecast Units =
+SUM(Data[target])
+
+Unit Variance =
+SUM(Data[units]) - SUM(Data[target])
+
+Short Cover SKU Periods =
+CALCULATE(COUNTROWS(Data), Data[status] = "Short cover")

@@ -1,0 +1,11 @@
+Good Output Units =
+SUM(Data[units])
+
+Material Cost =
+SUM(Data[cost])
+
+Waste Cost Proxy =
+SUM(Data[cost]) * AVERAGE(Data[extra]) / 100
+
+Average Reject Rate =
+DIVIDE(AVERAGE(Data[extra]), 100)

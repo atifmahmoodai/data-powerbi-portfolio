@@ -1,0 +1,157 @@
+{
+  "name": "Model",
+  "compatibilityLevel": 1567,
+  "model": {
+    "culture": "en-US",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Data",
+        "lineageTag": "e2882bd1-de15-5235-8371-88d9f96de604",
+        "columns": [
+          {
+            "name": "period",
+            "dataType": "string",
+            "sourceColumn": "period",
+            "summarizeBy": "none",
+            "lineageTag": "7665772a-23f6-59d6-9d32-2768029869a0"
+          },
+          {
+            "name": "group",
+            "dataType": "string",
+            "sourceColumn": "group",
+            "summarizeBy": "none",
+            "lineageTag": "665d26d2-ca9a-5051-8fb2-65fd40e1a672"
+          },
+          {
+            "name": "item",
+            "dataType": "string",
+            "sourceColumn": "item",
+            "summarizeBy": "none",
+            "lineageTag": "e6578783-fa3b-59b6-ae95-f4e716d8a17c"
+          },
+          {
+            "name": "status",
+            "dataType": "string",
+            "sourceColumn": "status",
+            "summarizeBy": "none",
+            "lineageTag": "ce129c9d-5860-5ecb-998b-14f764d6f745"
+          },
+          {
+            "name": "actual",
+            "dataType": "decimal",
+            "sourceColumn": "actual",
+            "summarizeBy": "none",
+            "lineageTag": "0da03d1d-b010-50da-ad97-c985a8b58b85"
+          },
+          {
+            "name": "cost",
+            "dataType": "decimal",
+            "sourceColumn": "cost",
+            "summarizeBy": "none",
+            "lineageTag": "7fbe96cc-796c-541e-8f2b-df72d62e30e5"
+          },
+          {
+            "name": "target",
+            "dataType": "decimal",
+            "sourceColumn": "target",
+            "summarizeBy": "none",
+            "lineageTag": "1939c416-c2c1-5514-b013-15fca453830b"
+          },
+          {
+            "name": "units",
+            "dataType": "decimal",
+            "sourceColumn": "units",
+            "summarizeBy": "none",
+            "lineageTag": "f1157232-d8a4-50aa-a269-74ac20b2292e"
+          },
+          {
+            "name": "extra",
+            "dataType": "decimal",
+            "sourceColumn": "extra",
+            "summarizeBy": "none",
+            "lineageTag": "a81edfdd-d4bd-5e8e-8015-7b0f94522931"
+          },
+          {
+            "name": "breach",
+            "dataType": "decimal",
+            "sourceColumn": "breach",
+            "summarizeBy": "none",
+            "lineageTag": "7b2255b6-6044-5055-bcd5-75f446f584e7"
+          }
+        ],
+        "measures": [
+          {
+            "name": "Service Jobs Logged",
+            "expression": "COUNTROWS(Data)",
+            "formatString": "#,0",
+            "displayFolder": "Analytics",
+            "description": "Service Jobs Logged",
+            "lineageTag": "a78f9b1c-db82-5fc4-9d6c-6a36739e7738"
+          },
+          {
+            "name": "SLA Breaches",
+            "expression": "CALCULATE(COUNTROWS(Data), Data[status] = \"SLA breach\")",
+            "formatString": "#,0",
+            "displayFolder": "Analytics",
+            "description": "SLA Breaches",
+            "lineageTag": "cbf4e1a1-379c-501f-a93f-06a2553e3a89"
+          },
+          {
+            "name": "Service Revenue",
+            "expression": "SUM(Data[actual])",
+            "formatString": "\"PKR \"#,0",
+            "displayFolder": "Analytics",
+            "description": "Service Revenue",
+            "lineageTag": "8de57237-0475-5e98-b070-5f22da39a20e"
+          },
+          {
+            "name": "Service Cost",
+            "expression": "SUM(Data[cost])",
+            "formatString": "\"PKR \"#,0",
+            "displayFolder": "Analytics",
+            "description": "Service Cost",
+            "lineageTag": "aa01d08b-2939-5b61-833d-bfe901af9a39"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Data",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Sample = Binary.Decompress(Binary.FromText(\"dVbNbhQ9ELx/T8EDNJbb/z4ijiAuSNyHfCMSKWGjzUTi8any7syOd8wlyl/Xtqurqvt1Pj+d/pdf59P7qzwt84u8LdPy/ibTw/I+PcvD6W2RZTr/mhd5//20vMn8ZzlP8vM8Tw+P/znr4ker8mU648enD8s8vcj3Hx+rDSrfv376cPk/ccnkJM4br+KiiQ6/EbXBVNEriJOv0+PpPPcYn08vr8/zMov3JhTiaJUQTVHxTrI3KvYK4OXb6bw8/qu+mhzZQUIlPjeJL6LqTd4Agnyef+Nxz/+CiMZHfKyJaMGZgO+DFLxpQ4gDIoq/IbhsqmcTbN+akvEbqdbEDSEdWdgD+GxKJUwOEqxJHr+Rum8hH1joGgjGYw5qFF8rH+K8FLerLwMSgLCbJSaRQR2q8Qg1eLT3mGUxZZtlPfKg0e7asCzTwmE6FDrASaomrW2oPfDQA0STAmE4R0sAFzkKtwHoPQ9dPXjU3NTkGptOQItCF5uc8IcDER1EAJXkEyRcRAkSHFRxAUhDVzgtnZwcFO2MJY0hUU2qbm0hjSzRAaB9K5pbKYwQyUEuuw4OjmD53pXV1EIWQ5M1/ugq1eQug0xDS9y/AUqEnkpsnOJrlJrWOaSxJfamCjADVFyQBLBoyHAWWICsNoSBJTpXFo7ANzVejJUbjXkDOFqiq1eTEuUcQrMXyFRKKW31I0vcRZNrUmC0ZAM3IJpK3T1h4Id7W+J/NGJ2aAcvAV5OayykkR3uTAkX1cxRxkJG8CJoK2/5mgaG6IMF44eAE60QlMIECxlxtbUw8EOPkMgdXsKEu1nKrzTkoSN6V3tmCGyRm7EcaahlnWQeGaKrjxhfoTGhGQS0k8gO8qrGPHBEV5/gxYAifjR2DDIy2QYQNoCBIfpUgKUq2UyOAV0R07Xlgm4QA0fc+xJSYjqmQoMhIoOkAjXoFeHoiN6UmGKmoh2lCSlwELauIZ8Hjujrs0mVWipt1XLJJC6JtNUPHNEnk2MsIJqw6MEFWHCO+X6TwsgRe0+RMRWlgBFzUBQ8GW4kjgzRWbJNEhQ0OeTa1KyrofLIDXeZUF3rv63JzHK1eVc/ckN/8sBFmS4iE5gIZhlsOziulizju6mzlOfNwlc0Q5BM3/R4nUQZXk33wQIELHjXZEFHpbi+o4yOpq6BwtXAo4EMciIMV+d3DYyOpq4Dy2Ksdq4nPgSrMvNWWAEGdrhf9VitgCGbIIH98PC7tXC0Q7/rbRtmGwG+j7wYME1dY6EM/ECA/cnTLj+sudruNn7lrg4IhnWWA0v02WQZ7sXg7uWO0JYLwNWtiYEleltqWxKV0cJLpfIdOB7rijAwRQcQ8eQWbDa1tPZoCj3UWw9HW3QAKA1tz+O13Ns0F5jczWLki74Hy5MDHLrmzHThQUMLp78=\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Sample else File.Contents(DataFolder),",
+                "    Parsed = Table.PromoteHeaders(Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]), [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Parsed, {{\"period\", type text}, {\"group\", type text}, {\"item\", type text}, {\"status\", type text}, {\"actual\", Currency.Type}, {\"cost\", Currency.Type}, {\"target\", Currency.Type}, {\"units\", Currency.Type}, {\"extra\", Currency.Type}, {\"breach\", Currency.Type}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DataMode",
+        "kind": "m",
+        "expression": "\"Demo\" meta [IsParameterQuery=true, List={\"Demo\", \"CSV\"}, DefaultValue=\"Demo\", Type=\"Text\", IsParameterQueryRequired=true]"
+      },
+      {
+        "name": "DataFolder",
+        "kind": "m",
+        "expression": "\"C:/Astra/19-field-service-analytics/data.csv\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      }
+    ]
+  }
+}

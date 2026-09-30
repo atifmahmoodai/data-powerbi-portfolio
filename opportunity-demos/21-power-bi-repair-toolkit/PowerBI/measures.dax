@@ -1,0 +1,11 @@
+Readiness Score =
+AVERAGE(Data[actual])
+
+Checks Reviewed =
+COUNTROWS(Data)
+
+Issues =
+CALCULATE(COUNTROWS(Data), Data[status] IN {"Review", "Fail"})
+
+Failed Checks =
+CALCULATE(COUNTROWS(Data), Data[status] = "Fail")

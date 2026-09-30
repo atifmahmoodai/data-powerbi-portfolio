@@ -1,0 +1,164 @@
+{
+  "name": "Model",
+  "compatibilityLevel": 1567,
+  "model": {
+    "culture": "en-US",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Data",
+        "lineageTag": "b8aa2dbf-fdc1-56ba-8525-abec6565108d",
+        "columns": [
+          {
+            "name": "period",
+            "dataType": "string",
+            "sourceColumn": "period",
+            "summarizeBy": "none",
+            "lineageTag": "afed70a2-136f-5547-9142-fab205a1ca40"
+          },
+          {
+            "name": "group",
+            "dataType": "string",
+            "sourceColumn": "group",
+            "summarizeBy": "none",
+            "lineageTag": "d7a684e4-7cda-5d51-baff-1c91fa337a70"
+          },
+          {
+            "name": "item",
+            "dataType": "string",
+            "sourceColumn": "item",
+            "summarizeBy": "none",
+            "lineageTag": "dfcb89ae-77ff-5a6a-a530-e8a21ac0728e"
+          },
+          {
+            "name": "status",
+            "dataType": "string",
+            "sourceColumn": "status",
+            "summarizeBy": "none",
+            "lineageTag": "133296dc-bc09-51a5-98e8-5e533cd383a5"
+          },
+          {
+            "name": "actual",
+            "dataType": "decimal",
+            "sourceColumn": "actual",
+            "summarizeBy": "none",
+            "lineageTag": "8580afef-4fad-5ac0-a710-62aa32474b75"
+          },
+          {
+            "name": "cost",
+            "dataType": "decimal",
+            "sourceColumn": "cost",
+            "summarizeBy": "none",
+            "lineageTag": "8f244c2f-e6fe-5079-ae7d-4d2784c6bcd6"
+          },
+          {
+            "name": "target",
+            "dataType": "decimal",
+            "sourceColumn": "target",
+            "summarizeBy": "none",
+            "lineageTag": "5fb5b4a5-5a80-5043-ac5a-9ae1be5cf73c"
+          },
+          {
+            "name": "units",
+            "dataType": "decimal",
+            "sourceColumn": "units",
+            "summarizeBy": "none",
+            "lineageTag": "6e2b2651-bd1b-5be1-920f-ad5637e5554e"
+          },
+          {
+            "name": "extra",
+            "dataType": "decimal",
+            "sourceColumn": "extra",
+            "summarizeBy": "none",
+            "lineageTag": "52dffd09-b293-50f7-89a5-ed4d6a2b9197"
+          },
+          {
+            "name": "issue",
+            "dataType": "decimal",
+            "sourceColumn": "issue",
+            "summarizeBy": "none",
+            "lineageTag": "b760192c-7938-5843-a0f1-a33a36397ce0"
+          },
+          {
+            "name": "fail",
+            "dataType": "decimal",
+            "sourceColumn": "fail",
+            "summarizeBy": "none",
+            "lineageTag": "0ea78384-674c-5a4e-a44d-f5cb41af27da"
+          }
+        ],
+        "measures": [
+          {
+            "name": "Readiness Score",
+            "expression": "AVERAGE(Data[actual])",
+            "formatString": "0.0",
+            "displayFolder": "Analytics",
+            "description": "Readiness Score",
+            "lineageTag": "7153f9d2-61b9-5727-acc7-364ac23888e6"
+          },
+          {
+            "name": "Checks Reviewed",
+            "expression": "COUNTROWS(Data)",
+            "formatString": "#,0",
+            "displayFolder": "Analytics",
+            "description": "Checks Reviewed",
+            "lineageTag": "80b01de7-4a80-578f-b9b3-d64c32251adf"
+          },
+          {
+            "name": "Issues",
+            "expression": "CALCULATE(COUNTROWS(Data), Data[status] IN {\"Review\", \"Fail\"})",
+            "formatString": "#,0",
+            "displayFolder": "Analytics",
+            "description": "Issues",
+            "lineageTag": "d9321bad-340e-5525-9b54-cd9029e4acbb"
+          },
+          {
+            "name": "Failed Checks",
+            "expression": "CALCULATE(COUNTROWS(Data), Data[status] = \"Fail\")",
+            "formatString": "#,0",
+            "displayFolder": "Analytics",
+            "description": "Failed Checks",
+            "lineageTag": "e672e0b8-da5a-5540-8f91-90143322bff5"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Data",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Sample = Binary.Decompress(Binary.FromText(\"dZbbrts4DEXf+xX9AFbQjaL03MGgwGCAon9gnOO2AXKag9iZy9+XlHVxYuUlCILQ3Ftcm/L7fD1dXuHH9XJ7h9M6v8GyTuttgellvU1neLksK6zT9ce8wu3XaV1g/m+9TvB9Op3htCy3+YPVFj9pA39M6/Tx7fI6n+Hzl7/kl6/TsgAZiCoFMF7xV5PAR6sINOhSaeHveVpu13mpdd/mf07zv5CQKwOCsco7SEDBK+RCUwod//E8rafLr+Xn6b1V/ynSogGvbJLWECAZrSyYVum58v1yXT+ep/8vt/VObwhcmTwYowxLB0xeuZ1cPBi1pTABt5FK/uTvDoIlFXel4cGpbU4JknQzQbEM4yFoZOHdKo2s2s0qaSDlIzdUyG0R0KAyO7dx5Na26bBcPsqkkNgzkDe5c9WcDnZdqYwQthP2SQqTiftCox/Muma21jAQuWUgmU4za8zIrNvMZiYs04RK5yN2Tvnu1diR16o4gFMhG3YIBOQ8P6QoDiOEfZ9sVM7KfCxYRsuGu8pHhH3z6vlgrRe5GLJXvfU0pXLIsC8ME6AKkZ/gjEDMclO1Gp5AXBQzUHy8FqWxk08+KHsn+Yhx4T8Ki1JjynjIpR6AcKS451UoYkfcM24gRgGxmx1SXAObZ2ryUXkEqwExcNy73yHGVTTLVI5kVYgADhC5O9FHjEsAomaMTRAoQl4yaPeFB4ztzi3lc7JSHvN2om52THGJbJTsSGR5ovmMMRIXN69jjO0ueCQLRjmmgmt3GNMI48q/ZAetTJafxXsxsudd4SPFLbEcHKbY5eCwSt43DFOsXukJxSWxlM82bcuNVVvwZPs2picgF80MUigZkPXKgaK+ZWiEcUkAZblha4s5tOj7NqYjxy20nABfDhhRzslvSFS9Q4x9208oZqOKcnkYTbHvYnoCcZUsfYMXKrR4Rdz2YhV8ZLjQz1sGc6HLC5lvBNoXHhhuieXFZuXGilIdgFLstw49Qdi05eTygpCz2Vpi9zkGuMoNkhyT5ebbjnidtsnEEcEF/WRh2y0uJ4+jG1N3Go8It7SK0pTpRSGJ+6LWfarxCcMlr9w3lZvDy2Zl90lm1IqHCFfRKJcrylh9vrIw9djFEcKuvYnwtSFLNWK9J82u8BHgllf+Owl/PBubF3FIpg82PiG45JXDluGV14IgcQ3EZ77zOkS4rhid39byFk+5tXd0N9sjxP2SZaN5OzmX++q72R4o9juKWSz63RsQ0xi63zHIJbEkIKcMcsqve6HfsvEJyDWw+S2Rx7QFj7lApLKLfwM=\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Sample else File.Contents(DataFolder),",
+                "    Parsed = Table.PromoteHeaders(Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]), [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Parsed, {{\"period\", type text}, {\"group\", type text}, {\"item\", type text}, {\"status\", type text}, {\"actual\", Currency.Type}, {\"cost\", Currency.Type}, {\"target\", Currency.Type}, {\"units\", Currency.Type}, {\"extra\", Currency.Type}, {\"issue\", Currency.Type}, {\"fail\", Currency.Type}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DataMode",
+        "kind": "m",
+        "expression": "\"Demo\" meta [IsParameterQuery=true, List={\"Demo\", \"CSV\"}, DefaultValue=\"Demo\", Type=\"Text\", IsParameterQueryRequired=true]"
+      },
+      {
+        "name": "DataFolder",
+        "kind": "m",
+        "expression": "\"C:/Astra/21-power-bi-repair-toolkit/data.csv\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      }
+    ]
+  }
+}

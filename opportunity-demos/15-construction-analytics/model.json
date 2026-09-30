@@ -1,0 +1,678 @@
+{
+  "slug": "15-construction-analytics",
+  "title": "Construction Project Analytics",
+  "groupLabel": "Project manager",
+  "plural": "Projects",
+  "rows": [
+    {
+      "period": "2025-01",
+      "group": "Tower A",
+      "item": "PRJ-014",
+      "status": "On schedule",
+      "actual": 833339.88,
+      "cost": 392758.32,
+      "target": 760983.39,
+      "units": 31,
+      "extra": 109.5,
+      "variance": 72356.49
+    },
+    {
+      "period": "2025-02",
+      "group": "Road Lot 3",
+      "item": "PRJ-014",
+      "status": "Behind plan",
+      "actual": 1052356.8,
+      "cost": 776662.27,
+      "target": 863413.95,
+      "units": 39,
+      "extra": 121.9,
+      "variance": 188942.85
+    },
+    {
+      "period": "2025-03",
+      "group": "Warehouse",
+      "item": "PRJ-014",
+      "status": "Ahead",
+      "actual": 637861.53,
+      "cost": 493411.48,
+      "target": 938007.72,
+      "units": 24,
+      "extra": 68.0,
+      "variance": -300146.19
+    },
+    {
+      "period": "2025-04",
+      "group": "Utilities",
+      "item": "PRJ-014",
+      "status": "On schedule",
+      "actual": 812303.1,
+      "cost": 443981.18,
+      "target": 782701.56,
+      "units": 30,
+      "extra": 103.8,
+      "variance": 29601.54
+    },
+    {
+      "period": "2025-05",
+      "group": "Tower A",
+      "item": "PRJ-018",
+      "status": "On schedule",
+      "actual": 965147.14,
+      "cost": 474541.23,
+      "target": 1074509.44,
+      "units": 36,
+      "extra": 89.8,
+      "variance": -109362.3
+    },
+    {
+      "period": "2025-06",
+      "group": "Road Lot 3",
+      "item": "PRJ-018",
+      "status": "Behind plan",
+      "actual": 1339937.1,
+      "cost": 843892.6,
+      "target": 972850.21,
+      "units": 50,
+      "extra": 137.7,
+      "variance": 367086.89
+    },
+    {
+      "period": "2025-07",
+      "group": "Warehouse",
+      "item": "PRJ-018",
+      "status": "Ahead",
+      "actual": 1036004.56,
+      "cost": 683978.2,
+      "target": 798870.67,
+      "units": 39,
+      "extra": 129.7,
+      "variance": 237133.89
+    },
+    {
+      "period": "2025-08",
+      "group": "Utilities",
+      "item": "PRJ-018",
+      "status": "On schedule",
+      "actual": 923423.35,
+      "cost": 441551.62,
+      "target": 1177891.81,
+      "units": 34,
+      "extra": 78.4,
+      "variance": -254468.46
+    },
+    {
+      "period": "2025-09",
+      "group": "Tower A",
+      "item": "PRJ-021",
+      "status": "On schedule",
+      "actual": 1051281.49,
+      "cost": 906892.34,
+      "target": 1052926.01,
+      "units": 39,
+      "extra": 99.8,
+      "variance": -1644.52
+    },
+    {
+      "period": "2025-10",
+      "group": "Road Lot 3",
+      "item": "PRJ-021",
+      "status": "Behind plan",
+      "actual": 906329.11,
+      "cost": 842162.24,
+      "target": 1063356.86,
+      "units": 34,
+      "extra": 85.2,
+      "variance": -157027.75
+    },
+    {
+      "period": "2025-11",
+      "group": "Warehouse",
+      "item": "PRJ-021",
+      "status": "Ahead",
+      "actual": 776219.43,
+      "cost": 632911.91,
+      "target": 1092465.27,
+      "units": 29,
+      "extra": 71.1,
+      "variance": -316245.84
+    },
+    {
+      "period": "2025-12",
+      "group": "Utilities",
+      "item": "PRJ-021",
+      "status": "On schedule",
+      "actual": 616301.24,
+      "cost": 347898.18,
+      "target": 913872.52,
+      "units": 23,
+      "extra": 67.4,
+      "variance": -297571.28
+    },
+    {
+      "period": "2026-01",
+      "group": "Tower A",
+      "item": "PRJ-027",
+      "status": "On schedule",
+      "actual": 1045914.38,
+      "cost": 698122.22,
+      "target": 932177.7,
+      "units": 39,
+      "extra": 112.2,
+      "variance": 113736.68
+    },
+    {
+      "period": "2026-02",
+      "group": "Road Lot 3",
+      "item": "PRJ-027",
+      "status": "Behind plan",
+      "actual": 1145430.95,
+      "cost": 781233.78,
+      "target": 922012.87,
+      "units": 43,
+      "extra": 124.2,
+      "variance": 223418.08
+    },
+    {
+      "period": "2026-03",
+      "group": "Warehouse",
+      "item": "PRJ-027",
+      "status": "Ahead",
+      "actual": 1299466.39,
+      "cost": 969937.26,
+      "target": 1021847.49,
+      "units": 49,
+      "extra": 127.2,
+      "variance": 277618.9
+    },
+    {
+      "period": "2026-04",
+      "group": "Utilities",
+      "item": "PRJ-027",
+      "status": "On schedule",
+      "actual": 1035738.28,
+      "cost": 949805.95,
+      "target": 743094.62,
+      "units": 39,
+      "extra": 139.4,
+      "variance": 292643.66
+    },
+    {
+      "period": "2026-05",
+      "group": "Tower A",
+      "item": "PRJ-014",
+      "status": "On schedule",
+      "actual": 664407.18,
+      "cost": 368343.1,
+      "target": 634878.4,
+      "units": 25,
+      "extra": 104.7,
+      "variance": 29528.78
+    },
+    {
+      "period": "2026-06",
+      "group": "Road Lot 3",
+      "item": "PRJ-014",
+      "status": "Behind plan",
+      "actual": 1211023.07,
+      "cost": 1082581.71,
+      "target": 984840.2,
+      "units": 45,
+      "extra": 123.0,
+      "variance": 226182.87
+    },
+    {
+      "period": "2026-07",
+      "group": "Warehouse",
+      "item": "PRJ-014",
+      "status": "Ahead",
+      "actual": 490260.57,
+      "cost": 288246.25,
+      "target": 681261.42,
+      "units": 18,
+      "extra": 72.0,
+      "variance": -191000.85
+    },
+    {
+      "period": "2026-08",
+      "group": "Utilities",
+      "item": "PRJ-014",
+      "status": "On schedule",
+      "actual": 982792.25,
+      "cost": 475364.74,
+      "target": 718878.23,
+      "units": 37,
+      "extra": 136.7,
+      "variance": 263914.02
+    },
+    {
+      "period": "2026-09",
+      "group": "Tower A",
+      "item": "PRJ-018",
+      "status": "On schedule",
+      "actual": 998941.16,
+      "cost": 710374.92,
+      "target": 940791.78,
+      "units": 37,
+      "extra": 106.2,
+      "variance": 58149.38
+    },
+    {
+      "period": "2026-10",
+      "group": "Road Lot 3",
+      "item": "PRJ-018",
+      "status": "Behind plan",
+      "actual": 922832.04,
+      "cost": 724963.67,
+      "target": 1053798.0,
+      "units": 34,
+      "extra": 87.6,
+      "variance": -130965.96
+    },
+    {
+      "period": "2026-11",
+      "group": "Warehouse",
+      "item": "PRJ-018",
+      "status": "Ahead",
+      "actual": 891462.67,
+      "cost": 518643.8,
+      "target": 1109922.32,
+      "units": 33,
+      "extra": 80.3,
+      "variance": -218459.65
+    },
+    {
+      "period": "2026-12",
+      "group": "Utilities",
+      "item": "PRJ-018",
+      "status": "On schedule",
+      "actual": 500041.85,
+      "cost": 335146.76,
+      "target": 744772.03,
+      "units": 18,
+      "extra": 67.1,
+      "variance": -244730.18
+    },
+    {
+      "period": "2027-01",
+      "group": "Tower A",
+      "item": "PRJ-021",
+      "status": "On schedule",
+      "actual": 804666.11,
+      "cost": 659076.08,
+      "target": 632702.8,
+      "units": 30,
+      "extra": 127.2,
+      "variance": 171963.31
+    },
+    {
+      "period": "2027-02",
+      "group": "Road Lot 3",
+      "item": "PRJ-021",
+      "status": "Behind plan",
+      "actual": 1007704.92,
+      "cost": 910775.58,
+      "target": 977438.28,
+      "units": 38,
+      "extra": 103.1,
+      "variance": 30266.64
+    },
+    {
+      "period": "2027-03",
+      "group": "Warehouse",
+      "item": "PRJ-021",
+      "status": "Ahead",
+      "actual": 888678.21,
+      "cost": 425260.63,
+      "target": 741130.95,
+      "units": 33,
+      "extra": 119.9,
+      "variance": 147547.26
+    },
+    {
+      "period": "2027-04",
+      "group": "Utilities",
+      "item": "PRJ-021",
+      "status": "On schedule",
+      "actual": 769358.08,
+      "cost": 552616.26,
+      "target": 721827.85,
+      "units": 29,
+      "extra": 106.6,
+      "variance": 47530.23
+    },
+    {
+      "period": "2027-05",
+      "group": "Tower A",
+      "item": "PRJ-027",
+      "status": "On schedule",
+      "actual": 953418.28,
+      "cost": 483941.89,
+      "target": 696678.68,
+      "units": 36,
+      "extra": 136.9,
+      "variance": 256739.6
+    },
+    {
+      "period": "2027-06",
+      "group": "Road Lot 3",
+      "item": "PRJ-027",
+      "status": "Behind plan",
+      "actual": 963679.02,
+      "cost": 513470.71,
+      "target": 707625.89,
+      "units": 36,
+      "extra": 136.2,
+      "variance": 256053.13
+    },
+    {
+      "period": "2027-07",
+      "group": "Warehouse",
+      "item": "PRJ-027",
+      "status": "Ahead",
+      "actual": 764086.41,
+      "cost": 587347.07,
+      "target": 688333.4,
+      "units": 28,
+      "extra": 111.0,
+      "variance": 75753.01
+    },
+    {
+      "period": "2027-08",
+      "group": "Utilities",
+      "item": "PRJ-027",
+      "status": "On schedule",
+      "actual": 672862.99,
+      "cost": 347689.74,
+      "target": 918733.26,
+      "units": 25,
+      "extra": 73.2,
+      "variance": -245870.27
+    },
+    {
+      "period": "2027-09",
+      "group": "Tower A",
+      "item": "PRJ-014",
+      "status": "On schedule",
+      "actual": 1328995.59,
+      "cost": 884009.65,
+      "target": 1061453.52,
+      "units": 50,
+      "extra": 125.2,
+      "variance": 267542.07
+    },
+    {
+      "period": "2027-10",
+      "group": "Road Lot 3",
+      "item": "PRJ-014",
+      "status": "Behind plan",
+      "actual": 865088.0,
+      "cost": 771127.46,
+      "target": 1058917.34,
+      "units": 32,
+      "extra": 81.7,
+      "variance": -193829.34
+    },
+    {
+      "period": "2027-11",
+      "group": "Warehouse",
+      "item": "PRJ-014",
+      "status": "Ahead",
+      "actual": 732172.44,
+      "cost": 404994.04,
+      "target": 924750.95,
+      "units": 27,
+      "extra": 79.2,
+      "variance": -192578.51
+    },
+    {
+      "period": "2027-12",
+      "group": "Utilities",
+      "item": "PRJ-014",
+      "status": "On schedule",
+      "actual": 593162.67,
+      "cost": 515256.14,
+      "target": 813862.41,
+      "units": 22,
+      "extra": 72.9,
+      "variance": -220699.74
+    },
+    {
+      "period": "2028-01",
+      "group": "Tower A",
+      "item": "PRJ-018",
+      "status": "On schedule",
+      "actual": 806394.09,
+      "cost": 512163.23,
+      "target": 659342.26,
+      "units": 30,
+      "extra": 122.3,
+      "variance": 147051.83
+    },
+    {
+      "period": "2028-02",
+      "group": "Road Lot 3",
+      "item": "PRJ-018",
+      "status": "Behind plan",
+      "actual": 948583.49,
+      "cost": 499831.7,
+      "target": 1054148.72,
+      "units": 35,
+      "extra": 90.0,
+      "variance": -105565.23
+    },
+    {
+      "period": "2028-03",
+      "group": "Warehouse",
+      "item": "PRJ-018",
+      "status": "Ahead",
+      "actual": 1285816.8,
+      "cost": 1142773.68,
+      "target": 957978.06,
+      "units": 48,
+      "extra": 134.2,
+      "variance": 327838.74
+    },
+    {
+      "period": "2028-04",
+      "group": "Utilities",
+      "item": "PRJ-018",
+      "status": "On schedule",
+      "actual": 637554.3,
+      "cost": 410467.79,
+      "target": 909598.27,
+      "units": 24,
+      "extra": 70.1,
+      "variance": -272043.97
+    },
+    {
+      "period": "2028-05",
+      "group": "Tower A",
+      "item": "PRJ-021",
+      "status": "On schedule",
+      "actual": 1006046.64,
+      "cost": 669999.79,
+      "target": 1081012.91,
+      "units": 38,
+      "extra": 93.1,
+      "variance": -74966.27
+    },
+    {
+      "period": "2028-06",
+      "group": "Road Lot 3",
+      "item": "PRJ-021",
+      "status": "Behind plan",
+      "actual": 607386.98,
+      "cost": 475336.2,
+      "target": 781820.03,
+      "units": 23,
+      "extra": 77.7,
+      "variance": -174433.05
+    },
+    {
+      "period": "2028-07",
+      "group": "Warehouse",
+      "item": "PRJ-021",
+      "status": "Ahead",
+      "actual": 491453.83,
+      "cost": 273720.65,
+      "target": 662272.44,
+      "units": 18,
+      "extra": 74.2,
+      "variance": -170818.61
+    },
+    {
+      "period": "2028-08",
+      "group": "Utilities",
+      "item": "PRJ-021",
+      "status": "On schedule",
+      "actual": 532171.96,
+      "cost": 303898.75,
+      "target": 767237.71,
+      "units": 20,
+      "extra": 69.4,
+      "variance": -235065.75
+    },
+    {
+      "period": "2028-09",
+      "group": "Tower A",
+      "item": "PRJ-027",
+      "status": "On schedule",
+      "actual": 665853.84,
+      "cost": 439540.16,
+      "target": 690654.91,
+      "units": 25,
+      "extra": 96.4,
+      "variance": -24801.07
+    },
+    {
+      "period": "2028-10",
+      "group": "Road Lot 3",
+      "item": "PRJ-027",
+      "status": "Behind plan",
+      "actual": 725750.69,
+      "cost": 533539.61,
+      "target": 700757.96,
+      "units": 27,
+      "extra": 103.6,
+      "variance": 24992.73
+    },
+    {
+      "period": "2028-11",
+      "group": "Warehouse",
+      "item": "PRJ-027",
+      "status": "Ahead",
+      "actual": 1229041.08,
+      "cost": 992111.99,
+      "target": 1153395.15,
+      "units": 46,
+      "extra": 106.6,
+      "variance": 75645.93
+    },
+    {
+      "period": "2028-12",
+      "group": "Utilities",
+      "item": "PRJ-027",
+      "status": "On schedule",
+      "actual": 473337.5,
+      "cost": 272186.62,
+      "target": 718957.92,
+      "units": 17,
+      "extra": 65.8,
+      "variance": -245620.42
+    }
+  ],
+  "cards": [
+    {
+      "label": "Earned value",
+      "key": "actual",
+      "kind": "sum",
+      "note": "Value of completed scope"
+    },
+    {
+      "label": "Planned value",
+      "key": "target",
+      "kind": "sum",
+      "note": "Planned value to date"
+    },
+    {
+      "label": "Actual cost",
+      "key": "cost",
+      "kind": "sum",
+      "note": "Project cost to date"
+    },
+    {
+      "label": "Schedule variance",
+      "key": "variance",
+      "kind": "sum",
+      "note": "Earned value less planned value"
+    }
+  ],
+  "columns": [
+    {
+      "key": "period",
+      "label": "Period"
+    },
+    {
+      "key": "group",
+      "label": "Project manager"
+    },
+    {
+      "key": "item",
+      "label": "Project"
+    },
+    {
+      "key": "status",
+      "label": "Status"
+    },
+    {
+      "key": "actual",
+      "label": "Earned value PKR",
+      "format": "money"
+    },
+    {
+      "key": "cost",
+      "label": "Cost / baseline",
+      "format": "money"
+    },
+    {
+      "key": "target",
+      "label": "Target",
+      "format": "money"
+    },
+    {
+      "key": "units",
+      "label": "Units"
+    },
+    {
+      "key": "extra",
+      "label": "Indicator %"
+    }
+  ],
+  "chartTitle": "Earned value",
+  "cardDefs": [
+    [
+      "Earned value",
+      "actual",
+      "sum",
+      "Value of completed scope"
+    ],
+    [
+      "Planned value",
+      "target",
+      "sum",
+      "Planned value to date"
+    ],
+    [
+      "Actual cost",
+      "cost",
+      "sum",
+      "Project cost to date"
+    ],
+    [
+      "Schedule variance",
+      "variance",
+      "sum",
+      "Earned value less planned value"
+    ]
+  ]
+}

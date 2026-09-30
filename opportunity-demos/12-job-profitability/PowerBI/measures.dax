@@ -1,0 +1,11 @@
+Job Revenue =
+SUM(Data[actual])
+
+Direct Cost =
+SUM(Data[cost])
+
+Gross Profit =
+SUM(Data[actual]) - SUM(Data[cost])
+
+Gross Margin =
+DIVIDE([Gross Profit], [Job Revenue])

@@ -1,0 +1,13 @@
+{
+  "name": "Astra Analytics",
+  "dataColors": [
+    "#0B6E61",
+    "#1E4E79",
+    "#E3A331",
+    "#C65749",
+    "#70877C"
+  ],
+  "background": "#F3F6F5",
+  "foreground": "#18332D",
+  "tableAccent": "#0B6E61"
+}

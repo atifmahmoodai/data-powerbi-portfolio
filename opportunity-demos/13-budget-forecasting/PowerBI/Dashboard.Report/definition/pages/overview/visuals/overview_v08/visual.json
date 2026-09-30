@@ -1,0 +1,158 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "overview_v08",
+  "position": {
+    "x": 24,
+    "y": 495,
+    "width": 1232,
+    "height": 270,
+    "z": 8,
+    "tabOrder": 8
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "TrueD"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Detail and exceptions'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Data"
+                    }
+                  },
+                  "Property": "period"
+                }
+              },
+              "queryRef": "Data.period",
+              "nativeQueryRef": "period"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Data"
+                    }
+                  },
+                  "Property": "group"
+                }
+              },
+              "queryRef": "Data.group",
+              "nativeQueryRef": "group"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Data"
+                    }
+                  },
+                  "Property": "item"
+                }
+              },
+              "queryRef": "Data.item",
+              "nativeQueryRef": "item"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Data"
+                    }
+                  },
+                  "Property": "status"
+                }
+              },
+              "queryRef": "Data.status",
+              "nativeQueryRef": "status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Data"
+                    }
+                  },
+                  "Property": "actual"
+                }
+              },
+              "queryRef": "Data.actual",
+              "nativeQueryRef": "actual"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Data"
+                    }
+                  },
+                  "Property": "cost"
+                }
+              },
+              "queryRef": "Data.cost",
+              "nativeQueryRef": "cost"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Data"
+                    }
+                  },
+                  "Property": "target"
+                }
+              },
+              "queryRef": "Data.target",
+              "nativeQueryRef": "target"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Data"
+                    }
+                  },
+                  "Property": "units"
+                }
+              },
+              "queryRef": "Data.units",
+              "nativeQueryRef": "units"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

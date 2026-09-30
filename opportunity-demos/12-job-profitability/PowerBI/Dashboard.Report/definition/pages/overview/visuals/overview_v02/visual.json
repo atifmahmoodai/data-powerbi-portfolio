@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "overview_v02",
+  "position": {
+    "x": 24,
+    "y": 82,
+    "width": 294,
+    "height": 105,
+    "z": 2,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "card",
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "TrueD"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Job Revenue'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Data"
+                    }
+                  },
+                  "Property": "Job Revenue"
+                }
+              },
+              "queryRef": "Data.Job Revenue",
+              "nativeQueryRef": "Job Revenue"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

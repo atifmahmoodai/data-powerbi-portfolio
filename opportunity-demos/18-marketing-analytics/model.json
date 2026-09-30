@@ -1,0 +1,679 @@
+{
+  "slug": "18-marketing-analytics",
+  "title": "Marketing Analytics",
+  "groupLabel": "Channel",
+  "plural": "Campaigns",
+  "rows": [
+    {
+      "period": "2025-01",
+      "group": "Search",
+      "item": "CMP-Search",
+      "status": "Below 2x",
+      "actual": 249195.04,
+      "cost": 185578.87,
+      "target": 181740.41,
+      "units": 33,
+      "extra": 137.1,
+      "roas": 1.3427985632200476
+    },
+    {
+      "period": "2025-02",
+      "group": "Social",
+      "item": "CMP-Search",
+      "status": "Below 2x",
+      "actual": 331156.92,
+      "cost": 284491.23,
+      "target": 298430.26,
+      "units": 44,
+      "extra": 111.0,
+      "roas": 1.1640320863318
+    },
+    {
+      "period": "2025-03",
+      "group": "Email",
+      "item": "CMP-Search",
+      "status": "Below 2x",
+      "actual": 248038.27,
+      "cost": 127637.72,
+      "target": 267387.02,
+      "units": 33,
+      "extra": 92.8,
+      "roas": 1.9432991281887517
+    },
+    {
+      "period": "2025-04",
+      "group": "Partners",
+      "item": "CMP-Search",
+      "status": "Below 2x",
+      "actual": 288676.51,
+      "cost": 264306.07,
+      "target": 231464.49,
+      "units": 38,
+      "extra": 124.7,
+      "roas": 1.0922053738682582
+    },
+    {
+      "period": "2025-05",
+      "group": "Search",
+      "item": "CMP-Social",
+      "status": "Below 2x",
+      "actual": 128614.81,
+      "cost": 103056.74,
+      "target": 191064.04,
+      "units": 17,
+      "extra": 67.3,
+      "roas": 1.2479999852508432
+    },
+    {
+      "period": "2025-06",
+      "group": "Social",
+      "item": "CMP-Social",
+      "status": "On target",
+      "actual": 267016.69,
+      "cost": 124975.91,
+      "target": 330850.43,
+      "units": 35,
+      "extra": 80.7,
+      "roas": 2.136545275005399
+    },
+    {
+      "period": "2025-07",
+      "group": "Email",
+      "item": "CMP-Social",
+      "status": "On target",
+      "actual": 178904.07,
+      "cost": 86248.35,
+      "target": 242221.42,
+      "units": 23,
+      "extra": 73.9,
+      "roas": 2.0742897690216684
+    },
+    {
+      "period": "2025-08",
+      "group": "Partners",
+      "item": "CMP-Social",
+      "status": "Below 2x",
+      "actual": 223247.8,
+      "cost": 155251.59,
+      "target": 289356.21,
+      "units": 29,
+      "extra": 77.2,
+      "roas": 1.4379743228394632
+    },
+    {
+      "period": "2025-09",
+      "group": "Search",
+      "item": "CMP-Email",
+      "status": "Below 2x",
+      "actual": 321490.68,
+      "cost": 180601.13,
+      "target": 328096.94,
+      "units": 42,
+      "extra": 98.0,
+      "roas": 1.7801144433592413
+    },
+    {
+      "period": "2025-10",
+      "group": "Social",
+      "item": "CMP-Email",
+      "status": "Below 2x",
+      "actual": 297058.05,
+      "cost": 268454.68,
+      "target": 288914.12,
+      "units": 39,
+      "extra": 102.8,
+      "roas": 1.1065482263151456
+    },
+    {
+      "period": "2025-11",
+      "group": "Email",
+      "item": "CMP-Email",
+      "status": "Below 2x",
+      "actual": 127941.77,
+      "cost": 67612.45,
+      "target": 193078.55,
+      "units": 17,
+      "extra": 66.3,
+      "roas": 1.8922812292706448
+    },
+    {
+      "period": "2025-12",
+      "group": "Partners",
+      "item": "CMP-Email",
+      "status": "Below 2x",
+      "actual": 273510.96,
+      "cost": 233390.39,
+      "target": 253684.74,
+      "units": 36,
+      "extra": 107.8,
+      "roas": 1.1719032647402492
+    },
+    {
+      "period": "2026-01",
+      "group": "Search",
+      "item": "CMP-Partner",
+      "status": "Below 2x",
+      "actual": 216837.31,
+      "cost": 199695.39,
+      "target": 246125.69,
+      "units": 28,
+      "extra": 88.1,
+      "roas": 1.0858403391285096
+    },
+    {
+      "period": "2026-02",
+      "group": "Social",
+      "item": "CMP-Partner",
+      "status": "Below 2x",
+      "actual": 155222.32,
+      "cost": 124732.85,
+      "target": 180681.61,
+      "units": 20,
+      "extra": 85.9,
+      "roas": 1.2444381732638996
+    },
+    {
+      "period": "2026-03",
+      "group": "Email",
+      "item": "CMP-Partner",
+      "status": "Below 2x",
+      "actual": 171858.33,
+      "cost": 87032.11,
+      "target": 216595.08,
+      "units": 22,
+      "extra": 79.3,
+      "roas": 1.974654297132403
+    },
+    {
+      "period": "2026-04",
+      "group": "Partners",
+      "item": "CMP-Partner",
+      "status": "On target",
+      "actual": 149620.18,
+      "cost": 67565.63,
+      "target": 178155.64,
+      "units": 19,
+      "extra": 84.0,
+      "roas": 2.214442165343533
+    },
+    {
+      "period": "2026-05",
+      "group": "Search",
+      "item": "CMP-Search",
+      "status": "On target",
+      "actual": 359696.9,
+      "cost": 175953.51,
+      "target": 322770.4,
+      "units": 47,
+      "extra": 111.4,
+      "roas": 2.0442723762657535
+    },
+    {
+      "period": "2026-06",
+      "group": "Social",
+      "item": "CMP-Search",
+      "status": "Below 2x",
+      "actual": 410942.43,
+      "cost": 285806.43,
+      "target": 335993.98,
+      "units": 54,
+      "extra": 122.3,
+      "roas": 1.4378347960890874
+    },
+    {
+      "period": "2026-07",
+      "group": "Email",
+      "item": "CMP-Search",
+      "status": "Below 2x",
+      "actual": 275695.95,
+      "cost": 161598.65,
+      "target": 241905.55,
+      "units": 36,
+      "extra": 114.0,
+      "roas": 1.7060535468582196
+    },
+    {
+      "period": "2026-08",
+      "group": "Partners",
+      "item": "CMP-Search",
+      "status": "Below 2x",
+      "actual": 202963.06,
+      "cost": 118695.6,
+      "target": 269907.36,
+      "units": 27,
+      "extra": 75.2,
+      "roas": 1.7099459457637856
+    },
+    {
+      "period": "2026-09",
+      "group": "Search",
+      "item": "CMP-Social",
+      "status": "Below 2x",
+      "actual": 174738.92,
+      "cost": 114447.35,
+      "target": 260681.73,
+      "units": 23,
+      "extra": 67.0,
+      "roas": 1.5268061689501766
+    },
+    {
+      "period": "2026-10",
+      "group": "Social",
+      "item": "CMP-Social",
+      "status": "On target",
+      "actual": 267236.4,
+      "cost": 125817.16,
+      "target": 250060.41,
+      "units": 35,
+      "extra": 106.9,
+      "roas": 2.1240059781988405
+    },
+    {
+      "period": "2026-11",
+      "group": "Email",
+      "item": "CMP-Social",
+      "status": "Below 2x",
+      "actual": 273787.68,
+      "cost": 189095.66,
+      "target": 239546.8,
+      "units": 36,
+      "extra": 114.3,
+      "roas": 1.4478792374187752
+    },
+    {
+      "period": "2026-12",
+      "group": "Partners",
+      "item": "CMP-Social",
+      "status": "Below 2x",
+      "actual": 199202.23,
+      "cost": 123240.57,
+      "target": 292343.92,
+      "units": 26,
+      "extra": 68.1,
+      "roas": 1.6163689440904079
+    },
+    {
+      "period": "2027-01",
+      "group": "Search",
+      "item": "CMP-Email",
+      "status": "Below 2x",
+      "actual": 146548.68,
+      "cost": 118324.44,
+      "target": 178673.31,
+      "units": 19,
+      "extra": 82.0,
+      "roas": 1.2385326311284464
+    },
+    {
+      "period": "2027-02",
+      "group": "Social",
+      "item": "CMP-Email",
+      "status": "Below 2x",
+      "actual": 197994.42,
+      "cost": 167261.07,
+      "target": 226681.35,
+      "units": 26,
+      "extra": 87.3,
+      "roas": 1.183744788909936
+    },
+    {
+      "period": "2027-03",
+      "group": "Email",
+      "item": "CMP-Email",
+      "status": "Below 2x",
+      "actual": 174936.38,
+      "cost": 107176.43,
+      "target": 211002.66,
+      "units": 23,
+      "extra": 82.9,
+      "roas": 1.6322280934343494
+    },
+    {
+      "period": "2027-04",
+      "group": "Partners",
+      "item": "CMP-Email",
+      "status": "Below 2x",
+      "actual": 134354.65,
+      "cost": 120261.22,
+      "target": 200643.79,
+      "units": 17,
+      "extra": 67.0,
+      "roas": 1.1171901465825809
+    },
+    {
+      "period": "2027-05",
+      "group": "Search",
+      "item": "CMP-Partner",
+      "status": "Below 2x",
+      "actual": 329495.59,
+      "cost": 282887.16,
+      "target": 260451.59,
+      "units": 43,
+      "extra": 126.5,
+      "roas": 1.1647597932688074
+    },
+    {
+      "period": "2027-06",
+      "group": "Social",
+      "item": "CMP-Partner",
+      "status": "Below 2x",
+      "actual": 375557.45,
+      "cost": 259065.8,
+      "target": 316228.32,
+      "units": 50,
+      "extra": 118.8,
+      "roas": 1.4496604723587598
+    },
+    {
+      "period": "2027-07",
+      "group": "Email",
+      "item": "CMP-Partner",
+      "status": "Below 2x",
+      "actual": 329736.04,
+      "cost": 175670.19,
+      "target": 239399.86,
+      "units": 43,
+      "extra": 137.7,
+      "roas": 1.8770176089637063
+    },
+    {
+      "period": "2027-08",
+      "group": "Partners",
+      "item": "CMP-Partner",
+      "status": "Below 2x",
+      "actual": 418940.45,
+      "cost": 245959.27,
+      "target": 325567.73,
+      "units": 55,
+      "extra": 128.7,
+      "roas": 1.7032919718781083
+    },
+    {
+      "period": "2027-09",
+      "group": "Search",
+      "item": "CMP-Search",
+      "status": "Below 2x",
+      "actual": 328775.24,
+      "cost": 220787.24,
+      "target": 267185.92,
+      "units": 43,
+      "extra": 123.1,
+      "roas": 1.4891043522261522
+    },
+    {
+      "period": "2027-10",
+      "group": "Social",
+      "item": "CMP-Search",
+      "status": "Below 2x",
+      "actual": 215776.02,
+      "cost": 144912.64,
+      "target": 324716.49,
+      "units": 28,
+      "extra": 66.5,
+      "roas": 1.4890075841555297
+    },
+    {
+      "period": "2027-11",
+      "group": "Email",
+      "item": "CMP-Search",
+      "status": "Below 2x",
+      "actual": 334201.35,
+      "cost": 169159.91,
+      "target": 266695.39,
+      "units": 44,
+      "extra": 125.3,
+      "roas": 1.9756533921069122
+    },
+    {
+      "period": "2027-12",
+      "group": "Partners",
+      "item": "CMP-Search",
+      "status": "On target",
+      "actual": 269158.36,
+      "cost": 128617.92,
+      "target": 217236.36,
+      "units": 35,
+      "extra": 123.9,
+      "roas": 2.092697191806554
+    },
+    {
+      "period": "2028-01",
+      "group": "Search",
+      "item": "CMP-Social",
+      "status": "Below 2x",
+      "actual": 158074.82,
+      "cost": 129286.48,
+      "target": 227972.81,
+      "units": 21,
+      "extra": 69.3,
+      "roas": 1.2226709242915423
+    },
+    {
+      "period": "2028-02",
+      "group": "Social",
+      "item": "CMP-Social",
+      "status": "On target",
+      "actual": 287194.88,
+      "cost": 143418.5,
+      "target": 286405.94,
+      "units": 38,
+      "extra": 100.3,
+      "roas": 2.002495354504475
+    },
+    {
+      "period": "2028-03",
+      "group": "Email",
+      "item": "CMP-Social",
+      "status": "Below 2x",
+      "actual": 189706.74,
+      "cost": 114989.07,
+      "target": 232964.77,
+      "units": 25,
+      "extra": 81.4,
+      "roas": 1.6497806269761115
+    },
+    {
+      "period": "2028-04",
+      "group": "Partners",
+      "item": "CMP-Social",
+      "status": "Below 2x",
+      "actual": 389179.74,
+      "cost": 285228.0,
+      "target": 310560.77,
+      "units": 51,
+      "extra": 125.3,
+      "roas": 1.3644513862594134
+    },
+    {
+      "period": "2028-05",
+      "group": "Search",
+      "item": "CMP-Email",
+      "status": "Below 2x",
+      "actual": 315919.83,
+      "cost": 225751.64,
+      "target": 327424.17,
+      "units": 42,
+      "extra": 96.5,
+      "roas": 1.3994132224244307
+    },
+    {
+      "period": "2028-06",
+      "group": "Social",
+      "item": "CMP-Email",
+      "status": "Below 2x",
+      "actual": 190479.7,
+      "cost": 120459.49,
+      "target": 258257.17,
+      "units": 25,
+      "extra": 73.8,
+      "roas": 1.5812759957725206
+    },
+    {
+      "period": "2028-07",
+      "group": "Email",
+      "item": "CMP-Email",
+      "status": "Below 2x",
+      "actual": 295771.94,
+      "cost": 196185.48,
+      "target": 274436.46,
+      "units": 39,
+      "extra": 107.8,
+      "roas": 1.5076138152527903
+    },
+    {
+      "period": "2028-08",
+      "group": "Partners",
+      "item": "CMP-Email",
+      "status": "Below 2x",
+      "actual": 181794.54,
+      "cost": 141495.69,
+      "target": 212557.57,
+      "units": 24,
+      "extra": 85.5,
+      "roas": 1.2848062015175161
+    },
+    {
+      "period": "2028-09",
+      "group": "Search",
+      "item": "CMP-Partner",
+      "status": "Below 2x",
+      "actual": 169057.45,
+      "cost": 152454.74,
+      "target": 255882.75,
+      "units": 22,
+      "extra": 66.1,
+      "roas": 1.1089025503569125
+    },
+    {
+      "period": "2028-10",
+      "group": "Social",
+      "item": "CMP-Partner",
+      "status": "Below 2x",
+      "actual": 310711.8,
+      "cost": 212339.36,
+      "target": 244824.73,
+      "units": 41,
+      "extra": 126.9,
+      "roas": 1.463279346796562
+    },
+    {
+      "period": "2028-11",
+      "group": "Email",
+      "item": "CMP-Partner",
+      "status": "Below 2x",
+      "actual": 170283.11,
+      "cost": 138798.94,
+      "target": 250740.78,
+      "units": 22,
+      "extra": 67.9,
+      "roas": 1.2268329282629966
+    },
+    {
+      "period": "2028-12",
+      "group": "Partners",
+      "item": "CMP-Partner",
+      "status": "Below 2x",
+      "actual": 261487.43,
+      "cost": 132592.09,
+      "target": 208782.84,
+      "units": 34,
+      "extra": 125.2,
+      "roas": 1.9721193775586463
+    }
+  ],
+  "cards": [
+    {
+      "label": "Attributed revenue",
+      "key": "actual",
+      "kind": "sum",
+      "note": "Campaign-attributed sales"
+    },
+    {
+      "label": "Ad spend",
+      "key": "cost",
+      "kind": "sum",
+      "note": "Media spend"
+    },
+    {
+      "label": "ROAS",
+      "key": "roas",
+      "kind": "ratio",
+      "denominator": "cost",
+      "note": "Attributed revenue divided by spend"
+    },
+    {
+      "label": "Conversions",
+      "key": "units",
+      "kind": "sum",
+      "note": "Synthetic conversions"
+    }
+  ],
+  "columns": [
+    {
+      "key": "period",
+      "label": "Period"
+    },
+    {
+      "key": "group",
+      "label": "Channel"
+    },
+    {
+      "key": "item",
+      "label": "Campaign"
+    },
+    {
+      "key": "status",
+      "label": "Status"
+    },
+    {
+      "key": "actual",
+      "label": "Revenue PKR",
+      "format": "money"
+    },
+    {
+      "key": "cost",
+      "label": "Cost / baseline",
+      "format": "money"
+    },
+    {
+      "key": "target",
+      "label": "Target",
+      "format": "money"
+    },
+    {
+      "key": "units",
+      "label": "Units"
+    },
+    {
+      "key": "extra",
+      "label": "Indicator %"
+    }
+  ],
+  "chartTitle": "Attributed revenue",
+  "cardDefs": [
+    [
+      "Attributed revenue",
+      "actual",
+      "sum",
+      "Campaign-attributed sales"
+    ],
+    [
+      "Ad spend",
+      "cost",
+      "sum",
+      "Media spend"
+    ],
+    [
+      "ROAS",
+      "roas",
+      "ratio",
+      "Attributed revenue divided by spend"
+    ],
+    [
+      "Conversions",
+      "units",
+      "sum",
+      "Synthetic conversions"
+    ]
+  ]
+}

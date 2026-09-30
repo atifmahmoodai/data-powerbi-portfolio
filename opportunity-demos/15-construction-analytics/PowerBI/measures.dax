@@ -1,0 +1,11 @@
+Earned Value =
+SUM(Data[actual])
+
+Planned Value =
+SUM(Data[target])
+
+Actual Cost =
+SUM(Data[cost])
+
+Schedule Variance =
+[Earned Value] - [Planned Value]

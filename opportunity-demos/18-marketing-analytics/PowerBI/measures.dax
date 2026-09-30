@@ -1,0 +1,11 @@
+Attributed Revenue =
+SUM(Data[actual])
+
+Ad Spend =
+SUM(Data[cost])
+
+ROAS =
+DIVIDE([Attributed Revenue], [Ad Spend])
+
+Conversions =
+SUM(Data[units])

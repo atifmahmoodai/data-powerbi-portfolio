@@ -1,0 +1,164 @@
+{
+  "name": "Model",
+  "compatibilityLevel": 1567,
+  "model": {
+    "culture": "en-US",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Data",
+        "lineageTag": "f01501e7-231a-54d0-afb2-6ea154772080",
+        "columns": [
+          {
+            "name": "period",
+            "dataType": "string",
+            "sourceColumn": "period",
+            "summarizeBy": "none",
+            "lineageTag": "078e5885-76b7-5dc2-9739-4c18db25bfe8"
+          },
+          {
+            "name": "group",
+            "dataType": "string",
+            "sourceColumn": "group",
+            "summarizeBy": "none",
+            "lineageTag": "b766c61b-c111-5d5d-b512-9541f43d36b1"
+          },
+          {
+            "name": "item",
+            "dataType": "string",
+            "sourceColumn": "item",
+            "summarizeBy": "none",
+            "lineageTag": "55063a57-5dc9-56c0-a45c-88007f75c1ac"
+          },
+          {
+            "name": "status",
+            "dataType": "string",
+            "sourceColumn": "status",
+            "summarizeBy": "none",
+            "lineageTag": "1114c4d0-3112-5d11-9929-5e1fd14a9bb7"
+          },
+          {
+            "name": "actual",
+            "dataType": "decimal",
+            "sourceColumn": "actual",
+            "summarizeBy": "none",
+            "lineageTag": "b15da865-47ba-5963-8ae4-6dd931b77a0e"
+          },
+          {
+            "name": "cost",
+            "dataType": "decimal",
+            "sourceColumn": "cost",
+            "summarizeBy": "none",
+            "lineageTag": "40feb7b9-7019-5116-b9d8-af9b3f9ecbdb"
+          },
+          {
+            "name": "target",
+            "dataType": "decimal",
+            "sourceColumn": "target",
+            "summarizeBy": "none",
+            "lineageTag": "079b49ef-e1dd-5af1-ab33-55600338a6fc"
+          },
+          {
+            "name": "units",
+            "dataType": "decimal",
+            "sourceColumn": "units",
+            "summarizeBy": "none",
+            "lineageTag": "a93fe60b-b98d-5215-ad03-d48368c8c544"
+          },
+          {
+            "name": "extra",
+            "dataType": "decimal",
+            "sourceColumn": "extra",
+            "summarizeBy": "none",
+            "lineageTag": "e3d0d18d-c270-504a-9aea-8f3c7ac9f3e8"
+          },
+          {
+            "name": "wastecost",
+            "dataType": "decimal",
+            "sourceColumn": "wastecost",
+            "summarizeBy": "none",
+            "lineageTag": "5e5b2540-8e5c-508f-ab48-cc502ea18234"
+          },
+          {
+            "name": "reject",
+            "dataType": "decimal",
+            "sourceColumn": "reject",
+            "summarizeBy": "none",
+            "lineageTag": "a7131d90-9fa6-56c0-9272-9b554e028149"
+          }
+        ],
+        "measures": [
+          {
+            "name": "Good Output Units",
+            "expression": "SUM(Data[units])",
+            "formatString": "#,0",
+            "displayFolder": "Analytics",
+            "description": "Good Output Units",
+            "lineageTag": "969d13f8-466e-5440-9dcf-95080d452822"
+          },
+          {
+            "name": "Material Cost",
+            "expression": "SUM(Data[cost])",
+            "formatString": "\"PKR \"#,0",
+            "displayFolder": "Analytics",
+            "description": "Material Cost",
+            "lineageTag": "f92c7a9c-e98b-59c3-af79-95e459aa6139"
+          },
+          {
+            "name": "Waste Cost Proxy",
+            "expression": "SUM(Data[cost]) * AVERAGE(Data[extra]) / 100",
+            "formatString": "\"PKR \"#,0",
+            "displayFolder": "Analytics",
+            "description": "Waste Cost Proxy",
+            "lineageTag": "f5372bb4-376d-5bbe-b127-b10e89c401a4"
+          },
+          {
+            "name": "Average Reject Rate",
+            "expression": "DIVIDE(AVERAGE(Data[extra]), 100)",
+            "formatString": "0.0%",
+            "displayFolder": "Analytics",
+            "description": "Average Reject Rate",
+            "lineageTag": "8aeee978-585e-5a6d-a923-e544bcd9c242"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Data",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Sample = Binary.Decompress(Binary.FromText(\"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\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Sample else File.Contents(DataFolder),",
+                "    Parsed = Table.PromoteHeaders(Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]), [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Parsed, {{\"period\", type text}, {\"group\", type text}, {\"item\", type text}, {\"status\", type text}, {\"actual\", Currency.Type}, {\"cost\", Currency.Type}, {\"target\", Currency.Type}, {\"units\", Currency.Type}, {\"extra\", Currency.Type}, {\"wastecost\", Currency.Type}, {\"reject\", Currency.Type}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DataMode",
+        "kind": "m",
+        "expression": "\"Demo\" meta [IsParameterQuery=true, List={\"Demo\", \"CSV\"}, DefaultValue=\"Demo\", Type=\"Text\", IsParameterQueryRequired=true]"
+      },
+      {
+        "name": "DataFolder",
+        "kind": "m",
+        "expression": "\"C:/Astra/14-manufacturing-waste/data.csv\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      }
+    ]
+  }
+}

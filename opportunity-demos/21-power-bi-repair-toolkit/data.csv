@@ -1,0 +1,49 @@
+period,group,item,status,actual,cost,target,units,extra,fail,issue
+2025-01,Data model,CHK-01,Pass,71,8.96,14.71,19,482.7,0,0
+2025-02,Measures,CHK-01,Review,95,8.65,12.43,9,764.5,0,1
+2025-03,Relationships,CHK-01,Fail,81,4.29,8.9,6,910.2,1,1
+2025-04,Report layout,CHK-01,Pass,66,4.94,11.11,8,594.3,0,0
+2025-05,Data model,CHK-02,Pass,69,10.94,10.99,13,627.8,0,0
+2025-06,Measures,CHK-02,Review,97,9.11,16.01,14,605.9,0,1
+2025-07,Relationships,CHK-02,Fail,70,7.48,13.59,15,515.1,1,1
+2025-08,Report layout,CHK-02,Pass,71,10.03,9.57,11,741.9,0,0
+2025-09,Data model,CHK-03,Pass,78,6.29,8.49,11,918.9,0,0
+2025-10,Measures,CHK-03,Review,99,8.49,14.77,11,670.2,0,1
+2025-11,Relationships,CHK-03,Fail,95,8.26,15.0,13,633.4,1,1
+2025-12,Report layout,CHK-03,Pass,76,3.61,10.35,7,734.0,0,0
+2026-01,Data model,CHK-04,Pass,69,18.32,16.2,21,426.0,0,0
+2026-02,Measures,CHK-04,Review,94,9.24,15.56,11,604.0,0,1
+2026-03,Relationships,CHK-04,Fail,87,5.68,9.31,6,934.9,1,1
+2026-04,Report layout,CHK-04,Pass,97,14.25,15.35,15,632.0,0,0
+2026-05,Data model,CHK-01,Pass,87,9.35,11.77,11,739.3,0,0
+2026-06,Measures,CHK-01,Review,93,9.03,15.89,15,585.1,0,1
+2026-07,Relationships,CHK-01,Fail,86,15.14,15.45,20,556.5,1,1
+2026-08,Report layout,CHK-01,Pass,81,7.37,12.03,14,673.3,0,0
+2026-09,Data model,CHK-02,Pass,80,6.16,10.63,9,752.3,0,0
+2026-10,Measures,CHK-02,Review,93,7.35,12.16,8,764.7,0,1
+2026-11,Relationships,CHK-02,Fail,88,6.48,14.97,11,587.7,1,1
+2026-12,Report layout,CHK-02,Pass,78,6.79,13.36,9,584.0,0,0
+2027-01,Data model,CHK-03,Pass,75,8.52,11.02,9,680.6,0,0
+2027-02,Measures,CHK-03,Review,76,9.23,10.37,10,732.8,0,1
+2027-03,Relationships,CHK-03,Fail,76,10.91,16.09,12,472.2,1,1
+2027-04,Report layout,CHK-03,Pass,89,6.68,9.39,10,947.9,0,0
+2027-05,Data model,CHK-04,Pass,73,10.61,16.05,21,454.8,0,0
+2027-06,Measures,CHK-04,Review,87,4.79,13.55,9,642.3,0,1
+2027-07,Relationships,CHK-04,Fail,95,5.91,8.81,8,1078.1,1,1
+2027-08,Report layout,CHK-04,Pass,77,4.64,14.0,10,550.2,0,0
+2027-09,Data model,CHK-01,Pass,94,5.64,13.29,8,707.2,0,0
+2027-10,Measures,CHK-01,Review,69,2.94,8.64,6,798.9,0,1
+2027-11,Relationships,CHK-01,Fail,87,3.77,12.3,8,707.5,1,1
+2027-12,Report layout,CHK-01,Pass,96,7.31,13.21,14,726.8,0,0
+2028-01,Data model,CHK-02,Pass,92,5.89,13.35,10,689.2,0,0
+2028-02,Measures,CHK-02,Review,77,19.37,15.39,21,500.3,0,1
+2028-03,Relationships,CHK-02,Fail,92,9.61,10.47,14,879.0,1,1
+2028-04,Report layout,CHK-02,Pass,95,9.55,14.4,13,659.6,0,0
+2028-05,Data model,CHK-03,Pass,66,5.53,9.85,11,670.1,0,0
+2028-06,Measures,CHK-03,Review,85,7.81,12.29,15,691.9,0,1
+2028-07,Relationships,CHK-03,Fail,68,8.81,10.06,12,675.8,1,1
+2028-08,Report layout,CHK-03,Pass,70,12.44,15.99,15,437.8,0,0
+2028-09,Data model,CHK-04,Pass,69,9.82,11.33,12,609.2,0,0
+2028-10,Measures,CHK-04,Review,69,10.54,13.59,15,507.6,0,1
+2028-11,Relationships,CHK-04,Fail,77,3.97,12.9,8,596.9,1,1
+2028-12,Report layout,CHK-04,Pass,74,11.66,13.29,14,557.0,0,0

@@ -1,0 +1,11 @@
+Net Ledger Amount =
+SUM(Data[actual]) - SUM(Data[cost])
+
+Ledger Lines =
+COUNTROWS(Data)
+
+Review Lines =
+CALCULATE(COUNTROWS(Data), Data[status] = "Review")
+
+Control Variance =
+SUM(Data[actual]) - SUM(Data[target])

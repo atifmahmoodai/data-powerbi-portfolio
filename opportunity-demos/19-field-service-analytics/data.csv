@@ -1,0 +1,49 @@
+period,group,item,status,actual,cost,target,units,extra,breach
+2025-01,Karachi team,SV-9041,SLA breach,26.76,23.31,25.52,26,104.9,1
+2025-02,Lahore team,SV-9041,Complete,33.48,26.19,45.81,32,73.1,0
+2025-03,North team,SV-9041,Complete,39.75,23.61,34.96,38,113.7,0
+2025-04,Central team,SV-9041,Complete,35.35,32.59,42.45,34,83.3,0
+2025-05,Karachi team,SV-9083,Complete,27.93,23.81,30.87,27,90.5,0
+2025-06,Lahore team,SV-9083,Complete,37.89,27.74,40.63,37,93.3,0
+2025-07,North team,SV-9083,Complete,24.36,21.16,29.59,23,82.3,0
+2025-08,Central team,SV-9083,SLA breach,33.78,19.51,31.05,33,108.8,1
+2025-09,Karachi team,SV-9150,Complete,20.05,18.19,28.82,19,69.6,0
+2025-10,Lahore team,SV-9150,Complete,25.64,20.96,30.82,25,83.2,0
+2025-11,North team,SV-9150,Complete,37.17,26.12,27.72,36,134.1,0
+2025-12,Central team,SV-9150,Complete,44.3,24.1,36.19,43,122.4,0
+2026-01,Karachi team,SV-9218,Complete,35.28,22.0,31.46,34,112.1,0
+2026-02,Lahore team,SV-9218,Complete,26.0,17.46,33.15,25,78.4,0
+2026-03,North team,SV-9218,SLA breach,29.98,20.45,32.18,29,93.2,1
+2026-04,Central team,SV-9218,Complete,35.74,21.85,37.15,35,96.2,0
+2026-05,Karachi team,SV-9041,Complete,43.83,38.9,39.47,42,111.0,0
+2026-06,Lahore team,SV-9041,Complete,38.1,33.51,33.81,37,112.7,0
+2026-07,North team,SV-9041,Complete,31.66,19.44,37.86,31,83.6,0
+2026-08,Central team,SV-9041,Complete,33.23,24.61,37.33,32,89.0,0
+2026-09,Karachi team,SV-9083,Complete,24.09,15.4,31.51,23,76.5,0
+2026-10,Lahore team,SV-9083,SLA breach,28.97,20.58,38.66,28,74.9,1
+2026-11,North team,SV-9083,Complete,32.13,16.72,41.28,31,77.9,0
+2026-12,Central team,SV-9083,Complete,36.86,24.93,27.72,36,133.0,0
+2027-01,Karachi team,SV-9150,Complete,23.8,15.27,24.12,23,98.7,0
+2027-02,Lahore team,SV-9150,Complete,57.88,44.06,42.2,56,137.2,0
+2027-03,North team,SV-9150,Complete,62.04,56.12,45.16,60,137.4,0
+2027-04,Central team,SV-9150,Complete,49.99,32.62,40.94,49,122.1,0
+2027-05,Karachi team,SV-9218,SLA breach,24.6,18.68,35.9,24,68.5,1
+2027-06,Lahore team,SV-9218,Complete,36.77,19.2,33.66,36,109.3,0
+2027-07,North team,SV-9218,Complete,37.69,20.89,45.63,36,82.6,0
+2027-08,Central team,SV-9218,Complete,22.74,17.52,32.94,22,69.0,0
+2027-09,Karachi team,SV-9041,Complete,22.11,14.9,26.3,21,84.1,0
+2027-10,Lahore team,SV-9041,Complete,32.04,19.8,44.79,31,71.5,0
+2027-11,North team,SV-9041,Complete,31.92,17.56,29.7,31,107.5,0
+2027-12,Central team,SV-9041,SLA breach,41.78,31.74,36.68,40,113.9,1
+2028-01,Karachi team,SV-9083,Complete,33.75,19.87,24.52,33,137.6,0
+2028-02,Lahore team,SV-9083,Complete,24.05,12.32,36.7,23,65.5,0
+2028-03,North team,SV-9083,Complete,38.45,24.39,31.11,37,123.6,0
+2028-04,Central team,SV-9083,Complete,20.39,9.65,25.87,19,78.8,0
+2028-05,Karachi team,SV-9150,Complete,25.43,20.78,34.55,24,73.6,0
+2028-06,Lahore team,SV-9150,Complete,30.92,16.68,30.56,30,101.2,0
+2028-07,North team,SV-9150,SLA breach,35.35,21.91,30.91,34,114.4,1
+2028-08,Central team,SV-9150,Complete,50.4,38.26,37.31,49,135.1,0
+2028-09,Karachi team,SV-9218,Complete,31.09,19.62,34.19,30,90.9,0
+2028-10,Lahore team,SV-9218,Complete,51.22,45.06,36.83,50,139.1,0
+2028-11,North team,SV-9218,Complete,45.45,37.08,43.88,44,103.6,0
+2028-12,Central team,SV-9218,Complete,50.98,30.28,44.61,49,114.3,0

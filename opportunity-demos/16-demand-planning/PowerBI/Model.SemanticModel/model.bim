@@ -1,0 +1,171 @@
+{
+  "name": "Model",
+  "compatibilityLevel": 1567,
+  "model": {
+    "culture": "en-US",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Data",
+        "lineageTag": "77edf0c8-009d-515e-b036-3d6e35e57ecf",
+        "columns": [
+          {
+            "name": "period",
+            "dataType": "string",
+            "sourceColumn": "period",
+            "summarizeBy": "none",
+            "lineageTag": "b14777d2-5f3e-5ba0-b4e1-250a10d0a558"
+          },
+          {
+            "name": "group",
+            "dataType": "string",
+            "sourceColumn": "group",
+            "summarizeBy": "none",
+            "lineageTag": "e7453fc8-e629-50a3-a616-910b948f48e5"
+          },
+          {
+            "name": "item",
+            "dataType": "string",
+            "sourceColumn": "item",
+            "summarizeBy": "none",
+            "lineageTag": "d8248755-79f4-5deb-9c1d-30fa8df1d6d9"
+          },
+          {
+            "name": "status",
+            "dataType": "string",
+            "sourceColumn": "status",
+            "summarizeBy": "none",
+            "lineageTag": "faa31e8b-c1a3-5ae7-b38f-fb344edbbf68"
+          },
+          {
+            "name": "actual",
+            "dataType": "decimal",
+            "sourceColumn": "actual",
+            "summarizeBy": "none",
+            "lineageTag": "b0733d38-48d0-519d-9a1f-98e6201f9813"
+          },
+          {
+            "name": "cost",
+            "dataType": "decimal",
+            "sourceColumn": "cost",
+            "summarizeBy": "none",
+            "lineageTag": "5072f385-e692-59a7-8085-47b889a94bea"
+          },
+          {
+            "name": "target",
+            "dataType": "decimal",
+            "sourceColumn": "target",
+            "summarizeBy": "none",
+            "lineageTag": "45f12213-9036-531c-a656-43b749ece1e0"
+          },
+          {
+            "name": "units",
+            "dataType": "decimal",
+            "sourceColumn": "units",
+            "summarizeBy": "none",
+            "lineageTag": "74493195-3d71-5234-b923-ca63b17e646c"
+          },
+          {
+            "name": "extra",
+            "dataType": "decimal",
+            "sourceColumn": "extra",
+            "summarizeBy": "none",
+            "lineageTag": "6bd9a640-92d9-5f40-a765-feeff5f1f34a"
+          },
+          {
+            "name": "targetunits",
+            "dataType": "decimal",
+            "sourceColumn": "targetunits",
+            "summarizeBy": "none",
+            "lineageTag": "0682c632-391e-5ccc-a79e-5b9871cb261c"
+          },
+          {
+            "name": "mape",
+            "dataType": "decimal",
+            "sourceColumn": "mape",
+            "summarizeBy": "none",
+            "lineageTag": "935ea694-c5d0-51d6-bd19-70238bba09f4"
+          },
+          {
+            "name": "risk",
+            "dataType": "decimal",
+            "sourceColumn": "risk",
+            "summarizeBy": "none",
+            "lineageTag": "8031f751-dd76-5b62-bec3-8482c044909e"
+          }
+        ],
+        "measures": [
+          {
+            "name": "Observed Units",
+            "expression": "SUM(Data[units])",
+            "formatString": "#,0",
+            "displayFolder": "Analytics",
+            "description": "Observed Units",
+            "lineageTag": "1dd649c7-8e0d-514f-bf92-6a2075ae3365"
+          },
+          {
+            "name": "Forecast Units",
+            "expression": "SUM(Data[target])",
+            "formatString": "#,0",
+            "displayFolder": "Analytics",
+            "description": "Forecast Units",
+            "lineageTag": "f4fc2261-ae58-5d1f-9b52-9fcf5538b449"
+          },
+          {
+            "name": "Unit Variance",
+            "expression": "SUM(Data[units]) - SUM(Data[target])",
+            "formatString": "#,0",
+            "displayFolder": "Analytics",
+            "description": "Unit Variance",
+            "lineageTag": "ce5c0c34-6159-58c8-89df-dfcd359ae1a9"
+          },
+          {
+            "name": "Short Cover SKU Periods",
+            "expression": "CALCULATE(COUNTROWS(Data), Data[status] = \"Short cover\")",
+            "formatString": "#,0",
+            "displayFolder": "Analytics",
+            "description": "Short Cover SKU Periods",
+            "lineageTag": "758cbba4-a863-542f-8d8b-6b067d0b523b"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Data",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Sample = Binary.Decompress(Binary.FromText(\"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\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Sample else File.Contents(DataFolder),",
+                "    Parsed = Table.PromoteHeaders(Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]), [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Parsed, {{\"period\", type text}, {\"group\", type text}, {\"item\", type text}, {\"status\", type text}, {\"actual\", Currency.Type}, {\"cost\", Currency.Type}, {\"target\", Currency.Type}, {\"units\", Currency.Type}, {\"extra\", Currency.Type}, {\"targetunits\", Currency.Type}, {\"mape\", Currency.Type}, {\"risk\", Currency.Type}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DataMode",
+        "kind": "m",
+        "expression": "\"Demo\" meta [IsParameterQuery=true, List={\"Demo\", \"CSV\"}, DefaultValue=\"Demo\", Type=\"Text\", IsParameterQueryRequired=true]"
+      },
+      {
+        "name": "DataFolder",
+        "kind": "m",
+        "expression": "\"C:/Astra/16-demand-planning/data.csv\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      }
+    ]
+  }
+}

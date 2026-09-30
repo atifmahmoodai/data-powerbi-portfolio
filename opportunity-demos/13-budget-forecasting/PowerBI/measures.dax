@@ -1,0 +1,11 @@
+Actual Spend =
+SUM(Data[actual])
+
+Budget =
+SUM(Data[target])
+
+Budget Variance =
+SUM(Data[target]) - SUM(Data[actual])
+
+Variance Percent =
+DIVIDE([Budget Variance], [Budget])

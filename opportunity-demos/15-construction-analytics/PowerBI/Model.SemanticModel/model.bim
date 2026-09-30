@@ -1,0 +1,157 @@
+{
+  "name": "Model",
+  "compatibilityLevel": 1567,
+  "model": {
+    "culture": "en-US",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Data",
+        "lineageTag": "fd718b37-4000-5d6e-80fb-ac9e7f6adf61",
+        "columns": [
+          {
+            "name": "period",
+            "dataType": "string",
+            "sourceColumn": "period",
+            "summarizeBy": "none",
+            "lineageTag": "ce59f511-c7d4-5064-ab23-75ca5273b9db"
+          },
+          {
+            "name": "group",
+            "dataType": "string",
+            "sourceColumn": "group",
+            "summarizeBy": "none",
+            "lineageTag": "d60d5adf-b341-5d7c-84a6-4b9543890081"
+          },
+          {
+            "name": "item",
+            "dataType": "string",
+            "sourceColumn": "item",
+            "summarizeBy": "none",
+            "lineageTag": "fdbcf197-66ba-576d-8875-0f7eed558af7"
+          },
+          {
+            "name": "status",
+            "dataType": "string",
+            "sourceColumn": "status",
+            "summarizeBy": "none",
+            "lineageTag": "34d8b517-efcf-54ec-a7f5-5e669e8d8c83"
+          },
+          {
+            "name": "actual",
+            "dataType": "decimal",
+            "sourceColumn": "actual",
+            "summarizeBy": "none",
+            "lineageTag": "c18297e7-25e9-577d-a6b8-7e837f9c58e1"
+          },
+          {
+            "name": "cost",
+            "dataType": "decimal",
+            "sourceColumn": "cost",
+            "summarizeBy": "none",
+            "lineageTag": "671f460f-51d7-5b5b-ac92-6a9dde1a8dd0"
+          },
+          {
+            "name": "target",
+            "dataType": "decimal",
+            "sourceColumn": "target",
+            "summarizeBy": "none",
+            "lineageTag": "a090e863-96bd-56f5-affd-7c1b6da92a33"
+          },
+          {
+            "name": "units",
+            "dataType": "decimal",
+            "sourceColumn": "units",
+            "summarizeBy": "none",
+            "lineageTag": "a66ab4f9-3cf9-5f96-ae60-2498ab39e7c9"
+          },
+          {
+            "name": "extra",
+            "dataType": "decimal",
+            "sourceColumn": "extra",
+            "summarizeBy": "none",
+            "lineageTag": "2a767a33-da43-5851-8c97-0b3ff16b905e"
+          },
+          {
+            "name": "variance",
+            "dataType": "decimal",
+            "sourceColumn": "variance",
+            "summarizeBy": "none",
+            "lineageTag": "541cace4-fe8d-5bfb-8edc-61cfcad054ca"
+          }
+        ],
+        "measures": [
+          {
+            "name": "Earned Value",
+            "expression": "SUM(Data[actual])",
+            "formatString": "\"PKR \"#,0",
+            "displayFolder": "Analytics",
+            "description": "Earned Value",
+            "lineageTag": "54be697f-9f60-5aaa-81fe-85f2656a5157"
+          },
+          {
+            "name": "Planned Value",
+            "expression": "SUM(Data[target])",
+            "formatString": "\"PKR \"#,0",
+            "displayFolder": "Analytics",
+            "description": "Planned Value",
+            "lineageTag": "ffc69d64-4405-594e-9cf6-3e3999b548eb"
+          },
+          {
+            "name": "Actual Cost",
+            "expression": "SUM(Data[cost])",
+            "formatString": "\"PKR \"#,0",
+            "displayFolder": "Analytics",
+            "description": "Actual Cost",
+            "lineageTag": "828c6891-1ba5-5332-82cd-d27d0116d521"
+          },
+          {
+            "name": "Schedule Variance",
+            "expression": "[Earned Value] - [Planned Value]",
+            "formatString": "\"PKR \"#,0",
+            "displayFolder": "Analytics",
+            "description": "Schedule Variance",
+            "lineageTag": "47e45d25-e5dd-531c-9982-a73d9086cfeb"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Data",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Sample = Binary.Decompress(Binary.FromText(\"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\", BinaryEncoding.Base64), Compression.Deflate),",
+                "    Source = if DataMode = \"Demo\" then Sample else File.Contents(DataFolder),",
+                "    Parsed = Table.PromoteHeaders(Csv.Document(Source, [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]), [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Parsed, {{\"period\", type text}, {\"group\", type text}, {\"item\", type text}, {\"status\", type text}, {\"actual\", Currency.Type}, {\"cost\", Currency.Type}, {\"target\", Currency.Type}, {\"units\", Currency.Type}, {\"extra\", Currency.Type}, {\"variance\", Currency.Type}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DataMode",
+        "kind": "m",
+        "expression": "\"Demo\" meta [IsParameterQuery=true, List={\"Demo\", \"CSV\"}, DefaultValue=\"Demo\", Type=\"Text\", IsParameterQueryRequired=true]"
+      },
+      {
+        "name": "DataFolder",
+        "kind": "m",
+        "expression": "\"C:/Astra/15-construction-analytics/data.csv\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      }
+    ]
+  }
+}
