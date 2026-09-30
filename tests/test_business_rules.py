@@ -61,6 +61,18 @@ class BusinessRules(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'every target date'):
             business_checks('02',d)
 
+    def test_inventory_age_bands_match_the_90_day_cutoff(self):
+        d=self.data(3)
+        business_checks('03',d)
+        self.assertTrue(any(r['AgeDays']>90 and r['AgeBand']=='91+' for r in d['Stock']))
+        d['Stock'][0]['AgeBand']='91+'
+        with self.assertRaisesRegex(ValueError,'age-band label/boundary'):
+            business_checks('03',d)
+
+    def test_inventory_ageing_detail_shows_exact_lot_age(self):
+        page=self.specs[2]['pages'][1]
+        self.assertIn('Stock.AgeDays',page['table'])
+
     def test_stock_ageing_detail_supports_actionable_stock_filtering(self):
         page=self.specs[0]['pages'][1]
         self.assertIn('Vehicles.Status',page['slicers'])

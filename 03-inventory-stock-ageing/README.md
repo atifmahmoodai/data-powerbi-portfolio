@@ -18,6 +18,10 @@ Find ageing inventory, reserved stock and warehouse capital exposure at receipt-
 - **Ageing exposure:** Aged Units, Aged Value, Aged Value Share, Weighted Stock Age
 - **Availability and lots:** On Hand Units, Reserved Units, Available Value, Occupied Lots
 
+### Page guidance
+
+- **Ageing exposure:** Age is measured from receipt to the 30 Sep 2026 snapshot. Band 91+ means more than 90 days.
+
 ## Business scope
 
 Single stock snapshot at 30 Sep 2026; age measured from lot receipt.

@@ -122,7 +122,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "SYNTHETIC DEMO  |  PKR  |  Single stock snapshot at 30 Sep 2026; age measured from lot receipt.",
+                    "value": "SYNTHETIC DEMO  |  PKR  |  Age is measured from receipt to the 30 Sep 2026 snapshot. Band 91+ means more than 90 days.",
                     "textStyle": {
                       "fontSize": "10pt",
                       "color": "#526674"

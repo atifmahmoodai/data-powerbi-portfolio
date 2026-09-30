@@ -68,6 +68,9 @@ def business_checks(slug,data):
             require(0<=r['Reserved']<=r['OnHand'] and r['UnitCost']>=0,'Invalid stock')
             require(r['SnapshotDate']==ASOF.isoformat(),'Mixed snapshots')
             require((ASOF-dt.date.fromisoformat(r['ReceiptDate'])).days==r['AgeDays'],'Invalid lot age')
+            require(r['AgeDays']>=0,'Stock receipt date is after snapshot')
+            expected_band='0–30' if r['AgeDays']<=30 else '31–60' if r['AgeDays']<=60 else '61–90' if r['AgeDays']<=90 else '91+'
+            require(r['AgeBand']==expected_band,'Stock age-band label/boundary mismatch')
     elif n==4:
         unique(data['PnL'],['DepartmentID','Date','Category'])
         require(all(r['Category'] in ['Revenue','COGS','Operating Expense'] and r['Actual']>=0 and r['Budget']>=0 for r in data['PnL']),'Invalid P&L category/sign')

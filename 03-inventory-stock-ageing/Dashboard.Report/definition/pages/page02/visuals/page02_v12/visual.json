@@ -26,7 +26,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Management detail'"
+                  "Value": "'Ageing detail · age in days'"
                 }
               }
             },
@@ -145,6 +145,20 @@
               },
               "queryRef": "Stock.AgeBand",
               "nativeQueryRef": "AgeBand"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Stock"
+                    }
+                  },
+                  "Property": "AgeDays"
+                }
+              },
+              "queryRef": "Stock.AgeDays",
+              "nativeQueryRef": "AgeDays"
             },
             {
               "field": {
