@@ -82,7 +82,7 @@ def build_model(p, folder):
     model={'name':'Model','compatibilityLevel':1567,'model':{'culture':'en-US','defaultPowerBIDataSourceVersion':'powerBI_V3','sourceQueryCulture':'en-US',
            'tables':tables,'relationships':rels,'expressions':[
                {'name':'DataMode','kind':'m','expression':'"Demo" meta [IsParameterQuery=true, List={"Demo", "Folder"}, DefaultValue="Demo", Type="Text", IsParameterQueryRequired=true]'},
-               {'name':'DataFolder','kind':'m','expression':f'"C:/PowerBI/Astra/power-bi/{p["slug"]}/data/demo" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]'}],
+               {'name':'DataFolder','kind':'m','expression':f'"C:/PowerBI/data-powerbi-portfolio/{p["slug"]}/data/demo" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]'}],
            'annotations':[{'name':'__PBI_TimeIntelligenceEnabled','value':'0'}]}}
     js(folder/'Model.SemanticModel/model.bim',model)
     js(folder/'Model.SemanticModel/definition.pbism',{'$schema':SCHEMA+'semanticModel/definitionProperties/1.0.0/schema.json','version':'1.0','settings':{}})
@@ -136,7 +136,7 @@ def build_docs(p,folder):
 
 ## Open
 
-1. Download/extract the Astra repository to a short Windows path.
+1. Download/extract this repository to a short Windows path, e.g. `C:/PowerBI/data-powerbi-portfolio`.
 2. Open `Dashboard.pbip` in current Power BI Desktop. Enable PBIP/PBIR options if your release requires them, then restart.
 3. Click **Refresh**. `DataMode = Demo` uses embedded fixtures and requires no data-file path or account.
 4. Review the three report tabs; use the dropdown filters and select chart categories to explore.

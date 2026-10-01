@@ -1,19 +1,19 @@
 # Power BI & analytics projects
 
-The names below cover the complete analytics list from our prior research. All 21 now have a native PBIP project source, measures and fictional demo data. The 10 core solutions are already in the Astra repository. This package adds native PBIP source for the other 11 under `opportunity-demos/`, alongside browser companion dashboards.
+The names below cover the complete analytics list from our prior research. All 21 now have a native PBIP project source, measures and fictional demo data. The 10 core solutions are in the numbered folders at the top of this repository; the other 11 are under `opportunity-demos/`, each with a browser companion dashboard.
 
 | Project | Build status |
 |---|---|
-| Car Dealership Profitability & Inventory | Native PBIP implemented in [`01-dealership-profitability/`](./01-dealership-profitability/) on the Astra default branch |
-| Executive Sales Performance | Native PBIP implemented in [`02-executive-sales/`](./02-executive-sales/) on the Astra default branch |
-| Inventory & Stock Ageing | Native PBIP implemented in [`03-inventory-stock-ageing/`](./03-inventory-stock-ageing/) on the Astra default branch |
-| Financial P&L / Cash Flow | Native PBIP implemented in [`04-financial-pnl-cashflow/`](./04-financial-pnl-cashflow/) on the Astra default branch |
-| Retail Store Performance | Native PBIP implemented in [`05-retail-performance/`](./05-retail-performance/) on the Astra default branch |
-| E-commerce Profitability | Native PBIP implemented in [`06-ecommerce-profitability/`](./06-ecommerce-profitability/) on the Astra default branch |
-| Sales CRM Analytics | Native PBIP implemented in [`07-sales-crm/`](./07-sales-crm/) on the Astra default branch |
-| HR / Workforce Analytics | Native PBIP implemented in [`08-hr-workforce/`](./08-hr-workforce/) on the Astra default branch |
-| Project Profitability | Native PBIP implemented in [`09-project-profitability/`](./09-project-profitability/) on the Astra default branch |
-| Operations & Management KPIs | Native PBIP implemented in [`10-operations-kpis/`](./10-operations-kpis/) on the Astra default branch |
+| Car Dealership Profitability & Inventory | Native PBIP implemented in [`01-dealership-profitability/`](./01-dealership-profitability/) |
+| Executive Sales Performance | Native PBIP implemented in [`02-executive-sales/`](./02-executive-sales/) |
+| Inventory & Stock Ageing | Native PBIP implemented in [`03-inventory-stock-ageing/`](./03-inventory-stock-ageing/) |
+| Financial P&L / Cash Flow | Native PBIP implemented in [`04-financial-pnl-cashflow/`](./04-financial-pnl-cashflow/) |
+| Retail Store Performance | Native PBIP implemented in [`05-retail-performance/`](./05-retail-performance/) |
+| E-commerce Profitability | Native PBIP implemented in [`06-ecommerce-profitability/`](./06-ecommerce-profitability/) |
+| Sales CRM Analytics | Native PBIP implemented in [`07-sales-crm/`](./07-sales-crm/) |
+| HR / Workforce Analytics | Native PBIP implemented in [`08-hr-workforce/`](./08-hr-workforce/) |
+| Project Profitability | Native PBIP implemented in [`09-project-profitability/`](./09-project-profitability/) |
+| Operations & Management KPIs | Native PBIP implemented in [`10-operations-kpis/`](./10-operations-kpis/) |
 | Overdue Collections | Native PBIP source + synthetic data in [`opportunity-demos/11-overdue-collections/PowerBI/`](./opportunity-demos/11-overdue-collections/PowerBI/) |
 | Job Profitability | Native PBIP source + synthetic data in [`opportunity-demos/12-job-profitability/PowerBI/`](./opportunity-demos/12-job-profitability/PowerBI/) |
 | Budget & Forecasting | Native PBIP source + synthetic data in [`opportunity-demos/13-budget-forecasting/PowerBI/`](./opportunity-demos/13-budget-forecasting/PowerBI/) |

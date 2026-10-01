@@ -377,7 +377,7 @@
       {
         "name": "DataFolder",
         "kind": "m",
-        "expression": "\"C:/PowerBI/Astra/power-bi/08-hr-workforce/data/demo\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+        "expression": "\"C:/PowerBI/data-powerbi-portfolio/08-hr-workforce/data/demo\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
       }
     ],
     "annotations": [

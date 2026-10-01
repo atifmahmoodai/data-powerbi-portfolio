@@ -6,7 +6,7 @@ Track current backlog, on-time completion, service cycle time, rework and delive
 
 ## Open
 
-1. Download/extract the Astra repository to a short Windows path.
+1. Download/extract this repository to a short Windows path, e.g. `C:/PowerBI/data-powerbi-portfolio`.
 2. Open `Dashboard.pbip` in current Power BI Desktop. Enable PBIP/PBIR options if your release requires them, then restart.
 3. Click **Refresh**. `DataMode = Demo` uses embedded fixtures and requires no data-file path or account.
 4. Review the three report tabs; use the dropdown filters and select chart categories to explore.

@@ -312,7 +312,7 @@
       {
         "name": "DataFolder",
         "kind": "m",
-        "expression": "\"C:/PowerBI/Astra/power-bi/03-inventory-stock-ageing/data/demo\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+        "expression": "\"C:/PowerBI/data-powerbi-portfolio/03-inventory-stock-ageing/data/demo\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
       }
     ],
     "annotations": [

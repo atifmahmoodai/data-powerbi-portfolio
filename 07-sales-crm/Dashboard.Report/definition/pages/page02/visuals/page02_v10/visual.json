@@ -26,7 +26,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Won Value by Source'"
+                  "Value": "'Won value by source'"
                 }
               }
             },

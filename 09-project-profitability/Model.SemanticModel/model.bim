@@ -430,7 +430,7 @@
       {
         "name": "DataFolder",
         "kind": "m",
-        "expression": "\"C:/PowerBI/Astra/power-bi/09-project-profitability/data/demo\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+        "expression": "\"C:/PowerBI/data-powerbi-portfolio/09-project-profitability/data/demo\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
       }
     ],
     "annotations": [

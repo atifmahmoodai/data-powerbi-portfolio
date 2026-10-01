@@ -1,6 +1,6 @@
 # Power BI project index
 
-All 21 analytics names are maintained within Astra’s `power-bi/` collection. Ten core PBIP projects are already on the Astra default branch. This update adds eleven additional native PBIP source projects and companion demos.
+All 21 analytics projects live in this repository: ten core PBIP projects in the numbered top-level folders, and eleven more native PBIP projects with companion demos under `opportunity-demos/`.
 
 | # | Project | Native Power BI project | Companion dashboard |
 |---|---|---|---|

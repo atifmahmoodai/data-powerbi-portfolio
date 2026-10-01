@@ -434,7 +434,7 @@
       {
         "name": "DataFolder",
         "kind": "m",
-        "expression": "\"C:/PowerBI/Astra/power-bi/04-financial-pnl-cashflow/data/demo\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+        "expression": "\"C:/PowerBI/data-powerbi-portfolio/04-financial-pnl-cashflow/data/demo\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
       }
     ],
     "annotations": [
