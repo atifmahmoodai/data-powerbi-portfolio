@@ -1,3 +1,10 @@
 __pycache__/
 *.py[cod]
 .DS_Store
+.venv/
+**/.pbi/
+*.pbix
+*.pbit
+data/private/
+**/data/private/
+*.env
